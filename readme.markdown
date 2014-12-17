@@ -1,9 +1,6 @@
 # nodejs Phidgets API
 _A nodeJS API for interacting with any type of Phidget_
 
-[![NPM](https://nodei.co/npm/phidgetapi.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/phidgetapi)
-[![NPM](https://nodei.co/npm-dl/phidgetapi.png?height=2)](https://www.npmjs.com/package/phidgetapi)
-
 ## ABOUT PHIDGETS AND NODE
 [Phidget boards](http://http://www.phidgets.com/) are a great prototyping tool which can handle digital inputs and outputs, along with a great array of analog sensors (RFID, temperature, etc).  [nodeJS](http://nodejs.org) is a fantastic networking library which makes it easy to create fast networked applications.  Currently there is no API supported by Phidgets for nodeJS, this project aims to become the default library for Phidget - nodeJS integration.
 
@@ -13,7 +10,8 @@ This project assumes you have the Phidget server up and running.  For most "regu
 ## Installation
 #NPM
 * npm install phidgetapi  
-[![alt phidgetapi npm downloads](https://nodei.co/npm-dl/phidgetapi.png "number of times the phidget api has been downloaded from npm")](https://npmjs.org/package/phidgetapi)
+[![alt phidgetapi npm useage and adoption](https://nodei.co/npm/phidgetapi.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/phidgetapi)
+[![alt phidgetapi npm downloads](https://nodei.co/npm-dl/phidgetapi.png?height=2 "number of times the phidget api has been downloaded from npm")](https://npmjs.org/package/phidgetapi)
 
 
 #GIT
