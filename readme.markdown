@@ -57,6 +57,7 @@ __phidgets.quit()__ This method requests a disconnect from the phidget board.  T
 		version : '1.0.10', //older phidgetwebservice installs may require 1.0.9
 		password: null,
 		type    : 'PhidgetManager',
+		boardID : 123456, //optional - used to connect to multiple boards of the same type
 		rawLog  : false
 	}
 
