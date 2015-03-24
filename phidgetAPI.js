@@ -74,11 +74,14 @@ function phidgetConnection(){
 
                 phidget.client.write('report 8 report\r\n');
 
-                phidget.client.write(
-                    'set /PCK/Client/0.0.0.0/1/'+
-                    phidget.params.type+
-                    '="Open" for session\r\n'
-                );
+				var randInt = parseInt(Math.random() * 99999, 10),
+					openStr = 'set /PCK/Client/0.0.0.0/' + randInt + '/' + phidget.params.type + '="Open" for session\r\n',
+					listenStr = 'listen /PSK/' + phidget.params.type + ' lid0\r\n';
+				if (phidget.params.boardID) {
+					openStr = 'set /PCK/Client/0.0.0.0/' + randInt + '/' + phidget.params.type + '/' + phidget.params.boardID + '="Open" for session\r\n';
+					listenStr = 'listen /PSK/' + phidget.params.type + '//' + phidget.params.boardID + ' lid0\r\n';
+				}	
+                phidget.client.write(openStr);
                 
                 if(phidget.params.type=='PhidgetManager'){
                     phidget.client.write(
@@ -88,11 +91,7 @@ function phidgetConnection(){
                     return;
                 }
                 
-                phidget.client.write(
-                    'listen /PSK/'+
-                    phidget.params.type+
-                    ' lid0\r\n'
-                );
+                phidget.client.write(listenStr);
                 
             }
         );	
