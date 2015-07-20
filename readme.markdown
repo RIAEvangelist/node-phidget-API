@@ -9,9 +9,9 @@ This project assumes you have the Phidget server up and running.  For most "regu
 
 ## Installation
 #NPM
-* npm install phidgetapi  
-[![alt phidgetapi npm useage and adoption](https://nodei.co/npm/phidgetapi.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/phidgetapi)
-[![alt phidgetapi npm downloads](https://nodei.co/npm-dl/phidgetapi.png?height=2 "number of times the phidget api has been downloaded from npm")](https://npmjs.org/package/phidgetapi)
+* npm install phidgetapi 
+[![phidgetapi npm version](https://badge.fury.io/js/phidgetapi.svg)](https://www.npmjs.com/package/phidgetapi)
+[![phidgetapi Package Quality](http://npm.packagequality.com/badge/phidgetapi.png)](https://www.npmjs.com/package/phidgetapi)
 
 
 #GIT
