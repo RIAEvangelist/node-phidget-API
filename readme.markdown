@@ -68,71 +68,73 @@ __Note on `version`__: version in this case is the version of the phidget server
 
 ## Example For Phidget Interface Kit 8/8/8
 
-	var phidget = require('phidgetAPI').phidget;
-
-        phidget.on(
-            "error", 
-            function(data){
-                console.log('error ',data);
-            }
-        );
-
-        phidget.on(
-            'phidgetReady',
-            function(){
-                console.log('phidget ready');
-                console.log(phidget.data);
-
-                phidget.set(
-                    {
-                        type:'Output',
-                        key:'0',
-                        value:'1'
-                    }
-                );
-
-                phidget.on(
-                    'changed', 
-                    update
-                );
-            }
-        );
-
-        var update=function(data){
-            console.log('phidget state changed');
-            console.log('data ',data);
-
-            if(data.type=='Sensor'){
-                phidget.set(
-                    {
-                        type:'Output',
-                        key:'0',
-                        value:'1'
-                    }
-                );
-                setTimeout(
-                    function(){
-                        phidget.set(
-                            {
-                                type:'Output',
-                                key:'0',
-                                value:'0'
-                            }
-                        );
-                    },
-                    200
-                );
-            }
+	var phidget = require('phidgetapi').phidget;
+    
+    var IK888=new phidget();
+    
+    IK888.on(
+        "error", 
+        function(data){
+            console.log('error ',data);
         }
-        
-        /*
-        * Connect to Phidget 
-        */
-        phidget.connect(
-            {
-                type    : 'PhidgetInterfaceKit'
-            }
-        );
+    );
+
+    IK888.on(
+        'phidgetReady',
+        function(){
+            console.log('phidget ready');
+            console.log(phidget.data);
+
+            IK888.set(
+                {
+                    type:'Output',
+                    key:'0',
+                    value:'1'
+                }
+            );
+
+            IK888.on(
+                'changed', 
+                update
+            );
+        }
+    );
+
+    var update=function(data){
+        console.log('phidget state changed');
+        console.log('data ',data);
+
+        if(data.type=='Sensor'){
+            IK888.set(
+                {
+                    type:'Output',
+                    key:'0',
+                    value:'1'
+                }
+            );
+            setTimeout(
+                function(){
+                    phidget.set(
+                        {
+                            type:'Output',
+                            key:'0',
+                            value:'0'
+                        }
+                    );
+                },
+                200
+            );
+        }
+    }
+
+    /*
+    * Connect to Phidget 
+    */
+    IK888.connect(
+        {
+            type    : 'PhidgetInterfaceKit'
+        }
+    );
 
 The above example will show you the available Sensors, Inputs and Outputs as well as the Triggers ( amount of change required in sensor value for a change event to be fired ) for the Phidgets Interface Kit 8/8/8. It will also cause an LED connected the Output 0 and G to flash red for 200 milliseconds upon a change in any sensor data.
 
