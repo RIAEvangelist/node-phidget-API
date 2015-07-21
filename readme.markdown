@@ -82,8 +82,8 @@ __Note on `version`__: version in this case is the version of the phidget server
     IK888.on(
         'phidgetReady',
         function(){
-            console.log('phidget ready');
-            console.log(phidget.data);
+            console.log('IK888 phidget ready');
+            console.log(IK888.data);
 
             IK888.set(
                 {
