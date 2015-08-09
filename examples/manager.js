@@ -1,4 +1,4 @@
-var phidget = require('../phidgetapi').phidget;
+var Phidget = require('../phidgetapi').Phidget;
 
 var manager=new Phidget;
 

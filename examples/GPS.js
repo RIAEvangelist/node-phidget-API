@@ -1,55 +1,35 @@
-var phidget = require('../phidgetapi.js').phidget;
+var Phidget = require('../phidgetapi.js').GPS;
 
-var GPS=new phidget();
+var GPS=new Phidget;
 
-GPS.on(
-    "log", 
+GPS.observe(update);
+
+function update(changes){
+    for(var i in changes){
+        var change=changes[i];
+        //see specific info about each change
+        //console.log(change);
+    }
+
+    //see updated GPS data after all changes
+    //console.log(changes[changes.length-1].object);
+
+    //Or just the info you care about
+    console.log(GPS.lat,GPS.lon);
+}
+
+/*
+// to see raw phidget transfer, helpful when trying to debug
+GPS.phidget.params.rawLog=true;
+GPS.phidget.on(
+    'log',
     function(data){
-        console.log('log ',data);
+        console.log(data)
     }
 );
-
-GPS.on(
-    "error", 
-    function(data){
-        console.log('error ',data);
-    }
-);
-
-GPS.on(
-    'changed', 
-    function(data){
-        console.log('changed');
-        console.log('data ',data);
-    }
-);
-
-GPS.on(
-    'phidgetReady',
-    function(){
-        console.log('GPS ready');
-        console.log(GPS.data);
-        
-    }
-);
-
+*/
 
 /*
  * Connect to phidget 
  */
-GPS.connect(
-    {
-        type:'PhidgetGPS'
-    }
-);
-    
-/*
- * an example of how to see the data being transferred to and from the phidget
- * 
- * GPS.connect(
- *      {
- *          rawLog:true
- *      }
- * );
- * 
- */
+GPS.phidget.connect();
