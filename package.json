@@ -1,12 +1,12 @@
 {
-  "author": "Brandon Nozaki Miller <brandon@1942design.com>",
+  "author": "Brandon Nozaki Miller <brandon@diginow.it.com>",
   "name": "phidgetapi",
-  "description": "a nodeJS - phidget interface API",
+  "description": "Full official phidget interface API for node.js",
   "version": "1.0.3",
   "homepage": "https://www.diginow.it",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RIAEvangelist/nodePhidgetAPI"
+    "url": "https://github.com/RIAEvangelist/node-phidget-API"
   },
   "main": "./phidgetapi.js",
   "engines": {
@@ -36,6 +36,8 @@
     "tag": "latest"
   },
   "bugs": {
-    "url": "https://github.com/RIAEvangelist/nodePhidgetAPI/issues"
+    "url": "https://github.com/RIAEvangelist/node-phidget-API/issues"
   }
 }
+git remote add origin git@github.com:RIAEvangelist/node-phidget-API.git
+git push -u origin maste
