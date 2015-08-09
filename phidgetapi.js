@@ -8,6 +8,8 @@
 var net = require('net');
 var EventEmitter = require('events').EventEmitter;
 
+var GPS = require('./lib/GPS.js');
+
 function phidgetConnection(){
     var phidget = new EventEmitter;
     Object.defineProperties(
@@ -75,6 +77,10 @@ function phidgetConnection(){
                 enumerable:false,
                 writeable:false,
                 value:disconnected
+            },
+            label:{
+                get:getLabel,
+                set:setLabel
             }
         }
     );
@@ -84,6 +90,10 @@ function phidgetConnection(){
 
     function getParams(){
         return phidgetParams;
+    }
+
+    function getLabel(){
+        return phidget.data.board.label;
     }
 
     function setParams(params){
@@ -99,6 +109,16 @@ function phidgetConnection(){
         if(this.params.boardID){
             phidgetParams.serial=this.params.boardID;
         }
+    }
+
+    function setLabel(value){
+        this.set(
+            {
+                type:'board',
+                key:'Label',
+                value:value
+            }
+        )
     }
 
     function connect(params, callback){
@@ -207,9 +227,6 @@ function phidgetConnection(){
             }
 
             e[chunk[1]]=chunk[2];
-
-            console.log(this,chunk[3],
-                e)
 
             this.emit(
                 chunk[3],

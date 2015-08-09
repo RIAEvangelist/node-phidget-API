@@ -1,6 +1,6 @@
 var phidget = require('../phidgetapi').phidget;
 
-var manager=new phidget();
+var manager=new Phidget;
 
 manager.on(
     "log", 
