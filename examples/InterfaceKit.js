@@ -1,4 +1,4 @@
-var phidget = require('../phidgetAPI').phidget;
+var phidget = require('../phidgetapi').phidget;
 
 var IK=new phidget();
 
