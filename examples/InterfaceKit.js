@@ -1,6 +1,6 @@
-var phidget = require('../phidgetapi').phidget;
+var Phidget = require('../phidgetapi').Phidget;
 
-var IK=new phidget();
+var IK=new Phidget();
 
 IK.on(
     "log", 
