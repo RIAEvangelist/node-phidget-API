@@ -2,7 +2,7 @@
   "author": "Brandon Nozaki Miller <brandon@diginow.it.com>",
   "name": "phidgetapi",
   "description": "Full official phidget interface API for node.js",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "homepage": "https://www.diginow.it",
   "repository": {
     "type": "git",
@@ -39,5 +39,3 @@
     "url": "https://github.com/RIAEvangelist/node-phidget-API/issues"
   }
 }
-git remote add origin git@github.com:RIAEvangelist/node-phidget-API.git
-git push -u origin maste
