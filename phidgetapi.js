@@ -10,12 +10,14 @@ var Manager = require('./lib/Manager.js').Manager;
 var GPS     = require('./lib/GPS.js').Phidget;
 var InterfaceKit = require('./lib/InterfaceKit.js').Phidget;
 var RFID = require('./lib/RFID.js').Phidget;
+var Spatial = require('./lib/Spatial.js').Phidget;
 
 exports.Phidget = Phidget;
 exports.Manager = Manager;
 exports.GPS     = GPS;
 exports.InterfaceKit=InterfaceKit;
 exports.RFID    = RFID;
+exports.Spatial = Spatial;
 
 //backwards compatibilirty only below
 exports.phidget = Phidget;
