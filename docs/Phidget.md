@@ -7,7 +7,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 Once connected, the phidgets object will throw a few types of  events: 
 
 |Event Name|Description|
-|-|-|-|
+|---|---|---|
 |phidgetReady|the Phidget has been initialized and the basic data map has been created. No arguments passed.|
 |error|there was an error ( go figure ). error data will be passed through from the board, or the API.|
 |disconnected|the Phidget is no longer being listened to.|
@@ -21,7 +21,7 @@ __it is possible that as new Phidgets are created there may be more events, howe
 ### Methods
 
 |method call|parameters|description|
-|-|-|-|
+|---|---|---|
 |phidget.connect|[__phidget__.data object]()|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
 |phidgets.set|[__phidget__.data object]()|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. The paramaters required for this method are as follows and remember JS is case sensative so math that case exactly as it is in the __phidget__.data object.
 __phidgets.quit()__ This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. 
@@ -43,7 +43,7 @@ __Note on `version`__: version in this case is the version of the phidget server
 
 ## phidget.data
 |key|description|
-|-|-|
+|---|---|
 |type|the key for the object your output resides ( maybe 'board', 'Output', 'Trigger' etc. check the phidget.data to see what options are available for the specific phidget you are working with )|
 |key|the key of the output you wish to set|
 |value|the value you wish to set|
