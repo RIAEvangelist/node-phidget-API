@@ -22,8 +22,8 @@ __it is possible that as new Phidgets are created there may be more events, howe
 
 |method call|parameters|description|
 |---|---|---|
-|phidget.connect|[__phidget__.data object]()|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
-|phidgets.set|[__phidget__.data object]()|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. The paramaters required for this method are as follows and remember JS is case sensative so math that case exactly as it is in the __phidget__.data object.
+|phidget.connect|[__phidget__.params object](#connecting--configuration-params)|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
+|phidgets.set|[__phidget__.data object](#phidgetdata)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. The paramaters required for this method are as follows and remember JS is case sensative so math that case exactly as it is in the __phidget__.data object.
 __phidgets.quit()__ This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. 
 
 ## Connecting & Configuration Params
