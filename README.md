@@ -27,8 +27,14 @@ For a guide on installing the required libraries and services on your platform, 
 OR
 * git clone https://github.com/RIAEvangelist/node-phidget-API.git
 
-#Modules
-* [Core Phidget Module]()
+#Module Documentation
+* [Core Phidget Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)
+* [Manager Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Manager.md)
+* [GPS Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/GPS.md)
+* [InterfaceKit Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/InterfaceKit.md)
+* [RFID Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/RFID.md)
+* [Servo Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Servo.md)
+* [Spatial Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Spatial.md)
 
 ## ToDo:
 * Support for Phidget authentication
