@@ -1,93 +1,42 @@
-var phidget = require('../phidgetapi').phidget;
+var Phidget = require('../phidgetapi').RFID;
 
-var RFID=new phidget();
+var RFID=new Phidget;
 
-RFID.on(
-    "log", 
-    function(data){
-        console.log('log ',data);
-    }
-);
+RFID.observeBoard(update);
 
-RFID.on(
-    "error", 
-    function(data){
-        console.log('error ',data);
-    }
-);
-
-RFID.on(
-    'changed', 
-    function(data){
-        console.log('changed');
-        console.log('data ',data);
-        
-        switch(data.key){
-            case 'TagState' :
-                if(data.value=='1'){
-                    RFID.set(
-                        {
-                            type:'board',
-                            key:'LEDOn',
-                            value:'1'
-                        }
-                    );
-                    break;
-                }
-                
-                RFID.set(
-                    {
-                        type:'board',
-                        key:'LEDOn',
-                        value:'0'
-                    }
-                );
-                break;
-        }
-    }
-);
-    
-RFID.on(
-    'added', 
-    function(data){
-        console.log('added');
-        console.log('data ',data);
-    }
-);
-
-RFID.on(
+RFID.phidget.on(
     'phidgetReady',
     function(){
-        console.log('phidget ready');
-        console.log(RFID.data);
-        
-        RFID.set(
-            {
-                type:'board',
-                key:'LEDOn',
-                value:'1'
-            }
-        );
+        //turn on the antenna when available and blink the LED so we know it is ready.
+        RFID.antennaOn=1;
+        RFID.LEDOn=1;
+        setTimeout(
+            function(){
+                RFID.LEDOn=0;
+            },
+            250
+        )
     }
 );
 
+RFID.phidget.connect();
 
-/*
- * Connect to phidget 
- */
-RFID.connect(
-    {
-        type:'PhidgetRFID'
+function update(changes){
+     for(var i in changes){
+        var change=changes[i];
+        //see specific info about each change
+        //console.log(change);
     }
-);
+
+    //light the LED while the tag is present
+    if(RFID.tagState==1 && RFID.LEDOn==0 && RFID.tag2.tag){
+        RFID.LEDOn=1;
+        console.log(RFID.tag2.tag);
+    }
+
+    //turn off the LED if no tag is present
+    if(RFID.tagState==0){
+        RFID.LEDOn=0;
+    }
     
-/*
- * an example of how to see the data being transferred to and from the phidget
- * 
- * RFID.connect(
- *      {
- *          rawLog:true
- *      }
- * );
- * 
- */
+}

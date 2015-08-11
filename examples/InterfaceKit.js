@@ -2,9 +2,6 @@ var Phidget = require('../phidgetapi').InterfaceKit;
 
 var IK=new Phidget;
 
-IK.phidget.connect();
-
-
 IK.observeOutputs(outputs);
 IK.observeInputs(inputs);
 IK.observeSensors(sensors);
@@ -15,14 +12,22 @@ IK.phidget.on(
     init
 );
 
+IK.phidget.connect();
+
 function init(){
     //do some initial set up here... like blinking an led.
+
     setInterval(
         function(){
-            IK.outputs[0]=(!IK.outputs[0])? 1:0; //if output is off turn it on || else turn it off
+            if(IK.outputs[0]==0){
+                IK.outputs[0]=1;
+            }else{
+                IK.outputs[0]=0;
+            }
         },
         1000
-    )
+    );
+
 }
 
 
