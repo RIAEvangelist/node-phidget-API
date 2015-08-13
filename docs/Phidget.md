@@ -1,24 +1,9 @@
-## Core Phidget Module Interaction
+# Core Phidget Module Interaction
 
 The PhidgetsAPI package exposes a few different ways of interacting with your Phidgets. You can use the below information to create low level or custom Phidget Modules. If you create anything you think others would like, ***Please do a pull request!*** Your rockstar work could help others too. And we would be happy to help you help others!
 
-### Events
 
-Once connected, the Phidgets object will throw a few types of  events: 
-
-|Event Name|Description|
-|---|---|---|
-|phidgetReady|the Phidget has been initialized and the basic data map has been created. No arguments passed.|
-|error|there was an error ( go figure ). error data will be passed through from the board, or the API.|
-|disconnected|the Phidget is no longer being listened to.|
-|changed|some data value has been changed/update/modified on or via a Phidget|
-|added|a new data key value pair has been added to the Phidget's data scope. Or if using the PhidgetManager type, a new phidget has been attached to the webservice for the first time during the current programs session.|
-|attached|PhidgetManager type only, a phidget device has been attached|
-|detached|PhidgetManager type only, a phidget device has been detached|
-
-__it is possible that as new Phidgets are created there may be more events, however, the event dispatching method should be future proofed, and thus may emit events not described here.__ If you notice this, please feel free to edit this doc. Much Love!
-
-### Methods
+## Methods
 
 |method call|parameters|description|
 |---|---|---|
@@ -27,19 +12,19 @@ __it is possible that as new Phidgets are created there may be more events, howe
 |phidget.quit| This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
 |phidget.on|"event name", eventHandler| this is how you bind to the phidget devices events.|
 
-#Event types
+##Events
 
 |event name| paramaters| description |
 |---|---|---|
 |phidgetReady||the phidget is attached and fully initialized|
 |error|{ message:String, type:String  }|emitted whenever a phidget may have an error, or when it can not handle your request|
-|changed|[__phidget__.event]()|emitted whenever a phidget or sensor has data which has changed.|
+|changed|__phidget__.event|emitted whenever a phidget or sensor has data which has changed.|
 |attached or added|__phidget__.data|phidget attached|
 |detached or removed|__phidget__.data|phidget attached|
 |log|String or Err|when rawLog set to true this event will be fired as data comes over the raw phidget socket.|
 |disconnected| the phidget socket was closed or lost|
 
-###__phidget__.event object
+## __phidget__.event object
 |key|value description|
 |---|---|---|
 |type| 'board' or 'output' etc. various root children of the devices __phidget__.data object.|
