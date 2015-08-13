@@ -1,104 +1,40 @@
-var phidget = require('../phidgetapi').phidget;
+var Phidget = require('../phidgetapi').Servo;
 
-var motor=new phidget();
+var servo=new Phidget();
+var motor;
 
-motor.on(
-    "log", 
-    function(data){
-        console.log('log ',data);
-    }
-);
+servo.observe(moved)
 
-motor.on(
-    "error", 
-    function(data){
-        console.log('error ',data);
-    }
-);
-
-/*
- * Detecting status change for both Re-Attach and Detach
- */
-motor.on(
-    'changed', 
-    function(data){
-        console.log('phidget status changed');
-        console.log('data ',data);
-        
-    }
-);
-    
-/*
- * Detecting Phidget Detach
- */
-motor.on(
-    'changed', 
-    function(data){
-        console.log('changed data ',data);
-        
-    }
-);
-
-motor.on(
+servo.phidget.on(
     'phidgetReady',
     function(){
-        console.log('motor ready');
-        console.log(motor.data);
-        motor.set(
-            {
-                type:'Engaged',
-                key:'0',
-                value:'1'
-            }
-        );
-        motor.set(
-            {
-                type:'Position',
-                key:'0',
-                value:'6.300000E+02'
-            }
-        );
+        servo.engaged[0]=1; //turn motor on, automatic on most servos
+        servo.positions[0]=0; //zero motor position
+
         setTimeout(
-            function(){
-                motor.set(
-                    {
-                        type:'Position',
-                        key:'0',
-                        value:'2.310000E+03'
-                    }
-                )
-            },
+            moveTo180,
+            500
+        );
+
+        setTimeout(
+            powerdown,
             1000
         );
     }
 );
 
+function moved(changes){
+    console.log('moved to', servo.positions[0]);
+}
 
-/*
- * Phidget API will default to a motor if no type is specified,
- * for clarity's sake, you may set the type to PhidgetManager
- * 
- * motor.connect(
- *      {
- *          type:PhidgetManager
- *      }
- * );
- * 
- */
+function moveTo180(){
+    servo.positions[0]=180;
+}
 
-motor.connect(
-    {
-        type: 'PhidgetServo'
-    }
-);
+function powerdown(){
+    //this will stop servo from moving if it has not completed its motion.
+    servo.engaged[0]=1; //fake a hard power up just to be sure servo listens to power off command
+    servo.engaged[0]=0; //power off
+}
 
-/*
- * an example of how to see the data being transferred to and from the phidget
- * 
- * motor.connect(
- *      {
- *          rawLog:true
- *      }
- * );
- * 
- */
+servo.phidget.connect();

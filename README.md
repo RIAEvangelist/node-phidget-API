@@ -38,4 +38,6 @@ OR
 
 ## ToDo:
 * Support for Phidget authentication
+* create modules for handling all phidget types
 * create more examples for various Phidgets
+* write tests for all phidget modules
