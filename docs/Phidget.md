@@ -4,7 +4,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 
 ### Events
 
-Once connected, the phidgets object will throw a few types of  events: 
+Once connected, the Phidgets object will throw a few types of  events: 
 
 |Event Name|Description|
 |---|---|---|
@@ -22,36 +22,87 @@ __it is possible that as new Phidgets are created there may be more events, howe
 
 |method call|parameters|description|
 |---|---|---|
-|phidget.connect|[__phidget__.params object](#connecting--configuration-params)|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
-|phidgets.set|[__phidget__.data object](#phidgetdata)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. The paramaters required for this method are as follows and remember JS is case sensative so math that case exactly as it is in the __phidget__.data object.
-__phidgets.quit()__ This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. 
+|phidget.connect|[__phidget__.params object](#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
+|phidget.set|[__phidget__.set object](#Setting-information-phidgetset)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. Remember this is case sensative so match that case exactly as it is in the __phidget__.data object for your device.
+|phidget.quit| This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
+|phidget.on|"event name", eventHandler| this is how you bind to the phidget devices events.|
 
-## Connecting & Configuration Params
-`phidgets.connect` can be passed an a JSON object of options.  Here are the options and their defaults:
+#Event types
+
+|event name| paramaters| description |
+|---|---|---|
+|phidgetReady||the phidget is attached and fully initialized|
+|error|{ message:String, type:String  }|emitted whenever a phidget may have an error, or when it can not handle your request|
+|changed|[__phidget__.event]()|emitted whenever a phidget or sensor has data which has changed.|
+|attached or added|__phidget__.data|phidget attached|
+|detached or removed|__phidget__.data|phidget attached|
+|log|String or Err|when rawLog set to true this event will be fired as data comes over the raw phidget socket.|
+|disconnected| the phidget socket was closed or lost|
+
+###__phidget__.event object
+|key|value description|
+|---|---|---|
+|type| 'board' or 'output' etc. various root children of the devices __phidget__.data object.|
+|key| the name of the key in the __phidget__.data[type] object |
+|value| the updated value for the key|
+| value of key from above | the updated value, same as the value of the above `value` key |
+
+example :
+
+    { 
+        type: 'Sensor',
+        key: '0',
+        value: '109',
+        '0': '109' 
+    }
+
+
+## Connecting & phidget.params
+`phidget.connect` can be passed an a JSON object of options.  Here are the options and their defaults:
+
+__Note on `version`__: version in this case is the version of the phidget server and associated API.  You should check your phidget server to learn the version in use.  The good news is that the APIs we are using here have not changed for the past 3 years, and appear to be unlikely to do so in the future.  If you run into errors with newer versions, please let us know, or submit a pull request with a fix.
+
+|key|default|description|
+|---|---|---|
+|host    | 'localhost'| the host or ip on which your phidget webservice is running. Generally localhost unless you are connecting to a remote device running phidget.
+|port    | 5001| the port on which the host is transmitting phidget data. Can be changed by using the -p flag when starting webservices, just make sure you match this port value to the -p port value if you do modify it.|
+|version | '1.0.10'|older phidgetwebservice installs may require 1.0.9|
+|password| null|not yet implemented|
+|type    | 'PhidgetManager'| the name of the phidget type|
+|serial | false| used to specify a specific board by serial number, handy when connecting to multiple boards of the same type |
+|rawLog  | false| triggers the __phidget__ "log" event on any raw data from the webservice. Handy for debugging. You still need to listen for this even if you want to show the raw data though.|
+
 
 	{
 		host    : 'localhost',
 		port    : 5001,
-		version : '1.0.10', //older phidgetwebservice installs may require 1.0.9
+		version : '1.0.10',
 		password: null,
 		type    : 'PhidgetManager',
-		boardID : 123456, //optional - used to connect to multiple boards of the same type
+		boardID : 123456,
 		rawLog  : false
 	}
 
-__Note on `version`__: version in this case is the version of the phidget server and associated API.  You should check your phidget server to learn the version in use.  The good news is that the APIs we are using here have not changed for the past 3 years, and appear to be unlikely to do so in the future.  If you run into errors with newer versions, let me know.
 
-## phidget.data
+## Setting information phidget.set
 |key|description|
 |---|---|
 |type|the key for the object your output resides ( maybe 'board', 'Output', 'Trigger' etc. check the phidget.data to see what options are available for the specific phidget you are working with )|
 |key|the key of the output you wish to set|
 |value|the value you wish to set|
 
+example:
 
-## Example For Phidget Interface Kit 8/8/8
+    {
+        type    : 'Output',
+        key     : '0',
+        value   : '1'
+    }
 
-	var phidget = require('phidgetapi').phidget;
+## Example Connecting to a Raw Phidget Interface Kit 8/8/8 
+We designed the [InterfaceKit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/InterfaceKit.md) module so you don't need to do this, but it serves as a good example if you ever want to build a new or custom Phidget module. If you build a module for a Phidget that we don't have, or something you think is usefull, __PLEASE__ feel free to submit a pull request! We love open source contributions and want to make the best API together!
+
+	var Phidget = require('phidgetapi').Phidget;
     
     var IK888=new phidget();
     
@@ -119,4 +170,4 @@ __Note on `version`__: version in this case is the version of the phidget server
         }
     );
 
-The above example will show you the available Sensors, Inputs and Outputs as well as the Triggers ( amount of change required in sensor value for a change event to be fired ) for the Phidgets Interface Kit 8/8/8. It will also cause an LED connected the Output 0 and G to flash red for 200 milliseconds upon a change in any sensor data.
+The above example will show you the available Sensors, Inputs and Outputs as well as the Triggers ( amount of change required in sensor value for a change event to be fired ) and DataRate ( sample rate in ms ) for the Phidgets Interface Kit 8/8/8. It will also cause an LED connected Output 0 and Ground to flash for 200 milliseconds upon a change in any sensor data.
