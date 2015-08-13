@@ -1,6 +1,12 @@
 var Phidget = require('../phidgetapi').InterfaceKit;
 
 var IK=new Phidget;
+/*
+In this example IK is a Phidget InterfaceKit 8/8/8
+this same code would work for other InterfaceKits, however
+the code for sensor input may never execute as those
+boards may not have sensors.
+*/
 
 IK.observeOutputs(outputs);
 IK.observeInputs(inputs);
