@@ -32,7 +32,7 @@ The PhidgetGPS object includes the below listed data. JSON.stringify can be used
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
 |.type|string|No|This is an identifier, Phidget GPS will always return 'PhidgetGPS'|
-|.date|Number|No|This returns the current date under UTC. Subkeys are broken up into __date.full__, __date.year__, __date.month__, __date.day__, __date.hour__, __date.min__, __date.sec__, and __date.ms__. They will return the value which they are respectivelny named after.|
+|.date|Number|No|This returns the current date under UTC. Subkeys are broken up into __date.full__, __date.year__, __date.month__, __date.day__, __date.hour__, __date.min__, __date.sec__, and __date.ms__. They will return the value which they are respectively named after.|
 |.heading|Number|No|This returns current heading Phidget GPS is on.|
 |.velocity|Number|No|This returns the current speed Phidget GPS is on with linear velocity units of __km/h__. |
 |.alt|Number|No|This returns current altitude Phidget GPS is in with units of __meters__.|
