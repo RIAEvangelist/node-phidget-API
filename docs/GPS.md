@@ -1,6 +1,6 @@
 #Phidget GPS Sensor
 
-The PhidgetGPS library makes for intutive and lightning fast development without any comprimise. For a quick start into your project see the [Basic GPS example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).  
+The PhidgetGPS library makes for intuitive and lightning fast development without any comprimise. For a quick start into your project see the [Basic GPS example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).  
 
 ToDo : map out module and describe use
 
