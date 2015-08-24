@@ -27,7 +27,7 @@ The below information lists the parameters, events, and give you further informa
 ##Data
 
 |Key|Data Type|Writable|Description|
-|---|---|---|
+|---|---|---|---|
 |.type|string|No|This is an identifier, Phidget GPS will always return 'PhidgetGPS'|
 |.date|Number|No|This returns the current date under UTC. Subkeys are broken up into __date.full__, __date.year__, __date.month__, __date.day__, __date.hour__, __date.min__, __date.sec__, and __date.ms__. They will return the value which they are respectivelny named after.|
 |.heading|Number|No|This returns current heading Phidget GPS is on|
