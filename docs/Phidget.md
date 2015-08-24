@@ -5,7 +5,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 
 ## Methods
 
-|method call|parameters|description|
+|Method call|Parameters|Description|
 |---|---|---|
 |phidget.connect|[__phidget__.params object](#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
 |phidget.set|[__phidget__.set object](#setting-information-phidgetset)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. Remember this is case sensative so match that case exactly as it is in the __phidget__.data object for your device.
@@ -14,18 +14,18 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 
 ##Events
 
-|event name| paramaters| description |
+|Event name| Paramaters| Description |
 |---|---|---|
-|phidgetReady||the phidget is attached and fully initialized|
+|phidgetReady|N/A|the phidget is attached and fully initialized|
 |error|{ message:String, type:String  }|emitted whenever a phidget may have an error, or when it can not handle your request|
 |changed|__phidget__.event|emitted whenever a phidget or sensor has data which has changed.|
 |attached or added|__phidget__.data|phidget attached|
 |detached or removed|__phidget__.data|phidget attached|
 |log|String or Err|when rawLog set to true this event will be fired as data comes over the raw phidget socket.|
-|disconnected| the phidget socket was closed or lost|
+|disconnected|N/A| the phidget socket was closed or lost|
 
 ## __phidget__.event object
-|key|value description|
+|Key|Value Description|
 |---|---|---|
 |type| 'board' or 'output' etc. various root children of the devices __phidget__.data object.|
 |key| the name of the key in the __phidget__.data[type] object |
@@ -47,7 +47,7 @@ example :
 
 __Note on `version`__: version in this case is the version of the phidget server and associated API.  You should check your phidget server to learn the version in use.  The good news is that the APIs we are using here have not changed for the past 3 years, and appear to be unlikely to do so in the future.  If you run into errors with newer versions, please let us know, or submit a pull request with a fix.
 
-|key|default|description|
+|Key|Default|Description|
 |---|---|---|
 |host    | 'localhost'| the host or ip on which your phidget webservice is running. Generally localhost unless you are connecting to a remote device running phidget.
 |port    | 5001| the port on which the host is transmitting phidget data. Can be changed by using the -p flag when starting webservices, just make sure you match this port value to the -p port value if you do modify it.|
@@ -70,7 +70,7 @@ __Note on `version`__: version in this case is the version of the phidget server
 
 
 ## Setting information phidget.set
-|key|description|
+|Key|Description|
 |---|---|
 |type|the key for the object your output resides ( maybe 'board', 'Output', 'Trigger' etc. check the phidget.data to see what options are available for the specific phidget you are working with )|
 |key|the key of the output you wish to set|
