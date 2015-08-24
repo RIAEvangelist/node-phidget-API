@@ -16,7 +16,7 @@ along with a variable name
 
 ##Methods
 
-You can use the below information to create low level or custom Phidget Modules. If you create anything you think others would like, ***Please do a pull request!*** Your rockstar work could help others too. And we would be happy to help you help others!
+The below information lists the parameters, events, and give you further information about your phidgets GPS. For low lever development, [see here](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams).
 
 |method call|parameters|description|
 |---|---|---|
