@@ -21,7 +21,7 @@ The below information lists the parameters, events, and give you further informa
 |---|---|---|
 |phidget.connect|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables consisting of: __date__, __heading__, __velocity__, __altitude__, __latitude__, and __logintude__ respectively. |
 |phidget.quit|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
-|phidget.observe|'update'|This calls for the Phidget GPS to be listened to at a maximum frequency of __10Hz__. Any changes to the Phidget are acknowledged and sent to the listeners. |
+|phidget.observe|'update'|This method is used for asynchronously observing the changes to the PhidgetGPS. It provides a stream of changes in the order in which they occur at maximum __10Hz__. |
 
 ##Data
 
