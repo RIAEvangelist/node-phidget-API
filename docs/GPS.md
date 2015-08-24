@@ -37,3 +37,4 @@ The PhidgetGPS object includes the below listed data. JSON.stringify can be used
 |.alt|number|no|This returns current altitude Phidget GPS is in with units of __meters__.|
 |.lat|number|no|This returns current latitude Phidget GPS is in.|
 |.lon|number|no|This returns current longitude Phidget GPS is in.|
+|.fixed|bool|no|This true if the GPS location has been fully determined by the Phidgets GPS.|
