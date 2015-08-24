@@ -22,19 +22,7 @@ The below information lists the parameters, events, and give you further informa
 |---|---|---|
 |phidget.connect|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables consisting of: __date__, __heading__, __velocity__, __altitude__, __latitude__, and __logintude__ respectively. |
 |phidget.quit|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
-|phidget.on|"event name", eventHandler| This is how you bind to the phidget devices events.|
-
-##Events
-
-|Event name| Paramaters| Description |
-|---|---|---|
-|phidgetReady|N/A|The phidget is attached and fully initialized|
-|error|{ message:String, type:String  }|emitted whenever a phidget may have an error, or when it can not handle your request|
-|changed|__phidget__.event|Emitted whenever a phidget or sensor has data which has changed.|
-|attached or added|__phidget__.data|Phidget attached|
-|detached or removed|__phidget__.data|Phidget attached|
-|log|String or Err|When rawLog set to true this event will be fired as data comes over the raw phidget socket.|
-|disconnected|N/A| The phidget socket was closed or lost|
+|phidget.observe|'update'|This calls for the Phidget GPS to be listened to. Any changes to the Phidget are acknowledged and sent to the listners. |
 
 ##Data
 
