@@ -1,17 +1,6 @@
 #Phidget GPS Sensor
 
-The PhidgetGPS library makes for intuitive and lightning fast development without any compromise. For a quick start into your GPS project see the [basic GPS example.](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).  
-
-
-##Getting Started
-
-Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?category=5) will require:
-
-    var Phidget = require('phidgeapi.js').GPS;
-
-along with a variable name:
-
-    var GPS = new Phidget;
+The PhidgetGPS library makes for intuitive and lightning fast development without any compromise. For a quick start into your GPS project see the __Getting Started__ section.(https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).  
 
 ##Methods
 
@@ -25,9 +14,6 @@ The below information lists the parameters, events, and give you further informa
 
 ##Data
 
-The PhidgetGPS object includes the below listed data. JSON.stringify can be used to list the entirety of it or can be individually selected using the keys as follows:
-
-
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
 |type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetGPS'|
@@ -39,3 +25,13 @@ The PhidgetGPS object includes the below listed data. JSON.stringify can be used
 |lat|number|no|This returns current latitude Phidget GPS is in.|
 |lon|number|no|This returns current longitude Phidget GPS is in.|
 |fixed|bool|no|This true if the GPS location has been fully determined by the Phidgets GPS.|
+
+##Getting Started
+
+Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?category=5) will require:
+
+    var Phidget = require('phidgeapi.js').GPS;
+
+along with a variable name:
+
+    var GPS = new Phidget;
