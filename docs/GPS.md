@@ -30,11 +30,12 @@ The PhidgetGPS object includes the below listed data. JSON.stringify can be used
 
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
-|.type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetGPS'|
-|.date|number|no|This returns the current date under UTC. Subkeys are broken up into __date.full__, __date.year__, __date.month__, __date.day__, __date.hour__, __date.min__, __date.sec__, and __date.ms__. They will return the value which they are respectively named after.|
-|.heading|number|no|This returns current heading Phidget GPS is on.|
-|.velocity|number|no|This returns the current speed Phidget GPS is on with linear velocity units of __km/h__. |
-|.alt|number|no|This returns current altitude Phidget GPS is in with units of __meters__.|
-|.lat|number|no|This returns current latitude Phidget GPS is in.|
-|.lon|number|no|This returns current longitude Phidget GPS is in.|
-|.fixed|bool|no|This true if the GPS location has been fully determined by the Phidgets GPS.|
+|type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetGPS'|
+|date|number|no|This returns the current date under UTC. Subkeys are broken up into __date.full__, __date.year__, __date.month__, __date.day__, __date.hour__, __date.min__, __date.sec__, and __date.ms__. They will return the value which they are respectively named after.|
+|date.timeOffset|number|no|This returns the time offset from the computer or embedded system the Phidget GPS is attached to. |
+|heading|number|no|This returns current heading Phidget GPS is on.|
+|velocity|number|no|This returns the current speed Phidget GPS is on with linear velocity units of __km/h__. |
+|alt|number|no|This returns current altitude Phidget GPS is in with units of __meters__.|
+|lat|number|no|This returns current latitude Phidget GPS is in.|
+|lon|number|no|This returns current longitude Phidget GPS is in.|
+|fixed|bool|no|This true if the GPS location has been fully determined by the Phidgets GPS.|
