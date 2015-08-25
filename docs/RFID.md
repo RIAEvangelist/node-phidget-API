@@ -4,16 +4,6 @@ The PhidgetRFID library makes for intuitive and lightning fast development witho
 
 ToDo : map out module and describe use
 
-##Getting Started
-
-Initializing [Phidgets RFID Devices](http://www.phidgets.com/products.php?category=14) will require:
-
-    var Phidget = require('phidgetapi.js').RFID;
-    
-along with a variable name:
-
-    var RFID = new Phidget;
-    
 ##Methods
 
 The below information lists the parameters, events, and give you further information about your Phidgets RFID. For low level development, [see here](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams).
@@ -26,3 +16,8 @@ The below information lists the parameters, events, and give you further informa
 ##Data
 
 The Phidget RFID object includes the listed below data. JSON.stringify can be used to list the entirety of it or can be individually selected using the keys as follows: 
+
+##Getting Started
+
+Initializing [Phidgets RFID Devices](http://www.phidgets.com/products.php?category=14) can be very easy, here is a basic example to help you get started.
+
