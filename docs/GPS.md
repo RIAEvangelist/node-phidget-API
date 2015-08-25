@@ -20,7 +20,7 @@ The below information lists the parameters, events, and give you further informa
 |date|number|no|This returns the current date under UTC. Subkeys are broken up into __date.full__, __date.year__, __date.month__, __date.day__, __date.hour__, __date.min__, __date.sec__, and __date.ms__. They will return the value which they are respectively named after.|
 |date.timeOffset|number|no|This returns the time offset from the computer or embedded system the Phidget GPS is attached to. |
 |heading|number|no|This returns current heading Phidget GPS is on.|
-|velocity|number|no|This returns the current speed Phidget GPS is on with linear velocity units of __km/h__. |
+|velocity|number|no|This returns the current speed in __km/h__. |
 |alt|number|no|This returns current altitude Phidget GPS is in with units of __meters__.|
 |lat|number|no|This returns current latitude Phidget GPS is in.|
 |lon|number|no|This returns current longitude Phidget GPS is in.|
