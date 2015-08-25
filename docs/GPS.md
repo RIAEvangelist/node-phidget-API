@@ -5,7 +5,7 @@ The PhidgetGPS library makes for intuitive and lightning fast development withou
 
 ##Getting Started
 
-Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?product_id=1040) will require:
+Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?category=5) will require:
 
     var Phidget = require('phidgeapi.js').GPS;
 

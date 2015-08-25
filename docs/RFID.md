@@ -6,7 +6,7 @@ ToDo : map out module and describe use
 
 ##Getting Started
 
-Initializing [Phidgets RFID Devices](http://www.phidgets.com/products.php?category=14&product_id=1024_0) will require:
+Initializing [Phidgets RFID Devices](http://www.phidgets.com/products.php?category=14) will require:
 
     var Phidget = require('phidgetapi.js').RFID;
     
