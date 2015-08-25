@@ -21,4 +21,8 @@ The below information lists the parameters, events, and give you further informa
 |Method call|Parameters|Description|
 |---|---|---|
 |phidget.connect|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables consisting of: __type__, __observeBoard__, __observeOutputs__, __numberOfOutputs__, __antennaOn__, __LEDon__, __lastTag__, __tagState__, __tag2__, __tagLoss2__, and __outputs__ respectively. |
-|phidget.observeBoard|'update' |This method is used for asynchronously observing the changes to all the features of the Phidgets RFID. It provides a stream of changes in the order in which they occur. |
+|phidget.observeBoard|'update' |This method is used for asynchronously observing the changes to all the features of the Phidgets RFID. It provides a stream of changes in the order in which they occur.|
+
+##Data
+
+The Phidget RFID object includes the listed below data. JSON.stringify can be used to list the entirety of it or can be individually selected using the keys as follows: 
