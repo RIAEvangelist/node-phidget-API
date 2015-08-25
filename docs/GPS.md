@@ -28,10 +28,40 @@ The below information lists the parameters, events, and give you further informa
 
 ##Getting Started
 
-Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?category=5) will require:
+Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?category=5) can be very easy, here is a basic example to help you get started. 
 
-    var Phidget = require('phidgeapi.js').GPS;
+    var Phidget = require('../phidgetapi.js').GPS;
 
-along with a variable name:
+    var GPS=new Phidget;
 
-    var GPS = new Phidget;
+    GPS.observe(update);
+
+    function update(changes){
+        for(var i in changes){
+            var change=changes[i];
+            //see specific info about each change
+            //console.log(change);
+        }
+
+        //see updated GPS data after all changes
+        //console.log(changes[changes.length-1].object);
+
+        //Or just the info you care about
+        console.log(GPS.lat,GPS.lon);
+    }
+
+    /*
+    // to see raw phidget transfer, helpful when trying to debug
+    GPS.phidget.params.rawLog=true;
+    GPS.phidget.on(
+        'log',
+        function(data){
+            console.log(data)
+        }
+    );
+    */
+
+    /*
+     * Connect to phidget 
+     */
+    GPS.phidget.connect();
