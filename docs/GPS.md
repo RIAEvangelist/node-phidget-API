@@ -1,21 +1,21 @@
 #Phidget GPS Sensor
 
-The PhidgetGPS library makes for intuitive and lightning fast development without any compromise. For a quick start into your GPS project see the [Basic GPS example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).  
+The PhidgetGPS library makes for intuitive and lightning fast development without any compromise. For a quick start into your GPS project see the [basic GPS example.](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).  
 
 
 ##Getting Started
 
-Initializing[Phidgets GPS Devices](http://www.phidgets.com/products.php?product_id=1040) will require 
+Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?product_id=1040) will require:
 
     var Phidget = require('phidgeapi.js').GPS;
 
-along with a variable name
+along with a variable name:
 
     var GPS = new Phidget;
 
 ##Methods
 
-The below information lists the parameters, events, and give you further information about your phidgets GPS. For low lever development, [see here](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams).
+The below information lists the parameters, events, and give you further information about your phidgets GPS. For low level development, [see here](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams).
 
 |Method call|Parameters|Description|
 |---|---|---|
