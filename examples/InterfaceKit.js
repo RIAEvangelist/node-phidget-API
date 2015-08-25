@@ -13,10 +13,7 @@ IK.observeInputs(inputs);
 IK.observeSensors(sensors);
 IK.observeRawSensors(rawSensors);
 
-IK.phidget.on(
-    'phidgetReady',
-    init
-);
+IK.whenReady(init);
 
 IK.phidget.connect();
 
