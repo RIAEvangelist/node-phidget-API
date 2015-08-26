@@ -12,7 +12,7 @@ The below information lists the parameters, events, and give you further informa
 
 ##Data
  
- |Key|Data Type|Writable|Description|
+|Key|Data Type|Writable|Description|
 |---|---|---|---|
 |type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetRFID'|
 |observeBoard|listener|no|This observes the board for any changes and reports inputs.|
