@@ -15,15 +15,15 @@ The PhidgetRFID library makes for intuitive and lightning fast development witho
  
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
-|type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetRFID'|
-|numberOfOutputs|number|no|This returns the number of outputs on the RFID board.|
-|antennaOn|bool|yes|This controls and reports the power state of the antenna. __1 = on__, __0 = off__. Antenna frequency range is __125Hz__ - __150Hz__. |
-|LEDon|bool|yes|This controls and reports the power state of the onboard LED. __1 = on__, __0 = off__. |
-|lastTag|number|no|This returns the ID of the last detected tag.|
-|tagState|bool|no|This returns the current detection of an RFID tag, __1 = tag detected__, __0 = no tag detected__.|
-|tag2|object|no|This identifies the tag providing the ID as well as the encoding tag. Keys availible are __.protocol__, and __.tag__ which return the value they are respectively named after. |
-|tagLoss2|object|no|This identifies the latest previously identified tag providing the ID as well as the encoding tag. Keys availible are __.protocol__, and __.tag__ which return the value they are respectively named after. |
-|outputs|array|yes|This array identifies and controls the state of the outputs of the RFID board. |
+|type|string|no|'PhidgetRFID'|
+|numberOfOutputs|number|no|number of outputs on the RFID board|
+|antennaOn|bool|yes|antenna state : ` 1 ` is On, ` 0 ` is Off |
+|LEDon|bool|yes|LED state  : ` 1 ` is On, ` 0 ` is Off|
+|lastTag|number|no|` ID ` of the last detected tag|
+|tagState|bool|no|RFID tag present : ` 1 ` is Present, ` 0 ` is Not Present|
+|tag2|object|no|Tag info if present ` tag protocol ` + ` tag ID `|
+|tagLoss2|object|no|` ID ` of the last detected tag|
+|outputs|array|yes|state of the outputs ` 1 ` is On, ` 0 ` is Off |
 
 
 

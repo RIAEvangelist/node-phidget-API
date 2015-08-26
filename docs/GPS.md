@@ -14,8 +14,8 @@ The PhidgetGPS library makes for intuitive and lightning fast development withou
 
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
-|type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetGPS'|
-|date.systemOffset|number|no|offset in milliseconds between system current time and the PhidgetGPS timestamp |
+|type|string|no|'PhidgetGPS'|
+|date.systemOffset|number|no|offset in milliseconds between system current time and the Phidget GPS timestamp |
 |date.timestamp|timestamp|no|traditional milliseconds from epoch timestamp|
 |date.full|String|no|full local date and time|
 |date.year|number|no|year|
