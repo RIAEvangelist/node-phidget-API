@@ -9,14 +9,14 @@ The below information lists the parameters, events, and give you further informa
 |---|---|---|
 |phidget.connect|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidget RFID|
 |phidget.whenReady|function() |This executes a function when the Phidgets RFID is ready to be used.|
+|observeBoard|listener|used for asynchronously observing the changes to the PhidgetRFID board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
+|observeOutputs|listener|used for asynchronously observing the changes to the Phidget RFID Outputs. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 
 ##Data
  
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
 |type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetRFID'|
-|observeBoard|listener|no|This observes the board for any changes and reports inputs.|
-|observeOutputs|listener|no|This observes the board for any outputs and reports their activity.|
 |numberOfOutputs|number|no|This returns the number of outputs on the RFID board.|
 |antennaOn|bool|yes|This controls and reports the power state of the antenna. __1 = on__, __0 = off__. Antenna frequency range is __125Hz__ - __150Hz__. |
 |LEDon|bool|yes|This controls and reports the power state of the onboard LED. __1 = on__, __0 = off__. |
