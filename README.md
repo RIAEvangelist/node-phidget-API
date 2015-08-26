@@ -15,11 +15,13 @@ For a guide on installing the required libraries and services on your platform, 
 
 ## Installation
 #NPM
-* npm install phidgetapi  
+* ` npm install phidgetapi `
 
-[![phidgetapi npm version](https://badge.fury.io/js/phidgetapi.svg)](https://www.npmjs.com/package/phidgetapi)
+[![Package Quality](http://npm.packagequality.com/shield/phidgetapi.svg)](http://packagequality.com/#?package=phidgetapi) [![phidgetapi npm version](https://badge.fury.io/js/phidgetapi.svg)](https://www.npmjs.com/package/phidgetapi)
 
 [![phidgetapi Package Quality](http://npm.packagequality.com/badge/phidgetapi.png)](https://www.npmjs.com/package/phidgetapi)
+
+[See NPM stats for phidgetapi](http://npm-stat.com/charts.html?package=phidgetapi&author=&from=&to=)
 
 
 #GIT
