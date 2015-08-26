@@ -27,6 +27,7 @@ The below information lists the parameters, events, and give you further informa
 |tagState|bool|no|This returns the current detection of an RFID tag, __1 = tag detected__, __0 = no tag detected__.|
 |tag2|object|no|This identifies the tag providing the ID as well as the encoding tag. Keys availible are __.protocol__, and __.tag__ which return the value they are respectively named after. |
 |tagLoss2|object|no|This identifies the latest previously identified tag providing the ID as well as the encoding tag. Keys availible are __.protocol__, and __.tag__ which return the value they are respectively named after. |
+|outputs|array|yes|This array identifies and controls the state of the outputs of the RFID board. |
 
 
 
