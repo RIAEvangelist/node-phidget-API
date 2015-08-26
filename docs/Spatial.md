@@ -25,10 +25,12 @@ The below information lists the parameters, events, and give you further informa
 |angularRateMin|number|no|This returns the maximum angular momentum that the desired axis will report. |
 |dataRate|number|yes|This controls and reports current data rate at which data is being handled. In depth guide [here](http://www.phidgets.com/docs/1044_User_Guide) |
 |dataRateMax|number|no|This returns the maximum supported data rate.|
-|tagState|bool|no|This returns the current detection of an RFID tag, __1 = tag detected__, __0 = no tag detected__.|
-|tag2|object|no|This identifies the tag providing the ID as well as the encoding tag. Keys availible are __.protocol__, and __.tag__ which return the value they are respectively named after. |
-|tagLoss2|object|no|This identifies the latest previously identified tag providing the ID as well as the encoding tag. Keys availible are __.protocol__, and __.tag__ which return the value they are respectively named after. |
-|outputs|array|yes|This array identifies and controls the state of the outputs of the RFID board. |
+|dataRateMin|number|no|is returns the minimum supported data rate.|
+|compassAxisCount|number|no|This returns the number of axes the PhidgetSpatial can measure magnetic field strength on. |
+|gyroAxisCount|number|no|This returns the number of axes the PhidgetSpatial can measure angular momentum on. |
+|accelerationAxisCount|number|no|This returns the number of axes the PhidgetSpatial can measure acceleration on. |
+|magneticFieldMax|number|no|This returns the maximum magnetic field that this axis will report.|
+|magneticFieldMin|number|no|This returns the maximum negative magnetic field that this axis will report.|
 
 
 
