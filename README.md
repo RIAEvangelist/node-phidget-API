@@ -41,3 +41,6 @@ OR
 * Create modules for handling all phidget types
 * Create more examples for various Phidgets
 * Write tests for all phidget modules
+
+## Licensed under DBAD license
+See the [DBAD license](https://github.com/philsturgeon/dbad) in your language or our [licence.md](https://github.com/RIAEvangelist/node-phidget-API/blob/master/license.md) file.
