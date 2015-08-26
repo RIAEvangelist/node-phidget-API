@@ -18,7 +18,7 @@ The below information lists the parameters, events, and give you further informa
 |observeBoard|listener|no|This observes the board for any changes and reports inputs.|
 |observeOutputs|listener|no|This observes the board for any outputs and reports their activity.|
 |numberOfOutputs|number|no|This returns the number of outputs on the RFID board.|
-|antennaOn|bool|yes|This controls and reports the power state of the antenna. __1 = on__, __0 = off__. Antenna frequency range : __125Hz__ - __150Hz__. |
+|antennaOn|bool|yes|This controls and reports the power state of the antenna. __1 = on__, __0 = off__. Antenna frequency range is __125Hz__ - __150Hz__. |
 |LEDon|bool|yes|This controls and reports the power state of the onboard LED. __1 = on__, __0 = off__. |
 |lastTag|number|no|This returns the ID of the last detected tag.|
 |tagState|bool|no|This returns the current detection of an RFID tag, __1 = tag detected__, __0 = no tag detected__.|
