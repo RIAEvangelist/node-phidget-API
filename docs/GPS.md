@@ -3,8 +3,6 @@
 The PhidgetGPS library makes for intuitive and lightning fast development without any compromise. For a quick start into your GPS project see the [Basic Manager example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).
 ##Methods
 
-The below information lists the parameters, events, and give you further information about your phidgets GPS. For low level development, [see here](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams).
-
 |Method call|Parameters|Description|
 |---|---|---|
 |[phidget.connect](https://github.com/MaybeRex/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidgets GPS |

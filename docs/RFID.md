@@ -3,8 +3,6 @@ The PhidgetRFID library makes for intuitive and lightning fast development witho
 
 ##Methods
 
-The below information lists the parameters, events, and give you further information about your Phidgets RFID. For low level development, [see here](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams).
-
 |Method call|Parameters|Description|
 |---|---|---|
 |phidget.connect|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidget RFID|
