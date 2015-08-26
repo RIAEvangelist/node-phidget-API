@@ -17,15 +17,18 @@ The below information lists the parameters, events, and give you further informa
  
  |Key|Data Type|Writable|Description|
 |---|---|---|---|
-|type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetGPS'|
-|date|number|no|This returns the current date under UTC. Subkeys are broken up into __date.full__, __date.year__, __date.month__, __date.day__, __date.hour__, __date.min__, __date.sec__, and __date.ms__. They will return the value which they are respectively named after.|
-|date.timeOffset|number|no|This returns the time offset from the computer or embedded system the Phidget GPS is attached to. |
-|heading|number|no|This returns current heading Phidget GPS is on.|
-|velocity|number|no|This returns the current speed in __km/h__. |
-|alt|number|no|This returns current altitude Phidget GPS is in with units of __meters__.|
-|lat|number|no|This returns current latitude Phidget GPS is in.|
-|lon|number|no|This returns current longitude Phidget GPS is in.|
-|fixed|bool|no|This true if the GPS location has been fully determined by the Phidgets GPS.|
+|type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetRFID'|
+|observeBoard|listener|no|This observes the board for any changes and reports inputs.|
+|observeOutputs|listener|no|This observes the board for any outputs and reports their activity.|
+|numberOfOutputs|number|no|This returns the number of outputs on the RFID board.|
+|antennaOn|bool|yes|This controls and reports the power state of the antenna. __1 = on__, __0 = off__. Antenna frequency range : __125Hz__ - __150Hz__. |
+|LEDon|bool|yes|This controls and reports the power state of the onboard LED. __1 = on__, __0 = off__. |
+|lastTag|number|no|This returns the ID of the last detected tag.|
+|tagState|bool|no|This returns the current detection of an RFID tag, __1 = tag detected__, __0 = no tag detected__.|
+|tag2|object|no|This identifies the tag providing the ID as well as the encoding tag. Keys availible are __.protocol__, and __.tag__ which return the value they are respectively named after. |
+|tagLoss2|object|no|This identifies the latest previously identified tag providing the ID as well as the encoding tag. Keys availible are __.protocol__, and __.tag__ which return the value they are respectively named after. |
+
+
 
 ##Getting Started
 
