@@ -31,6 +31,11 @@ The below information lists the parameters, events, and give you further informa
 |accelerationAxisCount|number|no|This returns the number of axes the PhidgetSpatial can measure acceleration on. |
 |magneticFieldMax|number|no|This returns the maximum magnetic field that this axis will report.|
 |magneticFieldMin|number|no|This returns the maximum negative magnetic field that this axis will report.|
+|observeAcceleration|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any acceleration changes and reports their activity.|
+|observeGyro|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any gyroscopic changes and reports their activity.|
+|observeMagneticField|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any changes in magnetic fields and reports their activity.|
+
+
 
 
 
