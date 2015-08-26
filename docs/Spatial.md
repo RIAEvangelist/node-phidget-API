@@ -32,9 +32,14 @@ The below information lists the parameters, events, and give you further informa
 |magneticFieldMax|number|no|This returns the maximum magnetic field that this axis will report.|
 |magneticFieldMin|number|no|This returns the maximum negative magnetic field that this axis will report.|
 |observeAcceleration|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any acceleration changes and reports their activity.|
-|observeGyro|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any gyroscopic changes and reports their activity.|
+|observeGyro|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any changes in angular momentum and reports their activity.|
 |observeMagneticField|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any changes in magnetic fields and reports their activity.|
-
+|acceleration|array|no|This contains three directions of acceleration with [user defined coordinates](http://www.phidgets.com/docs/1044_User_Guide) in __g__.|
+|acceleration|array|no|This contains three directions of acceleration with [user defined coordinates](http://www.phidgets.com/docs/1044_User_Guide) in __g__.|
+|gyro|array|no|This contains three directions of angular momentum with [user defined coordinates](http://www.phidgets.com/docs/1044_User_Guide) in __<sup>o</sup>/s__.|
+|magneticField|array|no|This contains three directions of magnetic field with [user defined coordinates](http://www.phidgets.com/docs/1044_User_Guide) in __G (Gauss)__.|
+|dataRate|number|yes|This controls and reports the rate at which data is acquired.|
+|zeroGyro|function|N/A| This re-zeroes the gyroscope.|
 
 
 
