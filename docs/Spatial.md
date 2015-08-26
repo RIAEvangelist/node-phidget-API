@@ -39,10 +39,9 @@ The below information lists the parameters, events, and give you further informa
 |gyro|array|no|This contains three directions of angular momentum with [user defined coordinates](http://www.phidgets.com/docs/1044_User_Guide) in __<sup>o</sup>/s__.|
 |magneticField|array|no|This contains three directions of magnetic field with [user defined coordinates](http://www.phidgets.com/docs/1044_User_Guide) in __G (Gauss)__.|
 |dataRate|number|yes|This controls and reports the rate at which data is acquired.|
-|zeroGyro|function|N/A| This re-zeroes the gyroscope.|
-
-
-
+|zeroGyro|function|no| This re-zeroes the gyroscope.|
+|setCompassCorrectionParameters|function|no|This function alters the parameters of the compass, paramters are input in the following order: `magfield`, `offset0`, `offset1`, `offset2`, `gain0`, `gain1`, `gain2`, `T0`, `T1`, `T2`, `T3`, `T4`, `T5`.|
+|resetCompassCorrectionParameters|function|no|This function resets the Compass Correction Parameters to default values.|
 
 ##Getting Started
 
