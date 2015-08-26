@@ -1,8 +1,5 @@
 #Phidget RFID Sensor
-
-The PhidgetRFID library makes for intuitive and lightning fast development without any compromise. For a quick start into your RFID project see the [basic RFID example.](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/RFID.js)
-
-ToDo : map out module and describe use
+The PhidgetRFID library makes for intuitive and lightning fast development without any compromise. For a quick start into your GPS project see the __Getting Started__ section.
 
 ##Methods
 
