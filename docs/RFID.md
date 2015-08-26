@@ -31,7 +31,7 @@ The PhidgetRFID library makes for intuitive and lightning fast development witho
 
 Initializing [Phidgets RFID Devices](http://www.phidgets.com/products.php?category=14) can be very easy, here is a basic example to help you get started.
 
-    var Phidget = require('../phidgetapi').RFID;
+    var Phidget = require('phidgetapi').RFID;
 
     var RFID=new Phidget;
 

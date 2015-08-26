@@ -36,7 +36,7 @@ The PhidgetGPS library makes for intuitive and lightning fast development withou
 
 Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?category=5) can be very easy, here is a basic example to help you get started. 
 
-    var Phidget = require('../phidgetapi.js').GPS;
+    var Phidget = require('phidgetapi.js').GPS;
 
     var GPS=new Phidget;
 
