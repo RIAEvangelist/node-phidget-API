@@ -7,8 +7,12 @@ The below information lists the parameters, events, and give you further informa
 
 |Method call|Parameters|Description|
 |---|---|---|
-|phidget.connect|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidget RFID|
-|phidget.whenReady|function() |This executes a function when the Phidgets RFID is ready to be used.|
+|[__phidget__.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidget Spatial|
+|[__phidget__.whenReady](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|function |This executes a function when the Phidgets RFID is ready to be used.|
+|[__phidget__.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
+|__phidget__.observeGyro|'gyro'|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) for the gyroscope on the __Spatial__ board. |
+|__phidget__.observeAcceleration|'accel'|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) for the acceleration sensors on the __Spatial__ board. |
+|__phidget__.observeMagneticField|'mag'|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) for the magnetic sensors on the __Spatial__ board. |
 
 ##Data
  
