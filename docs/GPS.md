@@ -5,27 +5,17 @@ The PhidgetGPS library makes for intuitive and lightning fast development withou
 
 |Method call|Parameters|Description|
 |---|---|---|
-<<<<<<< HEAD
-|[phidget.connect](https://github.com/MaybeRex/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidgets GPS |
-|[phidget.quit](https://github.com/MaybeRex/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
-=======
 |[phidget.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidgets GPS |
 |[phidget.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
 |whenReady|function|This executes a function when the Phidgets GPS is ready to be used.|
->>>>>>> upstream/master
 |observe|function|used for asynchronously observing the changes to the PhidgetGPS position. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 
 ##Data
 
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
-<<<<<<< HEAD
-|type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetGPS'|
-|date.systemOffset|number|no|offset in milliseconds between system current time and the PhidgetGPS timestamp |
-=======
 |type|string|no|'PhidgetGPS'|
 |date.systemOffset|number|no|offset in milliseconds between system current time and the Phidget GPS timestamp |
->>>>>>> upstream/master
 |date.timestamp|timestamp|no|traditional milliseconds from epoch timestamp|
 |date.full|String|no|full local date and time|
 |date.year|number|no|year|
