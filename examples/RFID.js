@@ -4,8 +4,7 @@ var RFID=new Phidget;
 
 RFID.observeBoard(update);
 
-RFID.phidget.on(
-    'phidgetReady',
+RFID.whenReady(
     function(){
         //turn on the antenna when available and blink the LED so we know it is ready.
         RFID.antennaOn=1;

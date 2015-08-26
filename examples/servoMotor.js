@@ -5,23 +5,22 @@ var motor;
 
 servo.observe(moved)
 
-servo.phidget.on(
-    'phidgetReady',
-    function(){
-        servo.engaged[0]=1; //turn motor on, automatic on most servos
-        servo.positions[0]=0; //zero motor position
+servo.whenReady(init);
 
-        setTimeout(
-            moveTo180,
-            500
-        );
+function init(){
+    servo.engaged[0]=1; //turn motor on, automatic on most servos
+    servo.positions[0]=0; //zero motor position
 
-        setTimeout(
-            powerdown,
-            1000
-        );
-    }
-);
+    setTimeout(
+        moveTo180,
+        500
+    );
+
+    setTimeout(
+        powerdown,
+        1000
+    );
+}
 
 function moved(changes){
     console.log('moved to', servo.positions[0]);

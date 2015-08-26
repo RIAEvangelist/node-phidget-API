@@ -15,11 +15,13 @@ For a guide on installing the required libraries and services on your platform, 
 
 ## Installation
 #NPM
-* npm install phidgetapi  
+* ` npm install phidgetapi `
 
-[![phidgetapi npm version](https://badge.fury.io/js/phidgetapi.svg)](https://www.npmjs.com/package/phidgetapi)
+[![Package Quality](http://npm.packagequality.com/shield/phidgetapi.svg)](http://packagequality.com/#?package=phidgetapi) [![phidgetapi npm version](https://badge.fury.io/js/phidgetapi.svg)](https://www.npmjs.com/package/phidgetapi)
 
 [![phidgetapi Package Quality](http://npm.packagequality.com/badge/phidgetapi.png)](https://www.npmjs.com/package/phidgetapi)
+
+[See NPM stats for phidgetapi](http://npm-stat.com/charts.html?package=phidgetapi&author=&from=&to=)
 
 
 #GIT
@@ -36,8 +38,34 @@ OR
 * [Servo Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Servo.md)
 * [Spatial Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Spatial.md)
 
+## Quick Example
+Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phidget-API#module-documentation) above for more info on specific phidget types.
+
+    var Manager = require('phidgetapi').Manager;
+
+    var manager=new Manager;
+
+    manager.observe(update);
+
+    function update(changes){
+        for(var i in changes){
+            var change=changes[i];
+            //see specific info about each phidget
+            //console.log(change);
+        }
+
+        //see latest info on all available phidgets
+        console.log(manager.devices);
+    }
+
+    manager.phidget.connect();
+
 ## ToDo:
 * Support for Phidget authentication
 * Create modules for handling all phidget types
+* document all modules for various Phidgets
 * Create more examples for various Phidgets
 * Write tests for all phidget modules
+
+## Licensed under DBAD license
+See the [DBAD license](https://github.com/philsturgeon/dbad) in your language or our [licence.md](https://github.com/RIAEvangelist/node-phidget-API/blob/master/license.md) file.
