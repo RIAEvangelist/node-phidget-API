@@ -6,7 +6,7 @@ The PhidgetRFID library makes for intuitive and lightning fast development witho
 |Method call|Parameters|Description|
 |---|---|---|
 |phidget.connect|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidget RFID|
-|phidget.whenReady|function|This executes a function when the Phidgets RFID is ready to be used.|
+|whenReady|function|This executes a function when the Phidgets RFID is ready to be used.|
 |observeBoard|function|used for asynchronously observing the changes to the PhidgetRFID board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 |observeOutputs|function|used for asynchronously observing the changes to the Phidget RFID Outputs. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 
