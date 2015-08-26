@@ -22,7 +22,7 @@ The PhidgetRFID library makes for intuitive and lightning fast development witho
 |lastTag|number|no|` ID ` of the last detected tag|
 |tagState|bool|no|RFID tag present : ` 1 ` is Present, ` 0 ` is Not Present|
 |tag2|object|no|Tag info if present ` tag protocol ` + ` tag ID `|
-|tagLoss2|object|no|` ID ` of the last detected tag|
+|tagLoss2|object|no|` tag protocol ` + ` tag ID ` of the last detected tag|
 |outputs|array|yes|state of the outputs ` 1 ` is On, ` 0 ` is Off |
 
 
