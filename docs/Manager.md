@@ -2,8 +2,6 @@
 
 The Phidget Manager library makes for an intuitive and easy way to manage your Phigets devices. For a quick start into your Manager project see the [Getting Started](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Manager.md#GettingStarted) section or jump to this [basic Manager example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/manager.js).
 
-ToDo : map out module and describe use
-
 ##Methods
 
 |Method call|Parameters|Description|
