@@ -29,14 +29,9 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |accelerationAxisCount|number|no|Returns the number of axes the PhidgetSpatial can measure acceleration on. |
 |magneticFieldMax|number|no|Returns constant for maximum magnetic field.|
 |magneticFieldMin|number|no|Returns constant for minumum magnetic field.|
-|observeAcceleration|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any acceleration changes and reports their activity.|
-|observeGyro|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any changes in angular momentum and reports their activity.|
-|observeMagneticField|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any changes in magnetic fields and reports their activity.|
-|acceleration|array|no|This contains three directions of acceleration with [user defined coordinates](http://www.phidgets.com/docs/1044_User_Guide) in __g__.|
-|acceleration|array|no|This contains three directions of acceleration with [user defined coordinates](http://www.phidgets.com/docs/1044_User_Guide) in __g__.|
-|gyro|array|no|This contains three directions of angular momentum with [user defined coordinates](http://www.phidgets.com/docs/1044_User_Guide) in __<sup>o</sup>/s__.|
-|magneticField|array|no|This contains three directions of magnetic field with [user defined coordinates](http://www.phidgets.com/docs/1044_User_Guide) in __G (Gauss)__.|
-|dataRate|number|yes|This controls and reports the rate at which data is acquired.|
+|acceleration|array|no|This contains three directions of acceleration with user defined coordinates in g.|
+|gyro|array|no|This contains three directions of angular momentum with user defined coordinates in degrees/s.|
+|magneticField|array|no|This contains three directions of magnetic field with user defined coordinates in G (Gauss).|
 |zeroGyro|function|no| This re-zeroes the gyroscope.|
 |setCompassCorrectionParameters|function|no|This function alters the parameters of the compass, paramters are input in the following order: `magfield`, `offset0`, `offset1`, `offset2`, `gain0`, `gain1`, `gain2`, `T0`, `T1`, `T2`, `T3`, `T4`, `T5`.|
 |resetCompassCorrectionParameters|function|no|This function resets the Compass Correction Parameters to default values.|
