@@ -12,7 +12,7 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |observeAcceleration|'accel'|used for asynchronously observing the changes to the PhidgetSpatial board's accelerometers. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework. |
 |observeMagneticField|'mag'|used for asynchronously observing the changes to the PhidgetSpatial board's magnetic field sensors. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework. |
 |zeroGyro|N/A| This re-zeroes the gyroscope.|
-|setCompassCorrectionParameters|`magfield`, `offset0`, `offset1`, `offset2`, `gain0`, `gain1`, `gain2`, `T0`, `T1`, `T2`, `T3`, `T4`, `T5`|This function adjusts the parameters of the compass.|
+|setCompassCorrectionParameters|`magfield, offset0, offset1, offset2, gain0, gain1, gain2, T0, T1, T2, T3, T4, T5`|This function adjusts the parameters of the compass.|
 |resetCompassCorrectionParameters|N/A|This function resets the Compass Correction Parameters to default values:`(1,0,0,0,1,1,1,0,0,0,0,0,0)`|
 
 ##Data
