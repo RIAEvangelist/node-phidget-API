@@ -11,6 +11,9 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |observeGyro|'gyro'|used for asynchronously observing the changes to the PhidgetSpatial board's gyroscopic sensors. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 |observeAcceleration|'accel'|used for asynchronously observing the changes to the PhidgetSpatial board's accelerometers. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework. |
 |observeMagneticField|'mag'|used for asynchronously observing the changes to the PhidgetSpatial board's magnetic field sensors. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework. |
+|zeroGyro|N/A| This re-zeroes the gyroscope.|
+|setCompassCorrectionParameters|`magfield`, `offset0`, `offset1`, `offset2`, `gain0`, `gain1`, `gain2`, `T0`, `T1`, `T2`, `T3`, `T4`, `T5`|This function adjusts the parameters of the compass.|
+
 
 ##Data
  
@@ -32,8 +35,11 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |acceleration|array|no|This contains three directions of acceleration with user defined coordinates in g.|
 |gyro|array|no|This contains three directions of angular momentum with user defined coordinates in degrees/s.|
 |magneticField|array|no|This contains three directions of magnetic field with user defined coordinates in G (Gauss).|
-|zeroGyro|function|no| This re-zeroes the gyroscope.|
-|setCompassCorrectionParameters|function|no|This function alters the parameters of the compass, paramters are input in the following order: `magfield`, `offset0`, `offset1`, `offset2`, `gain0`, `gain1`, `gain2`, `T0`, `T1`, `T2`, `T3`, `T4`, `T5`.|
+
+
+
+
+
 |resetCompassCorrectionParameters|function|no|This function resets the Compass Correction Parameters to default values.|
 
 ##Getting Started
