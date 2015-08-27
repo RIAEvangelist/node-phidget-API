@@ -25,8 +25,8 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |angularRateMax|number|no|Returns constant for minimum angular momentum.|
 |angularRateMin|number|no|Returns constant for maximum angular momentum. |
 |dataRate|number|yes|The number of times data is acquired per second. |
-|dataRateMax|number|no|Returns the maximum supported data rate.|
-|dataRateMin|number|no|Returns the minimum supported data rate.|
+|dataRateMax|number|no|Returns the maximum supported data rate in sample/s.|
+|dataRateMin|number|no|Returns the minimum supported data rate in sample/s.|
 |compassAxisCount|number|no|Returns the number of axes the PhidgetSpatial can measure magnetic field strength on. |
 |gyroAxisCount|number|no|Returns the number of axes the PhidgetSpatial can measure angular momentum on. |
 |accelerationAxisCount|number|no|Returns the number of axes the PhidgetSpatial can measure acceleration on. |
