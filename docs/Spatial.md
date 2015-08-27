@@ -22,8 +22,8 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |type|string|no|'PhidgetSpatial'|
 |accelerationMin|number|no|Access to value for minimum acceleration.|
 |accelerationMax|number|no|Access to value for maximum acceleration.|
-|angularRateMax|number|no|Access to value for minimum angular momentum.|
-|angularRateMin|number|no|Access to value for maximum angular momentum.|
+|angularRateMax|number|no|Access to value for minimum angular velocity.|
+|angularRateMin|number|no|Access to value for maximum angular velocity.|
 |dataRate|number|yes|The number of times data is acquired per second. |
 |dataRateMax|number|no|Access to supported max data rate value in sample/s.|
 |dataRateMin|number|no|Access to supported min data rate value in sample/s.|
@@ -33,8 +33,13 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |magneticFieldMax|number|no|Access to value for maximum magnetic field.|
 |magneticFieldMin|number|no|Access to value for maximum magnetic field.|
 |acceleration|array|no|This contains three directions of acceleration in g.|
-|gyro|array|no|This contains three directions of angular momentum degrees/s.|
+|gyro|array|no|This contains three directions of angular velocity degrees/s.|
 |magneticField|array|no|This contains three directions of magnetic field in G (Gauss).|
+
+
+##Defining Coordinates
+
+
 
 
 ##Getting Started
