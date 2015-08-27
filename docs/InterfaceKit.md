@@ -4,3 +4,4 @@ The Phidget Manager library makes for an intuitive and easy way to manage your P
 
 This module will work with all Phidget InterfaceKit I/O boards. Some boards like the relay and signal switching boards may not have inputs, triggers, or data rates, so these fields will be empty when connected to such boards.
 
+ToDo: Methods, Data, and Example documentation
