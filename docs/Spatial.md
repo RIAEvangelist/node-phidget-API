@@ -37,11 +37,6 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |magneticField|array|no|This contains three directions of magnetic field with user defined coordinates in G (Gauss).|
 
 
-
-
-
-|resetCompassCorrectionParameters|function|no|This function resets the Compass Correction Parameters to default values.|
-
 ##Getting Started
 
 Initializing [Phidgets Spatial Devices](http://www.phidgets.com/products.php?category=1) can be very easy, here is a basic example to help you get started.
