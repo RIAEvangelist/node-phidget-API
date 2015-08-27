@@ -1,5 +1,5 @@
 #Phidget Spatial Sensor
-More commonly known as an accelerometer, the PhidgetSpatial library makes for intuitive and lightning fast development without any compromise. All spacial directions must be defined by user, for an in dept guide into this, [see your board's user guide](http://www.phidgets.com/products.php?category=1). For a quick start into your Spatial project see this [basic Manager example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/spatial.js).
+More commonly known as an accelerometer, the PhidgetSpatial library makes for intuitive and lightning fast development without any compromise. All sensors on this board should be primed for accurate use, here are the [acceleration](http://www.phidgets.com/docs/Accelerometer_Primer), [gyroscpic](http://www.phidgets.com/docs/Gyroscope_Primer), and [magnetic field](http://www.phidgets.com/docs/Compass_Primer) primer guides. For a quick start into your Spatial project see this [basic Manager example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/spatial.js).
 
 ##Methods
 
