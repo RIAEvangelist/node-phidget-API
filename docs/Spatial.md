@@ -17,15 +17,15 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
 |type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetSpatial'|
-|accelerationMin|number|no|This returns the maximum negative acceleration that the desired axis will report.|
-|accelerationMax|number|no|This returns the maximum acceleration that the desired axis will report.|
-|angularRateMax|number|no|This returns the maximum angular momentum that the desired axis will report.|
-|angularRateMin|number|no|This returns the maximum angular momentum that the desired axis will report. |
-|dataRate|number|yes|This controls and reports current data rate at which data is being handled. In depth guide [here](http://www.phidgets.com/docs/1044_User_Guide) |
-|dataRateMax|number|no|This returns the maximum supported data rate.|
-|dataRateMin|number|no|is returns the minimum supported data rate.|
-|compassAxisCount|number|no|This returns the number of axes the PhidgetSpatial can measure magnetic field strength on. |
-|gyroAxisCount|number|no|This returns the number of axes the PhidgetSpatial can measure angular momentum on. |
+|accelerationMin|number|no|Returns constant for minimum acceleration.|
+|accelerationMax|number|no|Returns constant for maximum acceleration.|
+|angularRateMax|number|no|Returns constant for minimum angular momentum.|
+|angularRateMin|number|no|Returns constant for maximum angular momentum. |
+|dataRate|number|yes|The number of times data is acquired per second. |
+|dataRateMax|number|no|Returns the maximum supported data rate.|
+|dataRateMin|number|no|Returns the minimum supported data rate.|
+|compassAxisCount|number|no|Returns the number of axes the PhidgetSpatial can measure magnetic field strength on. |
+|gyroAxisCount|number|no|Returns the number of axes the PhidgetSpatial can measure angular momentum on. |
 |accelerationAxisCount|number|no|This returns the number of axes the PhidgetSpatial can measure acceleration on. |
 |magneticFieldMax|number|no|This returns the maximum magnetic field that this axis will report.|
 |magneticFieldMin|number|no|This returns the maximum negative magnetic field that this axis will report.|
