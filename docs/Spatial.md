@@ -25,8 +25,8 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |angularRateMax|number|no|Access to value for minimum angular velocity.|
 |angularRateMin|number|no|Access to value for maximum angular velocity.|
 |dataRate|number|yes|The number of times data is acquired per second. |
-|dataRateMax|number|no|Access to supported max data rate value in sample/s.|
-|dataRateMin|number|no|Access to supported min data rate value in sample/s.|
+|dataRateMax|number|no|Access to supported maximum data rate value in samples/s.|
+|dataRateMin|number|no|Access to supported minimum data rate value in samples/s.|
 |compassAxisCount|number|no|Access to number of magnetic field sensors on your board.|
 |gyroAxisCount|number|no|Access to number of gyroscopic sensors on your board.|
 |accelerationAxisCount|number|no|Access to number of acceleration sensors on your board.|
