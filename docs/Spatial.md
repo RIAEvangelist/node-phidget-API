@@ -26,9 +26,9 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |dataRateMin|number|no|Returns the minimum supported data rate.|
 |compassAxisCount|number|no|Returns the number of axes the PhidgetSpatial can measure magnetic field strength on. |
 |gyroAxisCount|number|no|Returns the number of axes the PhidgetSpatial can measure angular momentum on. |
-|accelerationAxisCount|number|no|This returns the number of axes the PhidgetSpatial can measure acceleration on. |
-|magneticFieldMax|number|no|This returns the maximum magnetic field that this axis will report.|
-|magneticFieldMin|number|no|This returns the maximum negative magnetic field that this axis will report.|
+|accelerationAxisCount|number|no|Returns the number of axes the PhidgetSpatial can measure acceleration on. |
+|magneticFieldMax|number|no|Returns constant for maximum magnetic field.|
+|magneticFieldMin|number|no|Returns constant for minumum magnetic field.|
 |observeAcceleration|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any acceleration changes and reports their activity.|
 |observeGyro|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any changes in angular momentum and reports their activity.|
 |observeMagneticField|listener|no|This [observes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) the PhidgetSpacial for any changes in magnetic fields and reports their activity.|
