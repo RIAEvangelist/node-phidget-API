@@ -19,7 +19,7 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
  
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
-|type|string|no|This is an identifier, Phidget GPS will always return 'PhidgetSpatial'|
+|type|string|no|'PhidgetSpatial'|
 |accelerationMin|number|no|Access to value for minimum acceleration.|
 |accelerationMax|number|no|Access to value for maximum acceleration.|
 |angularRateMax|number|no|Access to value for minimum angular momentum.|
@@ -32,9 +32,9 @@ More commonly known as an accelerometer, the PhidgetSpatial library makes for in
 |accelerationAxisCount|number|no|Access to number of acceleration sensors on your board.|
 |magneticFieldMax|number|no|Access to value for maximum magnetic field.|
 |magneticFieldMin|number|no|Access to value for maximum magnetic field.|
-|acceleration|array|no|This contains three directions of acceleration with user defined coordinates in g.|
-|gyro|array|no|This contains three directions of angular momentum with user defined coordinates in degrees/s.|
-|magneticField|array|no|This contains three directions of magnetic field with user defined coordinates in G (Gauss).|
+|acceleration|array|no|This contains three directions of acceleration in g.|
+|gyro|array|no|This contains three directions of angular momentum degrees/s.|
+|magneticField|array|no|This contains three directions of magnetic field in G (Gauss).|
 
 
 ##Getting Started
