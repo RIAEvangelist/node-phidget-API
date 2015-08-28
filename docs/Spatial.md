@@ -5,15 +5,15 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 
 |Method call|Parameters|Description|
 |---|---|---|
-|[__phidget__.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidget Spatial|
+|[__phidget__.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects the Phidget Spatial|
 |[__phidget__.whenReady](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|function |This executes a function when the Phidgets RFID is ready to be used.|
 |[__phidget__.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
-|observeGyro|gyro|used for asynchronously observing the changes to the PhidgetSpatial board's gyroscopic sensors. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
-|observeAcceleration|accel|used for asynchronously observing the changes to the PhidgetSpatial board's acceleration axes. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework. |
-|observeMagneticField|mag|used for asynchronously observing the changes to the PhidgetSpatial board's magnetic field sensors. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework. |
-|zeroGyro|N/A| This re-zeroes the gyroscope.|
+|observeGyro|gyro|Used for asynchronously observing the changes to the PhidgetSpatial board's gyroscopic sensors. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
+|observeAcceleration|accel|Used for asynchronously observing the changes to the PhidgetSpatial board's acceleration axes. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework. |
+|observeMagneticField|mag|Used for asynchronously observing the changes to the PhidgetSpatial board's magnetic field sensors. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework. |
+|zeroGyro|N/A| Re-zeroes the gyroscope.|
 |setCompassCorrectionParameters|`magfield, offset0, offset1, offset2, gain0, gain1, gain2, T0, T1, T2, T3, T4, T5`|This function adjusts the parameters of the compass.|
-|resetCompassCorrectionParameters|N/A|This function resets the Compass Correction Parameters to default values:`(1,0,0,0,1,1,1,0,0,0,0,0,0)`|
+|resetCompassCorrectionParameters|N/A|Resets the Compass Correction Parameters to default values:`(1,0,0,0,1,1,1,0,0,0,0,0,0)`|
 
 ##Data
  
