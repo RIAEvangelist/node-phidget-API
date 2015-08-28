@@ -1,5 +1,5 @@
 #Phidget Spatial Sensor
-The PhidgetSpatial library makes for intuitive and lightning fast development without any compromise. All sensors on this board should be primed for accurate use, here are the [acceleration](http://www.phidgets.com/docs/Accelerometer_Primer), [gyroscopic](http://www.phidgets.com/docs/Gyroscope_Primer), and [magnetic field](http://www.phidgets.com/docs/Compass_Primer) primer guides. For a quick start into your Spatial project see this [basic Manager example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/spatial.js).
+The PhidgetSpatial library makes for intuitive and lightning fast development without any compromise. All sensors on this board should be primed for accurate use, here are the [acceleration](http://www.phidgets.com/docs/Accelerometer_Primer), [gyroscopic](http://www.phidgets.com/docs/Gyroscope_Primer), and [magnetic field](http://www.phidgets.com/docs/Compass_Primer) primer guides. For a quick start into your Spatial project see this [basic PhidgetSpatial example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/spatial.js).
 
 ##Methods
 
