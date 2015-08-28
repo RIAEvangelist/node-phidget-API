@@ -20,18 +20,18 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
 |type|string|no|'PhidgetSpatial'|
-|accelerationMin|number|no|Access to value for minimum acceleration.|
-|accelerationMax|number|no|Access to value for maximum acceleration.|
-|angularRateMax|number|no|Access to value for minimum angular velocity.|
-|angularRateMin|number|no|Access to value for maximum angular velocity.|
+|accelerationMin|number|no|Minimum acceleration.|
+|accelerationMax|number|no|Maximum acceleration.|
+|angularRateMax|number|no|Minimum angular velocity.|
+|angularRateMin|number|no|Maximum angular velocity.|
 |dataRate|number|yes|The number of times data is acquired per second. |
-|dataRateMax|number|no|Access to supported maximum data rate value in samples/s.|
-|dataRateMin|number|no|Access to supported minimum data rate value in samples/s.|
-|compassAxisCount|number|no|Access to number of magnetic field sensors on your board.|
-|gyroAxisCount|number|no|Access to number of gyroscopic sensors on your board.|
-|accelerationAxisCount|number|no|Access to number of acceleration sensors on your board.|
-|magneticFieldMax|number|no|Access to value for maximum magnetic field.|
-|magneticFieldMin|number|no|Access to value for maximum magnetic field.|
+|dataRateMax|number|no|Maximum data rate in samples/s.|
+|dataRateMin|number|no|Minimum data rate in samples/s.|
+|compassAxisCount|number|no|Number of magnetic field sensors on your board.|
+|gyroAxisCount|number|no|Number of gyroscopic sensors on your board.|
+|accelerationAxisCount|number|no|Number of acceleration sensors on your board.|
+|magneticFieldMax|number|no|Maximum magnetic field in G (Gauss).|
+|magneticFieldMin|number|no|Minimum magnetic field in G (Gauss).|
 |acceleration|array|no|This contains three directions of acceleration in g.|
 |gyro|array|no|This contains three directions of angular velocity degrees/s.|
 |magneticField|array|no|This contains three directions of magnetic field in G (Gauss).|
