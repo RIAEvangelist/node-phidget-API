@@ -1,5 +1,12 @@
-# nodejs Phidgets API
-_A node.JS API for interacting with all official Phidget boards as well as your own analog sensors_. This module is compatible with all operating systems which can run node.js. phidgetsapi is perfect for projects using BeagleBone Black and Raspberry Pi too!
+# nodejs & io.js based Phidgets API
+_A node.js and io.js based API for interacting with your own analog sensors and [all official Phidget boards and sensors](http://www.phidgets.com/)_. This module is compatible with all operating systems which can run node.js or io.js. phidgetsapi is perfect for projects using BeagleBone Black and Raspberry Pi too!
+
+# Known supported platforms
+
+1. [node.js](nodejs.org)
+2. [io.js](https://iojs.org/en/index.html)
+3. [nw.js formerly node-webkit](http://nwjs.io/) : [nw.js github](https://github.com/nwjs/nw.js)
+4. [atom electron formerly atom shell](http://electron.atom.io/) [electron github](https://github.com/atom/electron)
 
 ## PHIDGETS
 [Phidget boards](https://www.phidgets.com/) are a great prototyping tool which can handle digital inputs and outputs, along with a great array of analog sensors (RFID, temperature, accelerometer, servo motors etc).
