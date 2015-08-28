@@ -11,11 +11,12 @@ This project assumes you have the Phidget server up and running for your OS. If 
 2. [Mac OS X](http://www.phidgets.com/docs/OS_-_OS_X)
 3. [Windows](http://www.phidgets.com/docs/OS_-_Windows)
 
+
 For most "regular" (USB) Phidget boards, that assumes that the computer or SBC (BeagleBone Black, Raspberry Pi etc.) you have connected to the Phidget board via USB has the webservice up and running.  For stand-alone Phidget micro-computers (phidgetsbc), this assumes you have configured the server via the web portal.  You will be connecting to the Phidget server via TCP, so be sure you can access the server from the machine running this project.
 
 If you are staring from the command line it will look something like this, __you can add -v if you want to see some more verbose logging from the service__.
 
-[Linux phidget webservice info](http://www.phidgets.com/docs/OS_-_Linux#Using_the_WebService)
+[Linux phidget webservice info](http://www.phidgets.com/docs/OS_-_Linux#Using_the_WebService)  
 [Mac phidget webservice info](http://www.phidgets.com/docs/OS_-_OS_X#Using_the_WebService)
 
     sudo phidgetswbservice21
@@ -31,7 +32,7 @@ For a guide on installing the required libraries and services on your platform, 
 3. [Windows](http://www.phidgets.com/docs/OS_-_Windows)
 
 ## Installation
-#NPM
+# NPM
 * ` npm install phidgetapi `
 
 [![Package Quality](http://npm.packagequality.com/shield/phidgetapi.svg)](http://packagequality.com/#?package=phidgetapi) [![phidgetapi npm version](https://badge.fury.io/js/phidgetapi.svg)](https://www.npmjs.com/package/phidgetapi)
@@ -41,7 +42,7 @@ For a guide on installing the required libraries and services on your platform, 
 [See NPM stats for phidgetapi](http://npm-stat.com/charts.html?package=phidgetapi&author=&from=&to=)
 
 
-#GIT
+# GIT
 * git clone git://github.com/RIAEvangelist/node-phidget-API.git
 OR
 * git clone https://github.com/RIAEvangelist/node-phidget-API.git
