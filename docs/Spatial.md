@@ -29,7 +29,7 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |acceleration|array|no|three axes of acceleration in g|
 |angularRateMax|number|no|Minimum rotational speed in degrees per second |
 |angularRateMin|number|no|Maximum rotational speed in degrees per second|
-|gyroAxisCount|number|no|Number of gyroscopic sensor|
+|gyroAxisCount|number|no|Number of gyroscopic sensors|
 |gyro|array|no|three axes of rotational speed in degrees per second|
 |magneticFieldMax|number|no|Maximum magnetic field in Gauss|
 |magneticFieldMin|number|no|Minimum magnetic field in Gauss|
