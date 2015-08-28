@@ -25,15 +25,15 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |angularRateMax|number|no|Minimum angular velocity.|
 |angularRateMin|number|no|Maximum angular velocity.|
 |dataRate|number|yes|The number of times data is acquired per second. |
-|dataRateMax|number|no|Maximum data rate in samples/s.|
-|dataRateMin|number|no|Minimum data rate in samples/s.|
+|dataRateMax|number|no|Maximum data rate in samples per second.|
+|dataRateMin|number|no|Minimum data rate in samples per second.|
 |compassAxisCount|number|no|Number of magnetic field sensors on your board.|
 |gyroAxisCount|number|no|Number of gyroscopic sensors on your board.|
 |accelerationAxisCount|number|no|Number of acceleration sensors on your board.|
 |magneticFieldMax|number|no|Maximum magnetic field in G (Gauss).|
 |magneticFieldMin|number|no|Minimum magnetic field in G (Gauss).|
 |acceleration|array|no|Contains three directions of acceleration in g.|
-|gyro|array|no|Contains three directions of angular velocity degrees/s.|
+|gyro|array|no|Contains three directions of angular velocity degrees per second.|
 |magneticField|array|no|Contains three directions of magnetic field in G (Gauss).|
 
 ##Getting Started
