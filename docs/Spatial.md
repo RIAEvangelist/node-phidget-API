@@ -30,11 +30,11 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |compassAxisCount|number|no|Number of magnetic field sensors on your board.|
 |gyroAxisCount|number|no|Number of gyroscopic sensors on your board.|
 |accelerationAxisCount|number|no|Number of acceleration sensors on your board.|
-|magneticFieldMax|number|no|Maximum magnetic field in G (Gauss).|
-|magneticFieldMin|number|no|Minimum magnetic field in G (Gauss).|
-|acceleration|array|no|Contains three directions of acceleration in g.|
-|gyro|array|no|Contains three directions of angular velocity degrees per second.|
-|magneticField|array|no|Contains three directions of magnetic field in G (Gauss).|
+|magneticFieldMax|number|no|Maximum magnetic field in Gauss.|
+|magneticFieldMin|number|no|Minimum magnetic field in Gauss.|
+|acceleration|array|no|three axes of acceleration in g.|
+|gyro|array|no|three axes of angular velocity degrees per second.|
+|magneticField|array|no|three axes of magnetic field in Gauss.|
 
 ##Getting Started
 
