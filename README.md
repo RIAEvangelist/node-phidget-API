@@ -5,8 +5,8 @@ _A node.js and io.js based API for interacting with your own analog sensors and 
 
 1. [node.js](nodejs.org)
 2. [io.js](https://iojs.org/en/index.html)
-3. [nw.js formerly node-webkit](http://nwjs.io/) : [nw.js github](https://github.com/nwjs/nw.js)
-4. [atom electron formerly atom shell](http://electron.atom.io/) [electron github](https://github.com/atom/electron)
+3. [nw.js formerly node-webkit](http://nwjs.io/) __->__ [nw.js github](https://github.com/nwjs/nw.js)
+4. [atom electron formerly atom shell](http://electron.atom.io/) __->__ [electron github](https://github.com/atom/electron)
 
 ## PHIDGETS
 [Phidget boards](https://www.phidgets.com/) are a great prototyping tool which can handle digital inputs and outputs, along with a great array of analog sensors (RFID, temperature, accelerometer, servo motors etc).
