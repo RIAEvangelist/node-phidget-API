@@ -1,8 +1,15 @@
-# nodejs Phidgets API
-_A node.JS API for interacting with all official Phidget boards as well as your own analog sensors_. This module is compatible with all operating systems which can run node.js. phidgetsapi is perfect for projects using BeagleBone Black and Raspberry Pi too!
+# Phidgets API for javascript!
+_A node.js and io.js based API for interacting with your own analog sensors and [all official Phidget boards and sensors](http://www.phidgets.com/)_. This module is compatible with all operating systems which can run node.js or io.js. phidgetsapi is perfect for projects using BeagleBone Black and Raspberry Pi too!
 
-## PHIDGETS
-[Phidget boards](https://www.phidgets.com/) are a great prototyping tool which can handle digital inputs and outputs, along with a great array of analog sensors (RFID, temperature, accelerometer, servo motors etc).
+# Known supported platforms
+
+1. [node.js](nodejs.org)
+2. [io.js](https://iojs.org/en/index.html)
+3. [nw.js formerly node-webkit](http://nwjs.io/) __->__ [nw.js github](https://github.com/nwjs/nw.js)
+4. [atom electron formerly atom shell](http://electron.atom.io/) __->__ [electron github](https://github.com/atom/electron)
+
+## Phidgets
+[Phidget boards](https://www.phidgets.com/) are a great prototyping tool which can handle digital inputs and outputs, along with a great array of analog sensors (RFID, temperature, accelerometer, servo motors etc). They make learning even easier and more fun than arduino. Prototyping is rediculiously easy with phidgets and the [Phidget SBC](http://www.phidgets.com/products.php?category=21), [Beaglebone Black](http://www.adafruit.com/category/75?gclid=CJHs6o38yscCFYlafgodfKUEvQ) or [Raspberry Pi](http://www.adafruit.com/category/105).
 
 ## Phidget Server Requirement
 This project assumes you have the Phidget server up and running for your OS. If you need to do that yet, you can check out the info for your system at one of these links.
@@ -57,7 +64,7 @@ OR
 * [Spatial Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Spatial.md)
 
 ## Quick Example
-Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phidget-API#module-documentation) above for more info on specific phidget types.
+Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phidget-API/tree/master/docs) above for more info on specific phidget types.
 
     var Manager = require('phidgetapi').Manager;
 
