@@ -20,21 +20,22 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
 |type|string|no|'PhidgetSpatial'|
-|accelerationMin|number|no|Minimum acceleration.|
-|accelerationMax|number|no|Maximum acceleration.|
-|angularRateMax|number|no|Minimum angular velocity.|
-|angularRateMin|number|no|Maximum angular velocity.|
-|dataRate|number|yes|The number of times data is acquired per second. |
-|dataRateMax|number|no|Maximum data rate in samples per second.|
-|dataRateMin|number|no|Minimum data rate in samples per second.|
-|compassAxisCount|number|no|Number of magnetic field sensors on your board.|
-|gyroAxisCount|number|no|Number of gyroscopic sensors on your board.|
-|accelerationAxisCount|number|no|Number of acceleration sensors on your board.|
-|magneticFieldMax|number|no|Maximum magnetic field in Gauss.|
-|magneticFieldMin|number|no|Minimum magnetic field in Gauss.|
-|acceleration|array|no|three axes of acceleration in g.|
-|gyro|array|no|three axes of angular velocity degrees per second.|
-|magneticField|array|no|three axes of magnetic field in Gauss.|
+|dataRateMax|number|no|Maximum data rate in samples per second|
+|dataRateMin|number|no|Minimum data rate in samples per second|
+|dataRate|number|yes|The number of times data is acquired per second|
+|accelerationMin|number|no|Minimum acceleration in g|
+|accelerationMax|number|no|Maximum acceleration in g|
+|accelerationAxisCount|number|no|Number of acceleration sensors|
+|acceleration|array|no|three axes of acceleration in g|
+|angularRateMax|number|no|Minimum rotational speed in degrees per second |
+|angularRateMin|number|no|Maximum rotational speed in degrees per second|
+|gyroAxisCount|number|no|Number of gyroscopic sensor|
+|gyro|array|no|three axes of rotational speed in degrees per second|
+|magneticFieldMax|number|no|Maximum magnetic field in Gauss|
+|magneticFieldMin|number|no|Minimum magnetic field in Gauss|
+|compassAxisCount|number|no|Number of magnetic field sensors|
+|magneticField|array|no|three axes of magnetic field in Gauss|
+
 
 ##Getting Started
 
