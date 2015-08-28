@@ -5,8 +5,25 @@ _A node.JS API for interacting with all official Phidget boards as well as your 
 [Phidget boards](https://www.phidgets.com/) are a great prototyping tool which can handle digital inputs and outputs, along with a great array of analog sensors (RFID, temperature, accelerometer, servo motors etc).
 
 ## Phidget Server Requirement
-This project assumes you have the Phidget server up and running.  For most "regular" (USB) Phidget boards, that assumes that the computer or SBC (BeagleBone Black, Raspberry Pi etc.) you have connected to the Phidget board via USB has the webservice up and running.  For stand-alone Phidget micro-computers (phidgetsbc), this assumes you have configured the server via the web portal.  You will be connecting to the Phidget server via TCP, so be sure you can access the server from the machine running this project.
+This project assumes you have the Phidget server up and running for your OS. If you need to do that yet, you can check out the info for your system at one of these links.
 
+1. [Linux](http://www.phidgets.com/docs/OS_-_Linux)
+2. [Mac OS X](http://www.phidgets.com/docs/OS_-_OS_X)
+3. [Windows](http://www.phidgets.com/docs/OS_-_Windows)
+
+For most "regular" (USB) Phidget boards, that assumes that the computer or SBC (BeagleBone Black, Raspberry Pi etc.) you have connected to the Phidget board via USB has the webservice up and running.  For stand-alone Phidget micro-computers (phidgetsbc), this assumes you have configured the server via the web portal.  You will be connecting to the Phidget server via TCP, so be sure you can access the server from the machine running this project.
+
+If you are staring from the command line it will look something like this, __you can add -v if you want to see some more verbose logging from the service__.
+
+[Linux phidget webservice info](http://www.phidgets.com/docs/OS_-_Linux#Using_the_WebService)
+[Mac phidget webservice info](http://www.phidgets.com/docs/OS_-_OS_X#Using_the_WebService)
+
+    sudo phidgetswbservice21
+
+[Windows  phidget webservice info](http://www.phidgets.com/docs/OS_-_Windows#Using_the_WebService)
+
+    PhidgetWebservice21
+    
 For a guide on installing the required libraries and services on your platform, see the below wikis
 
 1. [Linux](http://www.phidgets.com/docs/OS_-_Linux)
