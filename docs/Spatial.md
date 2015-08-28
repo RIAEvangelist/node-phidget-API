@@ -40,7 +40,7 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 
 Initializing [Phidgets Spatial Devices](http://www.phidgets.com/products.php?category=1) can be very easy, here is a basic example to help you get started.
 
-    var Phidget = require('../phidgetapi.js').Spatial;
+    var Phidget = require('phidgetapi').Spatial;
 
     var spatial=new Phidget;
     spatial.observeGyro(gyro);
