@@ -64,7 +64,7 @@ OR
 * [Spatial Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Spatial.md)
 
 ## Quick Example
-Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phidget-API#module-documentation) above for more info on specific phidget types.
+Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phidget-API/tree/master/docs) above for more info on specific phidget types.
 
     var Manager = require('phidgetapi').Manager;
 
