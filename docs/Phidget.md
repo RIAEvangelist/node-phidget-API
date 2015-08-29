@@ -90,7 +90,7 @@ example:
     }
 
 ## Example Connecting to a Raw Phidget Interface Kit 8/8/8 
-We designed the [InterfaceKit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/InterfaceKit.md) module so you don't need to do this, but it serves as a good example if you ever want to build a new or custom Phidget module. If you build a module for a Phidget that we don't have, or something you think is usefull, __PLEASE__ feel free to submit a pull request! We love open source contributions and want to make the best API together!
+We designed the [InterfaceKit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/InterfaceKit.md) module so you don't need to do this, but it serves as a good example if you ever want to build a new or custom Phidget module. If you build a module for a Phidget that we don't have, or something you think is useful, __PLEASE__ feel free to submit a pull request! We love open source contributions and want to make the best API together!
 
 	var Phidget = require('phidgetapi').Phidget;
     
