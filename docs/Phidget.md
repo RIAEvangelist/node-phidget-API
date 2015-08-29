@@ -10,7 +10,10 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |phidget.connect|[__phidget__.params object](#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
 |phidget.set|[__phidget__.set object](#setting-information-phidgetset)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. Remember this is case sensative so match that case exactly as it is in the __phidget__.data object for your device.
 |phidget.quit|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
-|phidget.on|"event name", eventHandler| this is how you bind to the phidget devices events.|
+|phidget.on|"event name", eventHandler| This is how you bind to the phidget devices events.|
+|phidget.rate| number | Get or set rate in milliseconds.|
+|phidget.label| number | Get or set label.|
+<!-- Brandon, is it a number for label? hard to tell, its get function has some key prepping but seems to accept a number. Thanks-->
 
 ##Events
 
@@ -23,6 +26,8 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |detached or removed|__phidget__.data|phidget attached|
 |log|String or Err|when rawLog set to true this event will be fired as data comes over the raw phidget socket.|
 |disconnected|N/A| the phidget socket was closed or lost|
+|connected|N/A| the phidget socket was found or connected|
+|data|N/A|phidget data|
 
 ## __phidget__.event object
 |Key|Value Description|
@@ -85,7 +90,7 @@ example:
     }
 
 ## Example Connecting to a Raw Phidget Interface Kit 8/8/8 
-We designed the [InterfaceKit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/InterfaceKit.md) module so you don't need to do this, but it serves as a good example if you ever want to build a new or custom Phidget module. If you build a module for a Phidget that we don't have, or something you think is usefull, __PLEASE__ feel free to submit a pull request! We love open source contributions and want to make the best API together!
+We designed the [InterfaceKit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/InterfaceKit.md) module so you don't need to do this, but it serves as a good example if you ever want to build a new or custom Phidget module. If you build a module for a Phidget that we don't have, or something you think is useful, __PLEASE__ feel free to submit a pull request! We love open source contributions and want to make the best API together!
 
 	var Phidget = require('phidgetapi').Phidget;
     
