@@ -11,6 +11,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |phidget.set|[__phidget__.set object](#setting-information-phidgetset)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. Remember this is case sensative so match that case exactly as it is in the __phidget__.data object for your device.
 |phidget.quit|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
 |phidget.on|"event name", eventHandler| this is how you bind to the phidget devices events.|
+|phidget.rate| number | get or set rate in milliseconds |
 
 ##Events
 
@@ -23,6 +24,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |detached or removed|__phidget__.data|phidget attached|
 |log|String or Err|when rawLog set to true this event will be fired as data comes over the raw phidget socket.|
 |disconnected|N/A| the phidget socket was closed or lost|
+|connected|N/A| the phidget socket was found or connected|
 
 ## __phidget__.event object
 |Key|Value Description|
