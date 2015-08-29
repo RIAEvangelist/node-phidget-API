@@ -11,8 +11,8 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |whenReady|function|This executes a function when the Phidget InterfaceKit is ready to be used.|
 |observeOutputs|outputs|Used for asynchronously observing the digital output changes to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 |observeInputs|inputs|Used for asynchronously observing the digital input changes to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
-|observeSensors|sensors|Used for asynchronously observing the analog input changes to the Phidget InterfaceKit board with a range of `0 - 1024`. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
-|observeRawSensors|rawSensors|Used for asynchronously observing the analog input changes to the Phidget InterfaceKit board with a range of `0 - 4096`. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
+|observeSensors|sensors|Used for asynchronously observing the sensor changes to the Phidget InterfaceKit board with a range of `0 - 1024`. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
+|observeRawSensors|rawSensors|Used for asynchronously observing the sensor changes to the Phidget InterfaceKit board with a range of `0 - 4096`. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 
 ##Data
 
@@ -25,8 +25,8 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |ratiometric|bool|yes|Sets ratiometric setting. [More info](http://www.phidgets.com/docs/Analog_Input_Primer#Ratiometric_Configuration)|
 |outputs|array|yes|Outputs of the InterfaceKit|
 |inputs|array|no|Digital inputs of the InterfaceKit|
-|sensors|array|no|Analog inputs of the InterfaceKit with a range of `0 - 1024`|
-|rawSensors|array|no|Analog inputs of the InterfaceKit with a range of `0 - 4096`|
+|sensors|array|no|sensor values `0 - 1024`|
+|rawSensors|array|no|sensor values `0 - 4096`|
 |triggers|array|yes|Minumum activation for input sensors|
 |datarates|array|yes|Data rates in milliseconds|
 
