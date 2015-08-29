@@ -14,7 +14,22 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |observeSensors|sensors|Used for asynchronously observing the analog input changes with an A to D digitalization of 2<sup>10</sup> to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 |observeRawSensors|rawSensors|Used for asynchronously observing the analog input changes with an A to D digitalization of 2<sup>12</sup> to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 
-#Data
+##Board
+
+Many different kinds of [Interface Boards]() are available. __board__ will give you info about the fetures of your board.
+
+|Array Name| Description|
+|---|---|
+|Output|Outputs available|
+|Input|Digital inputs available|
+|Sensor|Analog inputs available, 2<sup>10</sup>|
+|rawSensor|Analog inputs available, 2<sup>12</sup>|
+|Trigger|Input trigger|
+|DataRate|Data rate in milisecods|
+
+
+
+##Data
 
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
