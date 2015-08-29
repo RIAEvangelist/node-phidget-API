@@ -9,7 +9,7 @@ _A node.js and io.js based API for interacting with your own analog sensors and 
 4. [atom electron formerly atom shell](http://electron.atom.io/) __->__ [electron github](https://github.com/atom/electron)
 
 ## Phidgets
-[Phidget boards](https://www.phidgets.com/) are a great prototyping tool which can handle digital inputs and outputs, along with a great array of analog sensors (RFID, temperature, accelerometer, servo motors etc). They make learning even easier and more fun than arduino. Prototyping is rediculiously easy with phidgets and the [Phidget SBC](http://www.phidgets.com/products.php?category=21), [Beaglebone Black](http://www.adafruit.com/category/75?gclid=CJHs6o38yscCFYlafgodfKUEvQ) or [Raspberry Pi](http://www.adafruit.com/category/105).
+[Phidget boards](https://www.phidgets.com/) are a great prototyping tool which can handle digital inputs and outputs, along with a great array of analog sensors (RFID, temperature, accelerometer, servo motors etc). They make learning even easier and more fun than arduino. Prototyping is ridiculously easy with phidgets and the [Phidget SBC](http://www.phidgets.com/products.php?category=21), [Beaglebone Black](http://www.adafruit.com/category/75?gclid=CJHs6o38yscCFYlafgodfKUEvQ) or [Raspberry Pi](http://www.adafruit.com/category/105).
 
 ## Phidget Server Requirement
 This project assumes you have the Phidget server up and running for your OS. If you need to do that yet, you can check out the info for your system at one of these links.
