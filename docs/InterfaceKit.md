@@ -23,4 +23,7 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |dataRateMin|number|no|Minimum data rate in samples per second|
 |dataRate|number|yes|The number of times data is acquired per second|
 |ratiometric|bool|yes| __True__ = configures the Analog Inputs to measure relative to VCC (nominal 5V), __False__ = configures the Analog Inputs to measure relative to an internal precision 5V reference|
-|accelerationMax|number|no|Maximum acceleration in g|
+|outputs|array|yes|Outputs of the InterfaceKit|
+|inputs|array|no|Digital inputs of the InterfaceKit|
+|sensors|array|no|Analog inputs of the InterfaceKit with 2<sup>10</sup> digitalization|
+|rawSensors|array|no|Analog inputs of the InterfaceKit with 2<sup>12</sup> digitalization|
