@@ -11,23 +11,8 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |whenReady|function|This executes a function when the Phidget InterfaceKit is ready to be used.|
 |observeOutputs|outputs|Used for asynchronously observing the digital output changes to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 |observeInputs|inputs|Used for asynchronously observing the digital input changes to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
-|observeSensors|sensors|Used for asynchronously observing the analog input changes with an A to D digitalization of 2<sup>10</sup> to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
-|observeRawSensors|rawSensors|Used for asynchronously observing the analog input changes with an A to D digitalization of 2<sup>12</sup> to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
-
-##Board
-
-Many different kinds of [Interface Boards](http://www.phidgets.com/products.php?category=0) are available. __board__ will give you info about the features of your board.
-
-|Array Name| Description|
-|---|---|
-|Output|Outputs available|
-|Input|Digital inputs available|
-|Sensor|Analog inputs available, 2<sup>10</sup> digitalization|
-|rawSensor|Analog inputs available, 2<sup>12</sup>digitalization|
-|Trigger|Input triggers available|
-|DataRate|Data rates in milliseconds|
-
-
+|observeSensors|sensors|Used for asynchronously observing the analog input changes to the Phidget InterfaceKit board with a range of `0 - 1024`. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
+|observeRawSensors|rawSensors|Used for asynchronously observing the analog input changes to the Phidget InterfaceKit board with a range of `0 - 4096`. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 
 ##Data
 
@@ -37,11 +22,11 @@ Many different kinds of [Interface Boards](http://www.phidgets.com/products.php?
 |dataRateMax|number|no|Maximum data rate in samples per second|
 |dataRateMin|number|no|Minimum data rate in samples per second|
 |dataRate|number|yes|The number of times data is acquired per second|
-|ratiometric|bool|yes| __True__ = configures the Analog Inputs to measure relative to VCC (nominal 5V), __False__ = configures the Analog Inputs to measure relative to an internal precision 5V reference|
+|ratiometric|bool|yes| `True` = uses onboard power of `5V` for analog measurements, `False` = configures the Analog Inputs to measure with a more precise custom source. [More info](http://www.phidgets.com/docs/Analog_Input_Primer)|
 |outputs|array|yes|Outputs of the InterfaceKit|
 |inputs|array|no|Digital inputs of the InterfaceKit|
-|sensors|array|no|Analog inputs of the InterfaceKit with 2<sup>10</sup> digitalization|
-|rawSensors|array|no|Analog inputs of the InterfaceKit with 2<sup>12</sup> digitalization|
+|sensors|array|no|Analog inputs of the InterfaceKit with a range of `0 - 1024`|
+|rawSensors|array|no|Analog inputs of the InterfaceKit with a range of `0 - 4096`|
 |triggers|array|yes|Minumum activation for input sensors|
 |datarates|array|yes|Data rates in milliseconds|
 
@@ -49,7 +34,7 @@ Many different kinds of [Interface Boards](http://www.phidgets.com/products.php?
 
 Initializing [Phidget InterfaceKits](http://www.phidgets.com/products.php?category=0) can be very easy, here is a basic example to help you get started.
 
-    var Phidget = require('../phidgetapi').InterfaceKit;
+    var Phidget = require('phidgetapi').InterfaceKit;
 
     var IK=new Phidget;
     /*
