@@ -13,3 +13,14 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |observeInputs|inputs|Used for asynchronously observing the digital input changes to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 |observeSensors|sensors|Used for asynchronously observing the analog input changes with an A to D digitalization of 2<sup>10</sup> to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 |observeRawSensors|rawSensors|Used for asynchronously observing the analog input changes with an A to D digitalization of 2<sup>12</sup> to the Phidget InterfaceKit board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
+
+#Data
+
+|Key|Data Type|Writable|Description|
+|---|---|---|---|
+|type|string|no|'PhidgetInterfaceKit'|
+|dataRateMax|number|no|Maximum data rate in samples per second|
+|dataRateMin|number|no|Minimum data rate in samples per second|
+|dataRate|number|yes|The number of times data is acquired per second|
+|ratiometric|bool|yes| __True__ = configures the Analog Inputs to measure relative to VCC (nominal 5V), __False__ = configures the Analog Inputs to measure relative to an internal precision 5V reference|
+|accelerationMax|number|no|Maximum acceleration in g|
