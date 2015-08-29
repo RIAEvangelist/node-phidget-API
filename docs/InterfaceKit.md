@@ -42,3 +42,5 @@ Many different kinds of [Interface Boards]() are available. __board__ will give 
 |inputs|array|no|Digital inputs of the InterfaceKit|
 |sensors|array|no|Analog inputs of the InterfaceKit with 2<sup>10</sup> digitalization|
 |rawSensors|array|no|Analog inputs of the InterfaceKit with 2<sup>12</sup> digitalization|
+|triggers|array|yes|Minumum activation for input sensors|
+|datarates|array|yes|Data rates in milliseconds|
