@@ -24,8 +24,8 @@ Many different kinds of [Interface Boards](http://www.phidgets.com/products.php?
 |Input|Digital inputs available|
 |Sensor|Analog inputs available, 2<sup>10</sup> digitalization|
 |rawSensor|Analog inputs available, 2<sup>12</sup>digitalization|
-|Trigger|Input trigger|
-|DataRate|Data rate in milliseconds|
+|Trigger|Input triggers available|
+|DataRate|Data rates in milliseconds|
 
 
 
