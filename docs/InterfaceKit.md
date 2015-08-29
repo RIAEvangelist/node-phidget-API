@@ -22,7 +22,7 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |dataRateMax|number|no|Maximum data rate in samples per second|
 |dataRateMin|number|no|Minimum data rate in samples per second|
 |dataRate|number|yes|The number of times data is acquired per second|
-|ratiometric|bool|yes| `True` = uses onboard power of `5V` for analog measurements, `False` = configures the Analog Inputs to measure with a more precise custom source. [More info](http://www.phidgets.com/docs/Analog_Input_Primer)|
+|ratiometric|bool|yes|Sets rediometric detting. [More info](http://www.phidgets.com/docs/Analog_Input_Primer#Ratiometric_Configuration)|
 |outputs|array|yes|Outputs of the InterfaceKit|
 |inputs|array|no|Digital inputs of the InterfaceKit|
 |sensors|array|no|Analog inputs of the InterfaceKit with a range of `0 - 1024`|
