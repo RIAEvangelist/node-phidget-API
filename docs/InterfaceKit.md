@@ -18,7 +18,7 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
-|type|string|no|'PhidgetInterfaceKit'|
+|type|string|no|`'PhidgetInterfaceKit'`|
 |dataRateMax|number|no|Maximum data rate in samples per second|
 |dataRateMin|number|no|Minimum data rate in samples per second|
 |dataRate|number|yes|The number of times data is acquired per second|
