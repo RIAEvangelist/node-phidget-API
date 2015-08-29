@@ -16,7 +16,7 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 
 ##Board
 
-Many different kinds of [Interface Boards]() are available. __board__ will give you info about the fetures of your board.
+Many different kinds of [Interface Boards](http://www.phidgets.com/products.php?category=0) are available. __board__ will give you info about the features of your board.
 
 |Array Name| Description|
 |---|---|
@@ -25,7 +25,7 @@ Many different kinds of [Interface Boards]() are available. __board__ will give 
 |Sensor|Analog inputs available, 2<sup>10</sup> digitalization|
 |rawSensor|Analog inputs available, 2<sup>12</sup>digitalization|
 |Trigger|Input trigger|
-|DataRate|Data rate in milisecods|
+|DataRate|Data rate in milliseconds|
 
 
 
