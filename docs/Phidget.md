@@ -27,6 +27,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |log|String or Err|when rawLog set to true this event will be fired as data comes over the raw phidget socket.|
 |disconnected|N/A| the phidget socket was closed or lost|
 |connected|N/A| the phidget socket was found or connected|
+|data|N/A|phidget data|
 
 ## __phidget__.event object
 |Key|Value Description|
