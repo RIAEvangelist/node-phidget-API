@@ -13,6 +13,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |phidget.on|"event name", eventHandler| This is how you bind to the phidget devices events.|
 |phidget.rate| number | Get or set rate in milliseconds.|
 |phidget.label| number | Get or set label.|
+<!-- Brandon, is it a number for label? hard to tell, its get function has some key prepping but seems to accept a number. Thanks-->
 
 ##Events
 
