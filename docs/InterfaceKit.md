@@ -1,6 +1,6 @@
 #Phidget InterfaceKit Boards
 
-The PhidgetInterfaceKit library makes for intuitive and lightning fast development without any compromise to any [Phidget InterfaceBoard](http://www.phidgets.com/products.php?category=0). For accurate use, see the [analog input](http://www.phidgets.com/docs/Analog_Input_Primer), [digital input](http://www.phidgets.com/docs/Digital_Input_Primer), and [digital output](http://www.phidgets.com/docs/Digital_Output_Primer) primers. For a quick start into your InterfaceKit project, see this [basic InterfaceKit example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/InterfaceKit.js).
+The PhidgetInterfaceKit library makes for intuitive and lightning fast development without any compromise to any [Phidget InterfaceBoard](http://www.phidgets.com/products.php?category=0). For accurate use, see the [sensors](http://www.phidgets.com/docs/Analog_Input_Primer), [digital inputs](http://www.phidgets.com/docs/Digital_Input_Primer), and [digital outputs](http://www.phidgets.com/docs/Digital_Output_Primer) primers. For a quick start into your InterfaceKit project, see this [basic InterfaceKit example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/InterfaceKit.js).
 
 ##Methods
 
