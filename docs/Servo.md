@@ -12,7 +12,7 @@ The PhidgetServo library makes for intuitive and lightning fast development with
 |servoParameters[0].usToDegrees|bool|`true` returns Phidgets raw position data converted to degrees.|
 |servoParameters[1].degreesToUs|bool|`true` returns degrees position data converted to Phidgets raw position data.|
 |servoParameters[2].usToDegreesVels|bool|`true` returns Phidgets raw velocity data converted to degrees per second.|
-|servoParameters[2].degreesToUsVels|bool|`true` returns degrees per second data converted to Phidgets raw velocity data.|
+|servoParameters[3].degreesToUsVels|bool|`true` returns degrees per second data converted to Phidgets raw velocity data.|
 
 
 ##Data
