@@ -10,9 +10,9 @@ The PhidgetServo library makes for intuitive and lightning fast development with
 |whenReady|function|This executes a function when the Phidget Servo is ready to be used.|
 |observe|function|Used for asynchronously observing changes to the Phidget Servo. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 |servoParameters[0].usToDegrees|bool|`true` returns Phidgets raw position data converted to degrees.|
-|servoParameters[1].degreesToUs|bool|`true` returns degrees position data converted to Phidgets raw position data.|
-|servoParameters[2].usToDegreesVels|bool|`true` returns Phidgets raw velocity data converted to degrees per second.|
-|servoParameters[3].degreesToUsVels|bool|`true` returns degrees per second data converted to Phidgets raw velocity data.|
+|servoParameters[0].degreesToUs|bool|`true` returns degrees position data converted to Phidgets raw position data.|
+|servoParameters[0].usToDegreesVels|bool|`true` returns Phidgets raw velocity data converted to degrees per second.|
+|servoParameters[0].degreesToUsVels|bool|`true` returns degrees per second data converted to Phidgets raw velocity data.|
 
 
 ##Data
