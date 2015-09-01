@@ -1,5 +1,5 @@
 #Phidget Spatial Sensor
-The PhidgetServo library makes for intuitive and lightning fast development without any compromise. Servos can be primed for more accurate use, [here is the Servo Primer Guide](http://www.phidgets.com/docs/Servo_Motor_and_Controller_Primer). For a quick start into your Spatial project see this [basic PhidgetServo example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/servoMotor.js).
+The PhidgetServo library makes for intuitive and lightning fast development without any compromise. For a quick start into your Spatial project see this [basic PhidgetServo example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/servoMotor.js).S
 
 ##Methods
 
@@ -16,13 +16,13 @@ The PhidgetServo library makes for intuitive and lightning fast development with
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
 |type|string|no|`'PhidgetServo'`|
-|positionMaxLimit|number|no|Upper Position Limit|
-|positionMinLimit|number|no|Lower Position Limit|
+|positionMaxLimit|number|no|Global upper position Limit|
+|positionMinLimit|number|no|Global lower position Limit|
 |numberOfMotors|number|no|Number of motors|
-|engaged|array|yes|Power state of motors|
+|engaged|array|yes|Power state of motors: `1` = on, `0` = off|
 |positions|array|yes|Position of motors|
-|positionMax|array|no|Max position of servos|
-|positionMin|array|no|Min position of servos|
+|positionMax|array|no|Max position of each servo|
+|positionMin|array|no|Min position of each servo|
 |servoParameters|array|no|Parameters of Servos|
 
 ##Getting Started
