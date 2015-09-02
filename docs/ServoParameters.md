@@ -13,4 +13,6 @@ Each PhidgetServo will have its own set of parameters. Documentation for [Phidge
 |servoParameters[index].usToDegreesVels|bool|`true` returns current Phidgets raw velocity data converted to degrees per second.|
 |servoParameters{index].degreesToUsVels|bool|`true` returns current degrees per second data converted to Phidgets raw velocity data.|
 
-TODO: Add the rest of the Series of servos
+###Series 3500-4000
+
+To Do: Document method calls for linear actuators. 
