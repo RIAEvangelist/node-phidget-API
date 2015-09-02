@@ -20,9 +20,9 @@ The PhidgetServo library makes for intuitive and lightning fast development with
 |positionMinLimit|number|no|Global lower position Limit in `degrees`|
 |numberOfMotors|number|no|Number of motors|
 |engaged|array|yes|Power state of motors: `1` = on, `0` = off|
-|positions|array|yes|Position of each motor in `degrees`|
-|positionMax|array|no|Max position of each servo in `degrees`|
-|positionMin|array|no|Min position of each servo in `degrees`|
+|positions|array|yes|Position of each motor in degrees|
+|positionMax|array|no|Max position of each servo in degrees|
+|positionMin|array|no|Min position of each servo in degrees|
 |[servoParameters](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/ServoParameters.md)|array|no|ServoParams for each motor [see here](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/ServoParameters.md)|
 
 
