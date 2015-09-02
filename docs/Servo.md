@@ -9,10 +9,6 @@ The PhidgetServo library makes for intuitive and lightning fast development with
 |[phidget.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the phidget device.  The disconnected event will be dispatched when the connection has been successfully disconnected.|
 |whenReady|function|This executes a function when the Phidget Servo is ready to be used.|
 |observe|function|Used for asynchronously observing changes to the Phidget Servo. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
-|servoParameters[0].usToDegrees|bool|`true` returns current Phidgets raw position data converted to degrees.|
-|servoParameters[0].degreesToUs|bool|`true` returns current degrees position data converted to Phidgets raw position data.|
-|servoParameters[0].usToDegreesVels|bool|`true` returns current Phidgets raw velocity data converted to degrees per second.|
-|servoParameters[0].degreesToUsVels|bool|`true` returns current degrees per second data converted to Phidgets raw velocity data.|
 
 
 ##Data
@@ -27,6 +23,7 @@ The PhidgetServo library makes for intuitive and lightning fast development with
 |positions|array|yes|Position of each motor in `degrees`|
 |positionMax|array|no|Max position of each servo in `degrees`|
 |positionMin|array|no|Min position of each servo in `degrees`|
+|[servoParameters](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/ServoParameters.md)|array|no|ServoParams for each motor [see here](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/ServoParameters.md)|
 
 
 ##Getting Started
