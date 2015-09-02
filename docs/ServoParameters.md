@@ -4,7 +4,7 @@ Each PhidgetServo will have its own set of parameters. Documentation for [Phidge
 
 ##Methods
 
-###Series 3000 Servos
+###Series 3000-3499 Servos
 
 |Method call|Parameters|Description|
 |---|---|---|
