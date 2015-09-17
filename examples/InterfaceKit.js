@@ -22,7 +22,7 @@ IK.phidget.connect({rawLog:true});
 
 function init(){
 
-        IK.phidget.rate=71;
+        IK.phidget.label='test-board-4';
     //do some initial set up here... like blinking an led.
     setInterval(
         function(){
