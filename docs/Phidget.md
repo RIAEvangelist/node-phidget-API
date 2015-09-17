@@ -23,7 +23,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 
 |Event name| Paramaters| Description |
 |---|---|---|
-|phidgetReady|N/A|the phidget is attached and fully initialized|
+|phidgetReady|N/A|the phidget is attached and fully initialized. __if you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a phidget is detached and re attached__|
 |error|{ message:String, type:String  }|emitted whenever a phidget may have an error, or when it can not handle your request|
 |changed|__phidget__.event|emitted whenever a phidget or sensor has data which has changed.|
 |attached|__phidget__.data|phidget attached to computer|
