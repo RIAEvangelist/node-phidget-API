@@ -22,7 +22,7 @@ function init(){
     setInterval(
         function(){
             if(IK.outputs[0]==0){
-                IK.outputs[0]=1;
+                IK.outputs[0]=10;
             }else{
                 IK.outputs[0]=0;
             }
