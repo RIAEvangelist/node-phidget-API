@@ -24,8 +24,8 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |phidgetReady|N/A|the phidget is attached and fully initialized|
 |error|{ message:String, type:String  }|emitted whenever a phidget may have an error, or when it can not handle your request|
 |changed|__phidget__.event|emitted whenever a phidget or sensor has data which has changed.|
-|adding|__phidget__.data|phidget attached to computer|
-|removing|__phidget__.data|phidget removed from computer|
+|attached|__phidget__.data|phidget attached to computer|
+|detached|__phidget__.data|phidget detached from computer|
 |log|String or Err|when rawLog set to true this event will be fired as data comes over the raw phidget socket.|
 |disconnected|N/A| the phidget socket was closed or lost|
 |connected|N/A| the phidget socket was found or connected|
