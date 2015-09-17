@@ -7,12 +7,12 @@ The PhidgetRFID library makes for intuitive and lightning fast development witho
 |---|---|---|
 |[phidget.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects the Phidget RFID|
 |[phidget.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
-|whenReady|function|This executes a function when the Phidgets RFID is ready to be used.|
+|whenReady|function|This executes a function when the Phidgets RFID is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a phidget is detached and re attached__|
 |observeBoard|function|Used for asynchronously observing the changes to the PhidgetRFID board. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 |observeOutputs|function|Used for asynchronously observing the changes to the Phidget RFID Outputs. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 
 ##Data
- 
+
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
 |type|string|no|'PhidgetRFID'|

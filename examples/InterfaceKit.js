@@ -15,9 +15,10 @@ IK.observeRawSensors(rawSensors);
 
 IK.whenReady(init);
 
+IK.phidget.connect();
 
 function init(){
-
+    console.log('init');
     //do some initial set up here... like blinking an led.
     setInterval(
         function(){

@@ -6,7 +6,7 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |Method call|Parameters|Description|
 |---|---|---|
 |[__phidget__.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects the Phidget Spatial|
-|[__phidget__.whenReady](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|function |This executes a function when the Phidgets Spatial is ready to be used.|
+|[__phidget__.whenReady](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|function |This executes a function when the Phidgets Spatial is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a phidget is detached and re attached__|
 |[__phidget__.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
 |observeGyro|gyro|Used for asynchronously observing the changes to the PhidgetSpatial board's gyroscopic sensors. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
 |observeAcceleration|accel|Used for asynchronously observing the changes to the PhidgetSpatial board's acceleration axes. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework. |
@@ -16,7 +16,7 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |resetCompassCorrectionParameters|N/A|Resets the Compass Correction Parameters to default values:`(1,0,0,0,1,1,1,0,0,0,0,0,0)`|
 
 ##Data
- 
+
 |Key|Data Type|Writable|Description|
 |---|---|---|---|
 |type|string|no|'PhidgetSpatial'|
