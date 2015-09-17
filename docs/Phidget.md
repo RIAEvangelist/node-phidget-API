@@ -10,7 +10,9 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |phidget.connect|[__phidget__.params object](#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
 |phidget.set|[__phidget__.set object](#setting-information-phidgetset)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. Remember this is case sensative so match that case exactly as it is in the __phidget__.data object for your device.
 |phidget.quit|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
-|phidget.on|"event name", eventHandler| This is how you bind to the phidget devices events.|
+|phidget.on|"event name", eventHandler| Bind an event listener.|
+|phidget.addListener|"event name", eventHandler| Bind an event listener.|
+|phidget.removeListener|"event name", eventHandler| Unbind an event listener.|
 |phidget.rate| number | Get or set rate in milliseconds.|
 |phidget.label| number | Get or set label.|
 <!-- Brandon, is it a number for label? hard to tell, its get function has some key prepping but seems to accept a number. Thanks-->
@@ -22,8 +24,8 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |phidgetReady|N/A|the phidget is attached and fully initialized|
 |error|{ message:String, type:String  }|emitted whenever a phidget may have an error, or when it can not handle your request|
 |changed|__phidget__.event|emitted whenever a phidget or sensor has data which has changed.|
-|attached or added|__phidget__.data|phidget attached|
-|detached or removed|__phidget__.data|phidget attached|
+|attached|__phidget__.data|phidget attached to computer|
+|detached|__phidget__.data|phidget detached from computer|
 |log|String or Err|when rawLog set to true this event will be fired as data comes over the raw phidget socket.|
 |disconnected|N/A| the phidget socket was closed or lost|
 |connected|N/A| the phidget socket was found or connected|
