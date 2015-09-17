@@ -2,7 +2,6 @@
 
 The PhidgetsAPI package exposes a few different ways of interacting with your Phidgets. You can use the below information to create low level or custom Phidget Modules. If you create anything you think others would like, ***Please do a pull request!*** Your rockstar work could help others too. And we would be happy to help you help others!
 
-
 ## Methods
 
 |Method call|Parameters|Description|
@@ -13,9 +12,12 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |phidget.on|"event name", eventHandler| Bind an event listener.|
 |phidget.addListener|"event name", eventHandler| Bind an event listener.|
 |phidget.removeListener|"event name", eventHandler| Unbind an event listener.|
+
+## Data
+|Name|Type|Description|
+|---|---|---|
 |phidget.rate| number | Get or set rate in milliseconds.|
-|phidget.label| number | Get or set label.|
-<!-- Brandon, is it a number for label? hard to tell, its get function has some key prepping but seems to accept a number. Thanks-->
+|phidget.label| number or string | Get or set label.|
 
 ##Events
 
