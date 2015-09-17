@@ -12,7 +12,9 @@
   "engines": {
     "node": ">=0.11.13"
   },
-  "dependencies": {},
+  "dependencies": {
+    "event-pubsub": "^1.0.3"
+  },
   "scripts": {},
   "devDependencies": {},
   "optionalDependencies": {},

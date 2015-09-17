@@ -14,5 +14,5 @@ function update(changes){
     //see latest info on all available phidgets
     console.log(manager.devices);
 }
-
+manager.phidget.on('log',function(data){console.log(data)})
 manager.phidget.connect();
