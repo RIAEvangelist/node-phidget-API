@@ -18,11 +18,12 @@ IK.whenReady(init);
 IK.phidget.connect();
 
 function init(){
+    
     //do some initial set up here... like blinking an led.
     setInterval(
         function(){
             if(IK.outputs[0]==0){
-                IK.outputs[0]=10;
+                IK.outputs[0]=1;
             }else{
                 IK.outputs[0]=0;
             }
