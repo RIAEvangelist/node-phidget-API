@@ -40,7 +40,7 @@ describe(
 
 
                 function checkAttachDevice(data){
-                    console.log('fuck yeah im attached',data);
+                    console.log('yeah im attached',data);
                 }
 
                 function checkConnect(){
