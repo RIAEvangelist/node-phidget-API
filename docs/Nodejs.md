@@ -42,3 +42,6 @@ Node.Js is available on all platforms including both 64 and 32 bit architecture:
 ## Get Involved
 
 The Node.js community is ever expanding and vast, to join the discussion, see the latest of Node.js, or run some tutorials, visit the [Node.js Community Page](https://nodejs.org/en/get-involved/). Happy Phidgeting!
+
+
+ToDo: Add more information on nodejs, maybe on APIs? 
