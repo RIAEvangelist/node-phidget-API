@@ -31,15 +31,15 @@ If you are staring from the command line it will look something like this, __you
 [Windows  phidget webservice info](http://www.phidgets.com/docs/OS_-_Windows#Using_the_WebService)
 
     PhidgetWebservice21
-    
+
 For a guide on installing the required libraries and services on your platform, see the below wikis
 
 1. [Linux](http://www.phidgets.com/docs/OS_-_Linux)
 2. [Mac OS X](http://www.phidgets.com/docs/OS_-_OS_X)
 3. [Windows](http://www.phidgets.com/docs/OS_-_Windows)
 
-## Installation
-# NPM
+# Installation
+## NPM
 * ` npm install phidgetapi `
 
 [![Package Quality](http://npm.packagequality.com/shield/phidgetapi.svg)](http://packagequality.com/#?package=phidgetapi) [![phidgetapi npm version](https://badge.fury.io/js/phidgetapi.svg)](https://www.npmjs.com/package/phidgetapi)
@@ -49,12 +49,12 @@ For a guide on installing the required libraries and services on your platform, 
 [See NPM stats for phidgetapi](http://npm-stat.com/charts.html?package=phidgetapi&author=&from=&to=)
 
 
-# GIT
+## GIT
 * git clone git://github.com/RIAEvangelist/node-phidget-API.git
 OR
 * git clone https://github.com/RIAEvangelist/node-phidget-API.git
 
-#Module Documentation
+## Module Documentation
 * [Core Phidget Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)
 * [Manager Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Manager.md)
 * [GPS Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/GPS.md)
@@ -62,6 +62,10 @@ OR
 * [RFID Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/RFID.md)
 * [Servo Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Servo.md)
 * [Spatial Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Spatial.md)
+
+## Node.Js Documentation
+
+* [Node.js Guide](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/nodejs.md)
 
 ## Quick Example
 Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phidget-API/tree/master/docs) above for more info on specific phidget types.
