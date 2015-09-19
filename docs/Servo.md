@@ -5,10 +5,10 @@ The PhidgetServo library makes for intuitive and lightning fast development with
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
-|[connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects the PhidgetServo|
-|[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the phidget device.  The disconnected event will be dispatched when the connection has been successfully disconnected.|
-|whenReady|function|This executes a function when the Phidget Servo is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a phidget is detached and re attached__|
-|observe|function|Used for asynchronously observing changes to the Phidget Servo. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
+|[phidget.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects the PhidgetServo|
+|[phidget.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget device.  The disconnected event will be dispatched when the connection has been successfully disconnected.|
+|whenReady|function|This executes a function when the Phidget Servo is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a Phidget is detached and re attached__|
+|observe|change handler function|Used for asynchronously observing changes to the Phidget Servo.|
 |[servoParameters](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/ServoParameters.md)|see individual methods|array of [ServoParams Methods](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/ServoParameters.md) for each attached motor|
 
 ##Data

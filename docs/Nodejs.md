@@ -31,9 +31,25 @@ Node.Js is available on all platforms including both 64 and 32 bit architecture:
         `sudo make install`
 
 #### Binaries
+
 * Download the [binary file](https://nodejs.org/en/download/) for your system and run the Installer.
 
 ### Mac OS
+
+#### Source code
+
+* Download and unpack the Node.js Source code [available here](https://nodejs.org/en/download/)
+    * From the main unpacked libraries directory, run:
+
+        `./configure`
+
+        `make`
+
+        `sudo make install`
+
+
+#### Binaries
+
 * Download the [Macintosh Installer](https://nodejs.org/en/download/) for your system and run the Installer.
 
 ### Windows
@@ -44,4 +60,4 @@ Node.Js is available on all platforms including both 64 and 32 bit architecture:
 The Node.js community is ever expanding and vast, to join the discussion, see the latest of Node.js, or run some tutorials, visit the [Node.js Community Page](https://nodejs.org/en/get-involved/). Happy Phidgeting!
 
 
-ToDo: Add more information on nodejs, maybe on APIs? 
+ToDo: Add more information on nodejs, maybe on APIs?
