@@ -11,8 +11,12 @@ Node's non-blocking model makes for a perfect framework to use products like [Ph
 It is advisory to have the latest version of Node.js for best performance of this API.
 
 Node.Js is available on all platforms including both 64 and 32 bit architecture:
+
+
 1. [Linux](https://nodejs.org/en/)
+
 2. [Mac OS](https://nodejs.org/en/)
+
 3. [Widnows](https://nodejs.org/en/)
 
 ### Linux
@@ -37,4 +41,4 @@ Node.Js is available on all platforms including both 64 and 32 bit architecture:
 
 ## Get Involved
 
-The Node.js community is ever expanding and vast, to join the discussion, see the latest of Node.js, or run some tutorials, visit the [Node.js Community Page](https://nodejs.org/en/get-involved/). Happy Phidgeting! 
+The Node.js community is ever expanding and vast, to join the discussion, see the latest of Node.js, or run some tutorials, visit the [Node.js Community Page](https://nodejs.org/en/get-involved/). Happy Phidgeting!
