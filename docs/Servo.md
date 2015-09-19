@@ -1,4 +1,4 @@
-#Phidget Spatial Sensor
+#Phidget Servo
 The PhidgetServo library makes for intuitive and lightning fast development without any compromise. For a quick start into your Spatial project see this [basic PhidgetServo example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/servoMotor.js).
 
 ##Methods

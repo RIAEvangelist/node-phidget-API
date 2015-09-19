@@ -1,19 +1,19 @@
-#Phidget GPS Sensor
+#Phidget GPS
 
-The PhidgetGPS library makes for intuitive and lightning fast development without any compromise. For a quick start into your GPS project see the [Basic Manager example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).
+The PhidgetGPS library makes for intuitive and lightning fast development without any compromise. For a quick start into your GPS project see the [Basic GPS example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).
 ##Methods
 
 |Method call|Parameters|Description|
-|---|---|---|
-|[phidget.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidgets GPS |
-|[phidget.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
-|whenReady|function|This executes a function when the Phidgets GPS is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a phidget is detached and re attached__|
-|observe|function|used for asynchronously observing the changes to the PhidgetGPS position. This behaves much like the JS [Object.observe](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe), however you only pass the handler, not the object or accept list. All of this is handled by the Phidget Framework.|
+|-----------|----------|-----------|
+|[connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidgets GPS |
+|[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
+|whenReady|function|This executes a function when the Phidgets GPS is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a Phidget is detached and re attached__|
+|observe|function|Used for asynchronously observing the changes to the PhidgetGPS position.|
 
 ##Data
 
 |Key|Data Type|Writable|Description|
-|---|---|---|---|
+|---|---------|--------|-----------|
 |type|string|no|'PhidgetGPS'|
 |date.systemOffset|number|no|offset in milliseconds between system current time and the Phidget GPS timestamp |
 |date.timestamp|timestamp|no|traditional milliseconds from epoch timestamp|
@@ -25,9 +25,9 @@ The PhidgetGPS library makes for intuitive and lightning fast development withou
 |date.min|number|no|minute|
 |date.sec|number|no|second|
 |date.ms|number|no|millisecond|
-|heading|number|no|heading Phidget GPS is on.|
-|velocity|number|no|speed in __km/h__ |
-|alt|number|no|altitude Phidget GPS is in with units of __meters__|
+|heading|number|no|heading|
+|velocity|number|no|speed in km/h |
+|alt|number|no|altitude in meters|
 |lat|number|no|latitude|
 |lon|number|no|longitude|
 |fixed|bool|no|true if the Phidget GPS has gotten a fix on its location|

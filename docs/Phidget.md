@@ -5,7 +5,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 ## Methods
 
 |Method call|Parameters|Description|
-|---|---|---|
+|-----------|----------|-----------|
 |phidget.connect|[__phidget__.params object](#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
 |phidget.set|[__phidget__.set object](#setting-information-phidgetset)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. Remember this is case sensative so match that case exactly as it is in the __phidget__.data object for your device.
 |phidget.quit|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
@@ -15,14 +15,14 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 
 ## Data
 |Name|Type|Description|
-|---|---|---|
+|----|----|-----------|
 |phidget.rate| number | Get or set rate in milliseconds.|
 |phidget.label| number or string | Get or set label.|
 
 ##Events
 
-|Event name| Paramaters| Description |
-|---|---|---|
+|Event name| Paramaters| Description|
+|----------|-----------|------------|
 |phidgetReady|N/A|the phidget is attached and fully initialized. __if you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a phidget is detached and re attached__|
 |error|{ message:String, type:String  }|emitted whenever a phidget may have an error, or when it can not handle your request|
 |changed|__phidget__.event|emitted whenever a phidget or sensor has data which has changed.|
@@ -35,7 +35,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 
 ## __phidget__.event object
 |Key|Value Description|
-|---|---|---|
+|---|-----------------|
 |type| 'board' or 'output' etc. various root children of the devices __phidget__.data object.|
 |key| the name of the key in the __phidget__.data[type] object |
 |value| the updated value for the key|
@@ -43,11 +43,11 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 
 example :
 
-    { 
+    {
         type: 'Sensor',
         key: '0',
         value: '109',
-        '0': '109' 
+        '0': '109'
     }
 
 
@@ -57,9 +57,9 @@ example :
 __Note on `version`__: version in this case is the version of the phidget server and associated API.  You should check your phidget server to learn the version in use.  The good news is that the APIs we are using here have not changed for the past 3 years, and appear to be unlikely to do so in the future.  If you run into errors with newer versions, please let us know, or submit a pull request with a fix.
 
 |Key|Default|Description|
-|---|---|---|
-|host    | 'localhost'| the host or ip on which your phidget webservice is running. Generally localhost unless you are connecting to a remote device running phidget.
-|port    | 5001| the port on which the host is transmitting phidget data. Can be changed by using the -p flag when starting webservices, just make sure you match this port value to the -p port value if you do modify it.|
+|---|-------|-----------|
+|host| 'localhost'| the host or ip on which your phidget webservice is running. Generally localhost unless you are connecting to a remote device running phidget.
+|port| 5001| the port on which the host is transmitting phidget data. Can be changed by using the -p flag when starting webservices, just make sure you match this port value to the -p port value if you do modify it.|
 |version | '1.0.10'|older phidgetwebservice installs may require 1.0.9|
 |password| null|not yet implemented|
 |type    | 'PhidgetManager'| the name of the phidget type|
@@ -80,7 +80,7 @@ __Note on `version`__: version in this case is the version of the phidget server
 
 ## Setting information phidget.set
 |Key|Description|
-|---|---|
+|---|-----------|
 |type|the key for the object your output resides ( maybe 'board', 'Output', 'Trigger' etc. check the phidget.data to see what options are available for the specific phidget you are working with )|
 |key|the key of the output you wish to set|
 |value|the value you wish to set|
@@ -93,15 +93,15 @@ example:
         value   : '1'
     }
 
-## Example Connecting to a Raw Phidget Interface Kit 8/8/8 
+## Example Connecting to a Raw Phidget Interface Kit 8/8/8
 We designed the [InterfaceKit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/InterfaceKit.md) module so you don't need to do this, but it serves as a good example if you ever want to build a new or custom Phidget module. If you build a module for a Phidget that we don't have, or something you think is useful, __PLEASE__ feel free to submit a pull request! We love open source contributions and want to make the best API together!
 
 	var Phidget = require('phidgetapi').Phidget;
-    
+
     var IK888=new phidget();
-    
+
     IK888.on(
-        "error", 
+        "error",
         function(data){
             console.log('error ',data);
         }
@@ -122,7 +122,7 @@ We designed the [InterfaceKit](https://github.com/RIAEvangelist/node-phidget-API
             );
 
             IK888.on(
-                'changed', 
+                'changed',
                 update
             );
         }
@@ -156,7 +156,7 @@ We designed the [InterfaceKit](https://github.com/RIAEvangelist/node-phidget-API
     }
 
     /*
-    * Connect to Phidget 
+    * Connect to Phidget
     */
     IK888.connect(
         {

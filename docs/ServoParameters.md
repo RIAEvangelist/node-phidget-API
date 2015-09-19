@@ -5,10 +5,10 @@ Each PhidgetServo will have its own set of parameters. Documentation for [Phidge
 ##Methods
 
 |Method call|Parameters|Description|
-|---|---|---|
+|-----------|----------|-----------|
 |servoParameters[index].usToDegrees|bool|`true` returns current Phidgets raw position data converted to degrees.|
 |servoParameters[index].degreesToUs|bool|`true` returns current degrees position data converted to Phidgets raw position data.|
 |servoParameters[index].usToDegreesVels|bool|`true` returns current Phidgets raw velocity data converted to degrees per second.|
 |servoParameters{index].degreesToUsVels|bool|`true` returns current degrees per second data converted to Phidgets raw velocity data.|
 
-To Do: Document. 
+To Do: Document advanced Servo Controller 
