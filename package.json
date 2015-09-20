@@ -16,7 +16,9 @@
     "event-pubsub": "^1.0.3"
   },
   "scripts": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.3.2"
+  },
   "optionalDependencies": {},
   "_engineSupported": true,
   "_npmVersion": "1.1.4",

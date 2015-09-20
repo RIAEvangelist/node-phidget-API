@@ -1,6 +1,13 @@
 # Phidgets API for javascript!
 __A node.js and io.js based API for interacting with your own analog sensors and [all official Phidget boards and sensors](http://www.phidgets.com/)__. This module is compatible with all operating systems which can run node.js or io.js. phidgetsapi is perfect for projects using BeagleBone Black and Raspberry Pi too!
 
+npm info :  
+![nodephidgetapi npm version](https://img.shields.io/npm/v/nodephidgetapi.svg) ![total npm downloads for nodephidgetapi](https://img.shields.io/npm/dt/nodephidgetapi.svg) ![monthly npm downloads for nodephidgetapi](https://img.shields.io/npm/dm/nodephidgetapi.svg)
+
+GitHub info :  
+![node-phidget-API GitHub Release](https://img.shields.io/github/release/RIAEvangelist/node-phidget-API.svg) ![GitHub license node-phidget-API license](https://img.shields.io/github/license/RIAEvangelist/node-phidget-API.svg) ![open issues for node-phidget-API on GitHub](https://img.shields.io/github/issues/RIAEvangelist/node-phidget-API.svg)
+
+
 # Known supported platforms
 
 1. [node.js](nodejs.org)
@@ -31,7 +38,7 @@ If you are staring from the command line it will look something like this, __you
 [Windows  phidget webservice info](http://www.phidgets.com/docs/OS_-_Windows#Using_the_WebService)
 
     PhidgetWebservice21
-    
+
 For a guide on installing the required libraries and services on your platform, see the below wikis
 
 1. [Linux](http://www.phidgets.com/docs/OS_-_Linux)
