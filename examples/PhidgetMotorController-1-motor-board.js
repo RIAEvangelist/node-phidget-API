@@ -3,7 +3,7 @@ var Phidget = require('phidgetapi').phidget;
 var motor = new Phidget();
 
 motor.on(
-    "log", 
+    "log",
     function(data){
         console.log('log ',data);
     }
@@ -17,22 +17,22 @@ motor.on("error", function (data) {
  * Detecting status change for both Re-Attach and Detach
  */
 motor.on(
-    'changed', 
+    'changed',
     function(data){
         console.log('phidget status changed');
         console.log('data ',data);
-        
+
     }
 );
-    
+
 /*
  * Detecting Phidget Detach
  */
 motor.on(
-    'changed', 
+    'changed',
     function(data){
         console.log('changed data ',data);
-        
+
     }
 );
 
@@ -45,7 +45,7 @@ motor.on('phidgetReady', function () {
         key: '0',
         value: '0'
     });
-    
+
     //Velocity is the percentage of time the motor is being powered for. The PhidgetMotorControl rapidly switches power to the motor on/off. Velocity can be set between –100 and +100. –100 corresponds to the motor being         //driven 100% of the time in reverse, +100 driven 100% of the time forward. When velocity is 0, the motor is controlled by the Braking property, which defaults to 0%.
     //Values  0f -100 to 100 sent as a float.
     motor.set({
@@ -53,7 +53,7 @@ motor.on('phidgetReady', function () {
         key: '0',
         value: parseFloat(100)
     });
-    
+
     //Returns how fast a motor will be accelerated between given velocities. The valid range is between AccelerationMax and AccelerationMin. Acceleration is in %(duty cycle)/s
     //AccelerationMax is a constant = 6250% Duty Cycle/s
     //AccelerationMin is a constant = 24.51% Duty Cycle/s
@@ -62,8 +62,8 @@ motor.on('phidgetReady', function () {
         key: '0',
         value: parseFloat(6250)
     });
-    
-    //Sets the braking amount for a motor at rest, with a range of 0-100%. Braking is only active when the motor velocity is 0. By default, braking is 0%, allowing the motor to coast (free-wheel). 
+
+    //Sets the braking amount for a motor at rest, with a range of 0-100%. Braking is only active when the motor velocity is 0. By default, braking is 0%, allowing the motor to coast (free-wheel).
     //The holding strength of a braked motor depends on the motor, but is generally quite low.
     //Values 0 - 100 sent as a float
     motor.set({
@@ -72,7 +72,7 @@ motor.on('phidgetReady', function () {
         value: parseFloat(6250)
     });
 
-    
+
     //Sets the ratiometric state for the analog sensor inputs. Defaults to true.
     motor.set({
         type: 'board',
@@ -80,7 +80,7 @@ motor.on('phidgetReady', function () {
         value: '1'
     });
 
-    
+
     motor.on('changed', function (data) {
         console.log('motor state changed', data);
     });

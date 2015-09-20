@@ -30,6 +30,6 @@ GPS.phidget.on(
 */
 
 /*
- * Connect to phidget 
+ * Connect to phidget
  */
-GPS.phidget.connect();
+GPS.connect();

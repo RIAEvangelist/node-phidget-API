@@ -3,14 +3,14 @@ var phidget = require('../phidgetapi').phidget;
 var motor=new phidget();
 
 motor.on(
-    "log", 
+    "log",
     function(data){
         console.log('log ',data);
     }
 );
 
 motor.on(
-    "error", 
+    "error",
     function(data){
         console.log('error ',data);
     }
@@ -20,11 +20,11 @@ motor.on(
  * Detecting status change for both Re-Attach and Detach
  */
 motor.on(
-    'changed', 
+    'changed',
     function(data){
         console.log('phidget status changed');
         console.log('data ',data);
-        
+
     }
 );
 
@@ -65,7 +65,7 @@ motor.on(
 
 /*
  * Connect to motor
- * 
+ *
  */
 
 motor.connect(
@@ -76,11 +76,11 @@ motor.connect(
 
 /*
  * an example of how to see the data being transferred to and from the phidget
- * 
+ *
  * motor.connect(
  *      {
  *          rawLog:true
  *      }
  * );
- * 
+ *
  */
