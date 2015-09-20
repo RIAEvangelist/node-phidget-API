@@ -36,4 +36,4 @@ function powerdown(){
     servo.engaged[0]=0; //power off
 }
 
-servo.phidget.connect();
+servo.connect();

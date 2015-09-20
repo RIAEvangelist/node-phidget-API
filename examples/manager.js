@@ -15,4 +15,4 @@ function update(changes){
     console.log(manager.devices);
 }
 manager.phidget.on('log',function(data){console.log(data)})
-manager.phidget.connect();
+manager.connect();

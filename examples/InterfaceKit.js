@@ -15,7 +15,7 @@ IK.observeRawSensors(rawSensors);
 
 IK.whenReady(init);
 
-IK.phidget.connect();
+IK.connect();
 
 function init(){
     console.log('init');

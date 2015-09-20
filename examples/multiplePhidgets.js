@@ -4,26 +4,24 @@ var RFID=new phidget();
 
 var IK888=new phidget();
 
-RFID.on(
-    'phidgetReady',
+RFID.whenReady(
     function(){
         console.log('RFID ready');
         console.log(RFID.data);
-        
+
     }
 );
-    
-IK888.on(
-    'phidgetReady',
+
+IK888.whenReady(
     function(){
         console.log('InterfaceKit ready');
         console.log(IK888.data);
-        
+
     }
 );
 
 /*
- * Connect to RFID phidget 
+ * Connect to RFID phidget
  */
 RFID.connect(
     {
@@ -32,7 +30,7 @@ RFID.connect(
 );
 
 /*
- * Connect to InterfaceKit 8/8/8 phidget 
+ * Connect to InterfaceKit 8/8/8 phidget
  */
 IK888.connect(
     {
