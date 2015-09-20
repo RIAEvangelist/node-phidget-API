@@ -1,12 +1,12 @@
 #Phidget Spatial
-The PhidgetSpatial library makes for intuitive and lightning fast development without any compromise. All sensors on this board should be primed for accurate use, here are the [acceleration](http://www.phidgets.com/docs/Accelerometer_Primer), [gyroscopic](http://www.phidgets.com/docs/Gyroscope_Primer), and [magnetic field](http://www.phidgets.com/docs/Compass_Primer) primer guides. For a quick start into your Spatial project see this [basic PhidgetSpatial example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/spatial.js).
+The PhidgetSpatial library makes for intuitive and lightning fast development without any compromise. All sensors on the Phidget Spatial board should be primed for accurate use, here are the [acceleration](http://www.phidgets.com/docs/Accelerometer_Primer), [gyroscopic](http://www.phidgets.com/docs/Gyroscope_Primer), and [magnetic field](http://www.phidgets.com/docs/Compass_Primer) primer guides. For a quick start into your Spatial project see this [basic PhidgetSpatial example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/spatial.js).
 
 ##Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
-|[phidget.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects the Phidget Spatial|
-|[phidget.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
+|[connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects the Phidget Spatial|
+|[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
 |[whenReady](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|function |This executes a function when the PhidgetSpatial is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a phidget is detached and re attached__|
 |observeGyro|change handler function|Used for asynchronously observing the changes to the PhidgetSpatial board's gyroscopic sensors.|
 |observeAcceleration|change handler function|Used for asynchronously observing the changes to the PhidgetSpatial board's acceleration axes.|
@@ -90,4 +90,4 @@ Initializing [Phidgets Spatial Devices](http://www.phidgets.com/products.php?cat
         console.log('magnetic field : ',spatial.magneticField);
     }
 
-    spatial.phidget.connect();
+    spatial.connect();

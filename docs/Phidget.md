@@ -1,14 +1,14 @@
 # Core Phidget Module Interaction
 
-The PhidgetsAPI package exposes a few different ways of interacting with your Phidgets. You can use the below information to create low level or custom Phidget Modules. If you create anything you think others would like, ***Please do a pull request!*** Your rockstar work could help others too. And we would be happy to help you help others!
+The PhidgetsAPI package exposes a few different ways of interacting with your Phidget. You can use the below information to create low level or custom Phidget Modules. If you create anything you think others would like, ***Please do a pull request!*** Your rockstar work could help others too. And we would be happy to help you help others!
 
 ## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
-|phidget.connect|[__phidget__.params object](#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
-|phidget.set|[__phidget__.set object](#setting-information-phidgetset)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. Remember this is case sensative so match that case exactly as it is in the __phidget__.data object for your device.
-|phidget.quit|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
+|connect|[__phidget__.params object](#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
+|set|[__phidget__.set object](#setting-information-phidgetset)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. Remember this is case sensative so match that case exactly as it is in the __phidget__.data object for your device.
+|quit|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
 |phidget.on|"event name", eventHandler| Bind an event listener.|
 |phidget.addListener|"event name", eventHandler| Bind an event listener.|
 |phidget.removeListener|"event name", eventHandler| Unbind an event listener.|
@@ -52,7 +52,7 @@ example :
 
 
 ## Connecting & phidget.params
-`phidget.connect` can be passed an a JSON object of options.  Here are the options and their defaults:
+`connect` can be passed an a JSON object of options.  Here are the options and their defaults:
 
 __Note on `version`__: version in this case is the version of the phidget server and associated API.  You should check your phidget server to learn the version in use.  The good news is that the APIs we are using here have not changed for the past 3 years, and appear to be unlikely to do so in the future.  If you run into errors with newer versions, please let us know, or submit a pull request with a fix.
 

@@ -18,7 +18,7 @@ RFID.whenReady(
     }
 );
 
-RFID.phidget.connect();
+RFID.connect();
 
 function update(changes){
      for(var i in changes){
@@ -37,5 +37,5 @@ function update(changes){
     if(RFID.tagState==0){
         RFID.LEDOn=0;
     }
-    
+
 }

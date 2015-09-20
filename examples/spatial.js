@@ -47,4 +47,4 @@ function mag(changes){
     console.log('magnetic field : ',spatial.magneticField);
 }
 
-spatial.phidget.connect();
+spatial.connect();

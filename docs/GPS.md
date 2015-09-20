@@ -1,12 +1,13 @@
 #Phidget GPS
 
 The PhidgetGPS library makes for intuitive and lightning fast development without any compromise. For a quick start into your GPS project see the [Basic GPS example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).
+
 ##Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
-|[phidget.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidgets GPS |
-|[phidget.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
+|[connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the Phidgets GPS |
+|[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
 |whenReady|change handler function|This executes a function when the Phidgets GPS is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a Phidget is detached and re attached__|
 |observe|change handler function|Used for asynchronously observing the changes to the PhidgetGPS position.|
 
@@ -70,4 +71,4 @@ Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?categor
     /*
      * Connect to phidget
      */
-    GPS.phidget.connect();
+    GPS.connect();

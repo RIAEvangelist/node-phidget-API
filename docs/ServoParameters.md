@@ -11,4 +11,4 @@ Each PhidgetServo will have its own set of parameters. Documentation for [Phidge
 |servoParameters[index].usToDegreesVels|bool|`true` returns current Phidgets raw velocity data converted to degrees per second.|
 |servoParameters{index].degreesToUsVels|bool|`true` returns current degrees per second data converted to Phidgets raw velocity data.|
 
-To Do: Document advanced Servo Controller 
+To Do: Document advanced Servo Controller

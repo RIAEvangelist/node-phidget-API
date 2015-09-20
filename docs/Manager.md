@@ -1,13 +1,13 @@
 #Phidget Manager
 
-The Phidget Manager library makes for an intuitive and easy way to manage your Phigets devices. For a quick start into your Manager project see the [Getting Started](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Manager.md#GettingStarted) section or jump to this [basic Manager example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/manager.js).
+The Phidget Manager library makes for an intuitive and easy way to manage your Phiget devices. For a quick start into your Manager project see the [Getting Started](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Manager.md#GettingStarted) section or jump to this [Basic Manager Example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/manager.js).
 
 ##Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
-|[phidget.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects any Phidget USB Device|
-|[phidget.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected.|
+|[connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects any Phidget USB Device|
+|[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected.|
 |observe|change handler function|used for asynchronously observing the changes to any Phidget USB device.|
 
 ##Data
@@ -37,4 +37,4 @@ Initializing and identifying any [Phidget Device](http://www.phidgets.com/) can 
         console.log(manager.devices);
     }
 
-    manager.phidget.connect();
+    manager.connect();

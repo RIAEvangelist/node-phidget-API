@@ -6,8 +6,8 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
-|[phidget.connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects the Phidget RFID|
-|[phidget.quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected.|
+|[connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects the Phidget RFID|
+|[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected.|
 |whenReady|function|This executes a function when the Phidget InterfaceKit is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a Phidget is detached and re attached__|
 |observeOutputs|change handler function|Used for asynchronously observing the digital output changes to the Phidget InterfaceKit board.|
 |observeInputs|change handler function|Used for asynchronously observing the digital input changes to the Phidget InterfaceKit board.|
@@ -51,7 +51,7 @@ Initializing a [Phidget InterfaceKit](http://www.phidgets.com/products.php?categ
 
     IK.whenReady(init);
 
-    IK.phidget.connect();
+    IK.connect();
 
     function init(){
         //do some initial set up here... like blinking an led.
