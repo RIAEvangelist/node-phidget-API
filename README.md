@@ -1,8 +1,8 @@
 # Phidgets API for javascript!
 __A node.js and io.js based API for interacting with your own analog sensors and [all official Phidget boards and sensors](http://www.phidgets.com/)__. This module is compatible with all operating systems which can run node.js or io.js. phidgetsapi is perfect for projects using BeagleBone Black and Raspberry Pi too!
-p
-npm info :  [See NPM stats for phidgetapi](http://npm-stat.com/charts.html?package=phidgetapi&author=&from=&to=)  
-![phidgetapi npm version](https://img.shields.io/npm/v/phidgetapi.svg) ![total npm downloads for phidgetapi](https://img.shields.io/npm/dt/phidgetapi.svg) ![monthly npm downloads for phidgetapi](https://img.shields.io/npm/dm/phidgetapi.svg)  
+
+npm info :  [See npm trends and stats for phidgetapi](http://npm-stat.com/charts.html?package=phidgetapi&author=&from=&to=)  
+![phidgetapi npm version](https://img.shields.io/npm/v/phidgetapi.svg) ![supported node version for phidgetapi](https://img.shields.io/node/v/phidgetapi.svg) ![total npm downloads for phidgetapi](https://img.shields.io/npm/dt/phidgetapi.svg) ![monthly npm downloads for phidgetapi](https://img.shields.io/npm/dm/phidgetapi.svg) ![npm licence for phidgetapi](https://img.shields.io/npm/l/phidgetapi.svg)
 
 GitHub info :  
 ![node-phidget-API GitHub Release](https://img.shields.io/github/release/RIAEvangelist/node-phidget-API.svg) ![GitHub license node-phidget-API license](https://img.shields.io/github/license/RIAEvangelist/node-phidget-API.svg) ![open issues for node-phidget-API on GitHub](https://img.shields.io/github/issues/RIAEvangelist/node-phidget-API.svg)
