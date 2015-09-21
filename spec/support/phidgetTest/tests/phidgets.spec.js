@@ -89,7 +89,7 @@ describe(
             }
         );
 
-        xit(
+        it(
             'Verifies the rate event',
             function(done){
                 interfaceKit.on(
@@ -129,7 +129,7 @@ describe(
             }
         );
 
-        xit(
+        it(
             'Verifies data on change',
             function(done){
                 console.log('starting after')
