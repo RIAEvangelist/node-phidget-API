@@ -3,7 +3,7 @@ var Phidget = require('../../../../phidgetapi.js').Phidget;
 describe(
     'Phidget spec',
     function(){
-        var interfaceKit = new Phidget();
+        var phidgetCore = new Phidget();
 
         it(
             'Verifies phidget data when phidget is ready',
@@ -11,27 +11,27 @@ describe(
 
                 console.log('in phi test');
 
-                interfaceKit.on(
+                phidgetCore.on(
                     'attached',
                     checkAttachDevice
                 );
 
-                interfaceKit.on(
+                phidgetCore.on(
                     'phidgetReady',
                     phidgetIsReady
                 );
 
-                interfaceKit.on(
+                phidgetCore.on(
                     'error',
                     errorHandler
                 );
 
-                interfaceKit.on(
+                phidgetCore.on(
                     'connected',
                     checkConnect
                 );
 
-                interfaceKit.on(
+                phidgetCore.on(
                     'data',
                     function(data){
                         console.log(data);
@@ -41,11 +41,13 @@ describe(
 
                 function checkAttachDevice(data){
                     console.log('yeah im attached',data);
+                    expect(data.Status).toBe('Attached');
+                    expect(data.value).toBe('Attached');
                 }
 
                 function checkConnect(){
                     console.log('I am connected');
-                    interfaceKit.removeListener(
+                    phidgetCore.removeListener(
                         'connected',
                         checkConnect
                     );
@@ -58,30 +60,30 @@ describe(
 
                 function phidgetIsReady(){
                     console.log('Phidget is ready to be tested');
-                    testCase(interfaceKit.data);
+                    testCase(phidgetCore.data);
                  }
 
                 function testCase(){
-                    interfaceKit.removeListener(
+                    phidgetCore.removeListener(
                         'attached',
                         checkAttachDevice
                     );
 
-                    interfaceKit.removeListener(
+                    phidgetCore.removeListener(
                         'phidgetReady',
                         phidgetIsReady
                     );
 
-                    interfaceKit.removeListener(
+                    phidgetCore.removeListener(
                         'error',
                         errorHandler
                     );
-                    expect(Number(interfaceKit.data.serial.length)).toBeGreaterThan(0);
-                    expect(interfaceKit.data.board).toBeDefined();
+                    expect(Number(phidgetCore.data.serial.length)).toBeGreaterThan(0);
+                    expect(phidgetCore.data.board).toBeDefined();
                     done();
                 }
 
-                interfaceKit.connect(
+                phidgetCore.connect(
                     {
                         type: 'PhidgetInterfaceKit',
                     }
@@ -92,19 +94,19 @@ describe(
         it(
             'Verifies the rate event',
             function(done){
-                interfaceKit.on(
+                phidgetCore.on(
                     'error',
                     errorHandler
                 );
 
-                interfaceKit.on(
+                phidgetCore.on(
                     'changed',
                     testCaseRate
                 );
 
-                var rate = interfaceKit.rate;
+                var rate = phidgetCore.rate;
 
-                interfaceKit.rate = 4;
+                phidgetCore.rate = 4;
 
                 function errorHandler(err){
                     expect(err).toBe(false);
@@ -112,17 +114,17 @@ describe(
                 }
 
                 function testCaseRate(){
-                    interfaceKit.removeListener(
+                    phidgetCore.removeListener(
                         'error',
                         errorHandler
                     );
-                    interfaceKit.removeListener(
+                    phidgetCore.removeListener(
                         'changed',
                         testCaseRate
                     );
 
-                    expect(interfaceKit.rate).toBe(4);
-                    interfaceKit.rate = rate;
+                    expect(phidgetCore.rate).toBe(4);
+                    phidgetCore.rate = rate;
                     console.log('ending before')
                     done();
                 }
@@ -133,14 +135,14 @@ describe(
             'Verifies data on change',
             function(done){
                 console.log('starting after')
-                var orignalOutputValue = interfaceKit.data.Output[0];
+                var orignalOutputValue = phidgetCore.data.Output[0];
 
-                interfaceKit.on(
+                phidgetCore.on(
                     'error',
                     errorHandler
                 );
 
-                interfaceKit.on(
+                phidgetCore.on(
                     'changed',
                     testCase
                 );
@@ -150,8 +152,8 @@ describe(
                     done();
                 }
 
-                if(Number(interfaceKit.data.Output[0]) !== 1){
-                    interfaceKit.set(
+                if(Number(phidgetCore.data.Output[0]) !== 1){
+                    phidgetCore.set(
                         {
                             type : 'Output',
                             key : '0',
@@ -161,17 +163,17 @@ describe(
                 }
 
                 function testCase(){
-                    interfaceKit.removeListener(
+                    phidgetCore.removeListener(
                         'error',
                         errorHandler
                     );
-                    interfaceKit.removeListener(
+                    phidgetCore.removeListener(
                         'changed',
                         testCase
                     );
-                    expect(Number(interfaceKit.data.Output[0])).toBe(1);
-                    console.log('changed value', interfaceKit.data.Output[0]);
-                    interfaceKit.set(
+                    expect(Number(phidgetCore.data.Output[0])).toBe(1);
+                    console.log('changed value', phidgetCore.data.Output[0]);
+                    phidgetCore.set(
                         {
                             type : 'Output',
                             key : '0',
@@ -179,7 +181,7 @@ describe(
                         }
                     )
 
-                    console.log('after changing again', interfaceKit.data.Output[0])
+                    console.log('after changing again', phidgetCore.data.Output[0])
                     done();
                 }
             }
@@ -188,21 +190,18 @@ describe(
         it(
             'Verifies Phidget detached event',
             function(done){
-
-
-
-                console.log('in the test');
-                interfaceKit.on(
+                console.log('in Detach test');
+                phidgetCore.on(
                     'error',
                     errorHandler
                 );
 
-                interfaceKit.on(
+                phidgetCore.on(
                     'detached',
                     checkDetachDevice
                 );
 
-                interfaceKit.on(
+                phidgetCore.on(
                     'removed',
                     checkRemoveDevice
                 );
@@ -221,15 +220,13 @@ describe(
 
                 function checkDetachDevice(data){
                     console.log('in detach test');
+                    expect(data.Status).toBe('Detached');
+                    expect(data.value).toBe('Detached');
                     console.log(data);
                     done();
                 }
-
-                console.log(interfaceKit.quit);
-
-                interfaceKit.quit();
             }
-        )
+        );
     }
 )
 
