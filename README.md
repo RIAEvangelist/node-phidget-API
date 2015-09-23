@@ -65,6 +65,7 @@ OR
 * [RFID Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/RFID.md)
 * [Servo Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Servo.md)
 * [Spatial Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Spatial.md)
+* [Analog Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Analog.md)
 
 ## Quick Example
 Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phidget-API/tree/master/docs) above for more info on specific phidget types.
