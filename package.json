@@ -2,7 +2,7 @@
   "author": "Brandon Nozaki Miller <brandon@diginow.it.com>",
   "name": "phidgetapi",
   "description": "Full official phidget interface API for node.js",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "homepage": "https://www.diginow.it",
   "repository": {
     "type": "git",
