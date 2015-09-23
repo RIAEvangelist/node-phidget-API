@@ -1,4 +1,4 @@
-#Phidget Analog
+#Phidget Analog - not yet tested 
 The PhidgetAnalog library makes for intuitive and lightning fast development without any compromise. For a quick start into your Analog Output project see this [Basic PhidgetAnalog Example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/AnalogSource.js), and see this [Analog Primer Guide](http://www.phidgets.com/docs/Analog_Output_Primer) to get the most out of your Phidget!
 
 ##Methods
