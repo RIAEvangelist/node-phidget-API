@@ -20,18 +20,18 @@ IK.connect();
 function init(){
     console.log('init');
     //do some initial set up here... like blinking an led.
-    setInterval(
-        function(){
-            if(IK.outputs[0]==0){
-                IK.outputs[0]=1;
-            }else{
-                IK.outputs[0]=0;
-            }
-        },
-        1000
-    );
-}
 
+    IK.phidget.set(
+        {
+            type:'board',
+            key:'label',
+            value:'myFirstLabel'
+        }
+    );
+
+    console.log(IK.phidget.label);
+
+}
 
 function sensors(changes){
     for(var i in changes){
