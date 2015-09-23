@@ -12,6 +12,7 @@ var InterfaceKit = require('./lib/InterfaceKit.js').Phidget;
 var RFID = require('./lib/RFID.js').Phidget;
 var Spatial = require('./lib/Spatial.js').Phidget;
 var Servo = require('./lib/Servo.js').Phidget;
+var Analog = require('./lib/Analog.js').Phidget;
 
 exports.Phidget = Phidget;
 exports.Manager = Manager;
