@@ -261,7 +261,7 @@ describe(
             }
         );
 
-        xit(
+        it(
             'Verifies Phidget detached event',
             function(done){
                 console.log('in Detach test');
