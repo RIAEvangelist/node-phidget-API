@@ -123,7 +123,7 @@ describe(
                         testCaseRate
                     );
 
-                    expect(phidgetCore.rate).toBe(4);
+                    expect(phidgetCore.rate).toBe(4);//rate rounds
                     phidgetCore.rate = rate;
                     console.log('ending before')
                     done();
@@ -132,10 +132,22 @@ describe(
         );
 
         it(
-            'Verifies data on change',
+            'Verifies Set function and changed event',
             function(done){
-                console.log('starting after')
-                var orignalOutputValue = phidgetCore.data.Output[0];
+                //console.log('starting after');
+                //console.log(phidgetCore.data);
+                //console.log(phidgetCore.data.Output[0]);
+
+
+
+                var orignalOutputValue = '0';
+                var changedValue = '1';
+
+                expect(phidgetCore.data.Output[0]).toBe(orignalOutputValue);
+
+                if(phidgetCore.data.Output[0]!==orignalOutputValue){
+                    done();
+                }
 
                 phidgetCore.on(
                     'error',
@@ -147,47 +159,109 @@ describe(
                     testCase
                 );
 
+
                 function errorHandler(err){
-                    expect(err).toBe(false);
-                    done();
-                }
-
-                if(Number(phidgetCore.data.Output[0]) !== 1){
-                    phidgetCore.set(
-                        {
-                            type : 'Output',
-                            key : '0',
-                            value : '1'
-                        }
-                    )
-                }
-
-                function testCase(){
                     phidgetCore.removeListener(
                         'error',
                         errorHandler
                     );
+                    expect(err).toBe(false);
+                    done();
+                }
+
+                phidgetCore.set(
+                    {
+                        type : 'Output',
+                        key : '0',
+                        value : changedValue
+                    }
+                );
+
+                function testCase(){
+                    if(!phidgetCore.data.Output){
+                        console.log('no output, waiting...');
+                    }
                     phidgetCore.removeListener(
                         'changed',
                         testCase
                     );
-                    expect(Number(phidgetCore.data.Output[0])).toBe(1);
-                    console.log('changed value', phidgetCore.data.Output[0]);
-                    phidgetCore.set(
-                        {
-                            type : 'Output',
-                            key : '0',
-                            value : orignalOutputValue
-                        }
-                    )
 
-                    console.log('after changing again', phidgetCore.data.Output[0])
+                    expect(Number(phidgetCore.data.Output[0])).toBe(Number(changedValue));
+
+                    setTimeout(
+                        function(){
+                            phidgetCore.on(
+                                'changed',
+                                testChangedValue
+                            );
+                            phidgetCore.set(
+                                {
+                                    type : 'Output',
+                                    key : '0',
+                                    value : orignalOutputValue
+                                }
+                            );
+                        },
+                        phidgetCore.rate*10
+                    );
+                }
+
+                function testChangedValue(){
+                    if(!phidgetCore.data.Output){
+                        console.log('no output, waiting...');
+                    }
+                    phidgetCore.removeListener(
+                        'changed',
+                        testChangedValue
+                    );
+                    phidgetCore.removeListener(
+                        'error',
+                        errorHandler
+                    );
+                    expect(Number(phidgetCore.data.Output[0])).toBe(Number(orignalOutputValue));
                     done();
                 }
             }
         );
 
         it(
+            'Verifies the disconnected event and quit function',
+            function(done){
+
+                phidgetCore.on(
+                    'error',
+                    errorHandler
+                );
+
+                phidgetCore.on(
+                    'disconnected',
+                    checkDisconnectedDevice
+                );
+
+                function errorHandler(err){
+                    expect(err).toBe(false);
+                    done();
+                }
+
+                function checkDisconnectedDevice(){
+                    phidgetCore.removeListener(
+                        'error',
+                        errorHandler
+                    );
+                    phidgetCore.removeListener(
+                        'disconnected',
+                        checkDisconnectedDevice
+                    );
+                    console.log('In Disconnected');
+                    console.log(phidgetCore.data);
+                    done();
+                }
+                phidgetCore.quit();
+
+            }
+        );
+
+        xit(
             'Verifies Phidget detached event',
             function(done){
                 console.log('in Detach test');
@@ -201,24 +275,22 @@ describe(
                     checkDetachDevice
                 );
 
-                phidgetCore.on(
-                    'removed',
-                    checkRemoveDevice
-                );
-
                 function errorHandler(err){
                     expect(err).toBe(false);
                     done();
                 }
 
-                function checkRemoveDevice(data){
-                    console.log('in remove test');
-                    console.log(data);
-                    done();
-                }
-
-
                 function checkDetachDevice(data){
+
+                    phidgetCore.removeListener(
+                        'error',
+                        errorHandler
+                    );
+                    phidgetCore.removeListener(
+                        'detached',
+                        checkDetachDevice
+                    );
+
                     console.log('in detach test');
                     expect(data.Status).toBe('Detached');
                     expect(data.value).toBe('Detached');
