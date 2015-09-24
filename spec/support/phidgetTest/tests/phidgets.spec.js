@@ -225,43 +225,6 @@ describe(
         );
 
         it(
-            'Verifies the disconnected event and quit function',
-            function(done){
-
-                phidgetCore.on(
-                    'error',
-                    errorHandler
-                );
-
-                phidgetCore.on(
-                    'disconnected',
-                    checkDisconnectedDevice
-                );
-
-                function errorHandler(err){
-                    expect(err).toBe(false);
-                    done();
-                }
-
-                function checkDisconnectedDevice(){
-                    phidgetCore.removeListener(
-                        'error',
-                        errorHandler
-                    );
-                    phidgetCore.removeListener(
-                        'disconnected',
-                        checkDisconnectedDevice
-                    );
-                    console.log('In Disconnected');
-                    console.log(phidgetCore.data);
-                    done();
-                }
-                phidgetCore.quit();
-
-            }
-        );
-
-        it(
             'Verifies Phidget detached event',
             function(done){
                 console.log('in Detach test');
@@ -297,6 +260,43 @@ describe(
                     console.log(data);
                     done();
                 }
+            }
+        );
+
+        it(
+            'Verifies the disconnected event and quit function',
+            function(done){
+
+                phidgetCore.on(
+                    'error',
+                    errorHandler
+                );
+
+                phidgetCore.on(
+                    'disconnected',
+                    checkDisconnectedDevice
+                );
+
+                function errorHandler(err){
+                    expect(err).toBe(false);
+                    done();
+                }
+
+                function checkDisconnectedDevice(){
+                    phidgetCore.removeListener(
+                        'error',
+                        errorHandler
+                    );
+                    phidgetCore.removeListener(
+                        'disconnected',
+                        checkDisconnectedDevice
+                    );
+                    console.log('In Disconnected');
+                    console.log(phidgetCore.data);
+                    done();
+                }
+                phidgetCore.quit();
+
             }
         );
     }
