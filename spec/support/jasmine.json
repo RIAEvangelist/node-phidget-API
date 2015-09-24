@@ -1,6 +1,6 @@
 {
   "spec_dir": "spec",
   "spec_files": [
-    "/support/phidgetTest/tests/phidget.spec.js"
+    "/support/phidgetTest/tests/phidgets.spec.js"
   ]
 }
