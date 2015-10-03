@@ -13,6 +13,7 @@ var RFID = require('./lib/RFID.js').Phidget;
 var Spatial = require('./lib/Spatial.js').Phidget;
 var Servo = require('./lib/Servo.js').Phidget;
 var Analog = require('./lib/Analog.js').Phidget;
+var TemperatureSensor = require('./lib/TemperatureSensor.js').Phidget;
 
 exports.Phidget = Phidget;
 exports.Manager = Manager;
@@ -21,6 +22,7 @@ exports.InterfaceKit=InterfaceKit;
 exports.RFID    = RFID;
 exports.Spatial = Spatial;
 exports.Servo = Servo;
+exports.TemperatureSensor = TemperatureSensor;
 
 //backwards compatibilirty only below
 exports.phidget = Phidget;
