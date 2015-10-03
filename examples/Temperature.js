@@ -8,19 +8,20 @@ temp.whenReady(init);
 
 function init(){
     console.log('Initiated');
-    temp.observeAmbientTemperature(outputs);
+    temp.observeAmbientTemperature(temperatureUpdates);
     //console.log(temp.phidget.data);
 
+    //console.log(temp.thermocoupleType);
 }
 
-function outputs(changes){
+function temperatureUpdates(changes){
 
-    for(var i in changes){
-        var change=changes[i];
-        //see specific info about each change
-        console.log(change);
-    }
+    // for(var i in changes){
+    //     var change=changes[i];
+    //     //see specific info about each change
+    //     console.log(change);
+    // }
+    //console.log(changes);
+    console.log(temp.ambientTemperature);
 
-    //see updated IK data after all changes
-    //console.log(temp.phidget.data);
 }
