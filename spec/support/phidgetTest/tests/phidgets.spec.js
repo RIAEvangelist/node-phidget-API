@@ -4,12 +4,18 @@ describe(
     'Phidget spec',
     function(){
         var phidgetCore = new Phidget();
+        console.log('label ',phidgetCore.label);
 
         it(
             'Verifies phidget data when phidget is ready',
             function(done){
 
                 console.log('in phi test');
+
+                phidgetCore.on(
+                   'log',
+                   giveLog
+                )
 
                 phidgetCore.on(
                     'attached',
@@ -34,7 +40,7 @@ describe(
                 phidgetCore.on(
                     'data',
                     function(data){
-                        console.log(data);
+                        console.log('this is data yayayayayay',data);
                     }
                 );
 
@@ -53,7 +59,15 @@ describe(
                     );
                 }
 
+                function giveLog(data){
+                    expect(data).toBeDefined();
+                }
+
                 function errorHandler(err){
+                    phidgetCore.removeListener(
+                        'error',
+                        errorHandler
+                    );
                     expect(err).toBe(false);
                     done();
                 }
@@ -73,11 +87,6 @@ describe(
                         'phidgetReady',
                         phidgetIsReady
                     );
-
-                    phidgetCore.removeListener(
-                        'error',
-                        errorHandler
-                    );
                     expect(Number(phidgetCore.data.serial.length)).toBeGreaterThan(0);
                     expect(phidgetCore.data.board).toBeDefined();
                     done();
@@ -86,8 +95,56 @@ describe(
                 phidgetCore.connect(
                     {
                         type: 'PhidgetInterfaceKit',
+                        rawLog: true
                     }
                 );
+            }
+        );
+
+         it(
+            'Verifies the label event',
+            function(done){
+
+                phidgetCore.on(
+                    'changed',
+                    testCaseLabel
+                );
+
+                phidgetCore.on(
+                    'error',
+                    errorHandler
+                );
+                console.log('this is the label for phidget', phidgetCore.Label);
+
+                var label = phidgetCore.Label;
+
+                phidgetCore.Label = '44rdt';
+
+                function errorHandler(err){
+                     phidgetCore.removeListener(
+                        'error',
+                        errorHandler
+                    );
+                    expect(err).toBe(false);
+                    done();
+                }
+
+                function testCaseLabel(){
+
+                    phidgetCore.removeListener(
+                        'changed',
+                        testCaseLabel
+                    );
+                    console.log(phidgetCore.Label);
+
+                    expect(phidgetCore.Label).toBe('44rdt');
+                    phidgetCore.Label = label;
+                    console.log('ending before')
+                    done();
+                }
+
+//                 expect(phidgetCore.Label).toBe('44rdt');
+//                done();
             }
         );
 
@@ -109,15 +166,15 @@ describe(
                 phidgetCore.rate = 4;
 
                 function errorHandler(err){
+                    phidgetCore.removeListener(
+                        'error',
+                        errorHandler
+                    );
                     expect(err).toBe(false);
                     done();
                 }
 
                 function testCaseRate(){
-                    phidgetCore.removeListener(
-                        'error',
-                        errorHandler
-                    );
                     phidgetCore.removeListener(
                         'changed',
                         testCaseRate
@@ -134,11 +191,7 @@ describe(
         it(
             'Verifies Set function and changed event',
             function(done){
-                //console.log('starting after');
-                //console.log(phidgetCore.data);
-                //console.log(phidgetCore.data.Output[0]);
-
-
+                console.log(phidgetCore.data);
 
                 var orignalOutputValue = '0';
                 var changedValue = '1';
@@ -224,6 +277,20 @@ describe(
             }
         );
 
+//        it(
+//            'Verifies log event',
+//            function(done){
+//               phidgetCore.on(
+//                   'log',
+//                   giveLog
+//               )
+//               function giveLog(data, err){
+//                    console.log('In Log ',data, err);
+//                    done();
+//               }
+//            }
+//        );
+
         it(
             'Verifies Phidget detached event',
             function(done){
@@ -239,16 +306,15 @@ describe(
                 );
 
                 function errorHandler(err){
+                    phidgetCore.removeListener(
+                        'error',
+                        errorHandler
+                    );
                     expect(err).toBe(false);
                     done();
                 }
 
                 function checkDetachDevice(data){
-
-                    phidgetCore.removeListener(
-                        'error',
-                        errorHandler
-                    );
                     phidgetCore.removeListener(
                         'detached',
                         checkDetachDevice
@@ -278,15 +344,16 @@ describe(
                 );
 
                 function errorHandler(err){
+                    phidgetCore.removeListener(
+                        'error',
+                        errorHandler
+                    );
                     expect(err).toBe(false);
                     done();
                 }
 
                 function checkDisconnectedDevice(){
-                    phidgetCore.removeListener(
-                        'error',
-                        errorHandler
-                    );
+
                     phidgetCore.removeListener(
                         'disconnected',
                         checkDisconnectedDevice
