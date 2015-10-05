@@ -66,6 +66,7 @@ OR
 * [Servo Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Servo.md)
 * [Spatial Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Spatial.md)
 * [Analog Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Analog.md)
+* [Temperature Module](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Temperature.md)
 
 ## Quick Example
 Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phidget-API/tree/master/docs) above for more info on specific phidget types.

@@ -20,17 +20,6 @@ IK.connect();
 function init(){
     console.log('init');
     //do some initial set up here... like blinking an led.
-
-    IK.phidget.set(
-        {
-            type:'board',
-            key:'label',
-            value:'myFirstLabel'
-        }
-    );
-
-    console.log(IK.phidget.label);
-
 }
 
 function sensors(changes){
