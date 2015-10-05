@@ -20,9 +20,6 @@ IK.connect();
 function init(){
     console.log('init');
     //do some initial set up here... like blinking an led.
-
-    IK.label = 'fuckitman';
-    console.log(IK.label);
 }
 
 function sensors(changes){
