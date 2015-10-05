@@ -7,7 +7,7 @@ console.log('here');
 temp.whenReady(init);
 
 function init(){
-    console.log('Thermocouple Types Initially Connected ',temp.thermocoupleType); //Logs Initial Thermocouples Connected
+    console.log('Thermocouple Types Initially Connected ',temp.thermocoupleType);
 
     temp.observeAmbientTemperature(ambientTemperatureUpdates);
     temp.observeTemperature(temperatureUpdates);
