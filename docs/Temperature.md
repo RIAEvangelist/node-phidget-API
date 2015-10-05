@@ -17,3 +17,40 @@ The PhidgetTemperature library makes for intuitive and lightning fast developmen
 |Key|Data Type|Writable|Description|
 |---|---------|--------|-----------|
 |type|string|no|'PhidgetTemperature'|
+|ambientTemperature|number|no|Ambient temperature in Celsius|
+|ambientTemperatureMax|number|no|Max ambient temperature in Celsius|
+|ambientTemperatureMin|number|no|Min ambient temperature in Celsius|
+|temperature|number|no|Sensor temperature in Celsius|
+|temperatureMax|number|no|Max sensor temperature in Celsius|
+|temperatureMin|number|no|Min sensor temperature in Celsius|
+|potential|number|no|Thermocouple potential in Millivolts|
+|potentialMin|number|no|Min Thermocouple potential|
+|potentialMax|number|no|Max Thermocouple potential|
+|thermocoupleType|number|no|Thermocouple [Key](http://www.phidgets.com/docs/Thermocouple_Primer)|
+
+##Getting Started
+
+Initializing [PhidgetTemperature](http://www.phidgets.com/products.php?category=35) Devices can be very easy, here is a basic example to help you get started.
+
+    var Phidget = require('phidgetapi').TemperatureSensor;
+    var temp =new Phidget;
+
+
+    temp.connect();
+    console.log('here');
+    temp.whenReady(init);
+
+    function init(){
+        console.log('Thermocouple Types Initially Connected ',temp.thermocoupleType); //Logs Initial Thermocouples Connected
+
+        temp.observeAmbientTemperature(ambientTemperatureUpdates);
+        temp.observeTemperature(temperatureUpdates);
+    }
+
+    function ambientTemperatureUpdates(changes){
+        console.log('Ambient Temperatures', temp.ambientTemperature);
+    }
+
+    function temperatureUpdates(changes){
+        console.log('Sensor Temperatures' , temp.temperature);
+    }

@@ -3,7 +3,7 @@ var temp =new Phidget;
 
 
 temp.connect();
-
+console.log('here');
 temp.whenReady(init);
 
 function init(){
