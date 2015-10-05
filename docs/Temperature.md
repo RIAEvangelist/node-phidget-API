@@ -1,0 +1,19 @@
+#Phidget Temperature Sensor Boards
+
+The PhidgetTemperature library makes for intuitive and lightning fast development without any compromise. For a quick start into your Temperature Sensor project see the [Basic Temperature example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/temperature.js).
+
+##Methods
+
+|Method call|Parameters|Description|
+|-----------|----------|-----------|
+|[connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|This connects the PhidgetTemperature |
+|[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
+|whenReady|change handler function|This executes a function when the PhidgetTemperature is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a Phidget is detached and re attached__|
+|observeTemperature|change handler function|Used for asynchronously observing the changes to Sensor Temperature.|
+|observeAmbientTemperature|change handler function|Used for asynchronously observing the changes to Ambient Temperature.|
+
+##Data
+
+|Key|Data Type|Writable|Description|
+|---|---------|--------|-----------|
+|type|string|no|'PhidgetTemperature'|
