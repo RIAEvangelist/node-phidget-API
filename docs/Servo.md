@@ -9,6 +9,7 @@ The PhidgetServo library makes for intuitive and lightning fast development with
 |[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget device.  The disconnected event will be dispatched when the connection has been successfully disconnected.|
 |whenReady|function|This executes a function when the Phidget Servo is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a Phidget is detached and re attached__|
 |observe|change handler function|Used for asynchronously observing changes to the Phidget Servo.|
+|unobserve|change handler function|Stops observing from the specified observe's change handler function.|
 |[servoParameters](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/ServoParameters.md)|see individual methods|array of [ServoParams Methods](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/ServoParameters.md) for each attached motor|
 
 ##Data

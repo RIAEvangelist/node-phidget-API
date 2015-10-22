@@ -10,7 +10,9 @@ The PhidgetTemperature library makes for intuitive and lightning fast developmen
 |[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
 |whenReady|change handler function|This executes a function when the PhidgetTemperature is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a Phidget is detached and re attached__|
 |observeTemperature|change handler function|Used for asynchronously observing the changes to Sensor Temperature.|
+|unobserveTemperature|change handler function|Stops observing from the specified observeTemperature's change handler function.|
 |observeAmbientTemperature|change handler function|Used for asynchronously observing the changes to Ambient Temperature.|
+|unobserveAmbientTemperature|change handler function|Stops observing from the specified observeAmbientTemperature's change handler function.|
 
 ##Data
 

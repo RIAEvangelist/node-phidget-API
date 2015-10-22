@@ -9,8 +9,11 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
 |[whenReady](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md)|function |This executes a function when the PhidgetSpatial is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a phidget is detached and re attached__|
 |observeGyro|change handler function|Used for asynchronously observing the changes to the PhidgetSpatial board's gyroscopic sensors.|
+|unobserveGyro|change handler function|Stops observing from the specified observeGyro's change handler function.|
 |observeAcceleration|change handler function|Used for asynchronously observing the changes to the PhidgetSpatial board's acceleration axes.|
+|unobserveAcceleration|change handler function|Stops observing from the specified observeAcceleration's change handler function.|
 |observeMagneticField|change handler function|Used for asynchronously observing the changes to the PhidgetSpatial board's magnetic field sensors.|
+|unobserveMagneticField|change handler function|Stops observing from the specified observeMagneticField's change handler function.|
 |zeroGyro|N/A| Re-zeroes the gyroscope.|
 |setCompassCorrectionParameters|`magfield, offset0, offset1, offset2, gain0, gain1, gain2, T0, T1, T2, T3, T4, T5`|This function adjusts the parameters of the compass.|
 |resetCompassCorrectionParameters|N/A|Resets the Compass Correction Parameters to default values:`(1,0,0,0,1,1,1,0,0,0,0,0,0)`|
