@@ -9,6 +9,7 @@ The Phidget Manager library makes for an intuitive and easy way to manage your P
 |[connect](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|[__phidget__.params object](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#connecting--phidgetparams)|Connects any Phidget USB Device|
 |[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected.|
 |observe|change handler function|used for asynchronously observing the changes to any Phidget USB device.|
+|unobserve|change handler function|Stops observing from the specified observe's change handler function.|
 
 ##Data
 
