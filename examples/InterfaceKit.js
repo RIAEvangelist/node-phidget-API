@@ -32,6 +32,16 @@ IK.connect();
 function init(){
     console.log('init');
     //do some initial set up here... like blinking an led.
+    setInterval(
+    function(){
+        if(IK.outputs[0]==0){
+            IK.outputs[0]=1;
+        }else{
+            IK.outputs[0]=0;
+        }
+    },
+    1000
+);
 }
 
 function sensors(changes){
