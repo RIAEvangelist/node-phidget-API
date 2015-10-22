@@ -13,6 +13,18 @@ IK.observeInputs(inputs);
 IK.observeSensors(sensors);
 IK.observeRawSensors(rawSensors);
 
+//Uncomment to stop observing after 8 seconds
+// setTimeout(
+//     function(){
+//         IK.unobserveRawSensors(rawSensors);
+//         IK.unobserveSensors(sensors);
+//         IK.unobserveInputs(inputs);
+//         IK.unobserveOutputs(outputs);
+//     },
+//     8000
+// );
+
+
 IK.whenReady(init);
 
 IK.connect();
