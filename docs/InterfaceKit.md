@@ -10,9 +10,13 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |[quit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Phidget.md#methods)|N/A |This method requests a disconnect from the Phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected.|
 |whenReady|function|This executes a function when the Phidget InterfaceKit is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a Phidget is detached and re attached__|
 |observeOutputs|change handler function|Used for asynchronously observing the digital output changes to the Phidget InterfaceKit board.|
+|unobserveOutputs|change handler function|Stops observing from the specified observeOutputs' change handler function.|
 |observeInputs|change handler function|Used for asynchronously observing the digital input changes to the Phidget InterfaceKit board.|
+|unobserveInputs|change handler function|Stops observing from the specified observeInputs' change handler function.|
 |observeSensors|change handler function|Used for asynchronously observing the sensor changes to the Phidget InterfaceKit board with a range of `0 - 1024`.|
+|unobserveSensors|change handler function|Stops observing from the specified observeSensors' change handler function.|
 |observeRawSensors|change handler function|Used for asynchronously observing the sensor changes to the Phidget InterfaceKit board with a range of `0 - 4096`.|
+|unobserveRawSensors|change handler function|Stops observing from the specified observeRawSensors' change handler function.|
 
 ##Data
 
@@ -34,7 +38,7 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 
 Initializing a [Phidget InterfaceKit](http://www.phidgets.com/products.php?category=0) can be very easy, here is a basic example to help you get started.
 
-    var Phidget = require('phidgetapi').InterfaceKit;
+    var Phidget = require('../phidgetapi').InterfaceKit;
 
     var IK=new Phidget;
     /*
@@ -49,24 +53,36 @@ Initializing a [Phidget InterfaceKit](http://www.phidgets.com/products.php?categ
     IK.observeSensors(sensors);
     IK.observeRawSensors(rawSensors);
 
+    //Uncomment to stop observing after 8 seconds
+    // setTimeout(
+    //     function(){
+    //         IK.unobserveRawSensors(rawSensors);
+    //         IK.unobserveSensors(sensors);
+    //         IK.unobserveInputs(inputs);
+    //         IK.unobserveOutputs(outputs);
+    //     },
+    //     8000
+    // );
+
+
     IK.whenReady(init);
 
     IK.connect();
 
     function init(){
+        console.log('init');
         //do some initial set up here... like blinking an led.
         setInterval(
-            function(){
-                if(IK.outputs[0]==0){
-                    IK.outputs[0]=1;
-                }else{
-                    IK.outputs[0]=0;
-                }
-            },
-            1000
-        );
+        function(){
+            if(IK.outputs[0]==0){
+                IK.outputs[0]=1;
+            }else{
+                IK.outputs[0]=0;
+            }
+        },
+        1000
+    );
     }
-
 
     function sensors(changes){
         for(var i in changes){

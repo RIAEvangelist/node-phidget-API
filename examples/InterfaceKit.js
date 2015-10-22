@@ -13,6 +13,18 @@ IK.observeInputs(inputs);
 IK.observeSensors(sensors);
 IK.observeRawSensors(rawSensors);
 
+//Uncomment to stop observing after 8 seconds
+// setTimeout(
+//     function(){
+//         IK.unobserveRawSensors(rawSensors);
+//         IK.unobserveSensors(sensors);
+//         IK.unobserveInputs(inputs);
+//         IK.unobserveOutputs(outputs);
+//     },
+//     8000
+// );
+
+
 IK.whenReady(init);
 
 IK.connect();
@@ -20,6 +32,16 @@ IK.connect();
 function init(){
     console.log('init');
     //do some initial set up here... like blinking an led.
+    setInterval(
+    function(){
+        if(IK.outputs[0]==0){
+            IK.outputs[0]=1;
+        }else{
+            IK.outputs[0]=0;
+        }
+    },
+    1000
+);
 }
 
 function sensors(changes){
