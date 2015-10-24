@@ -25,8 +25,8 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |type|string|no|`'PhidgetInterfaceKit'`|
 |dataRateMax|number|no|Maximum data rate in samples per second|
 |dataRateMin|number|no|Minimum data rate in samples per second|
-|dataRate|number|yes|The number of times data is acquired per second|
-|ratiometric|bool|yes|Sets ratiometric setting. [More info](http://www.phidgets.com/docs/Analog_Input_Primer#Ratiometric_Configuration)|
+|dataRates|number|yes|The number of times data is acquired per second|
+|ratiometric|number|yes|Sets ratiometric setting to either `0` or `1` [More info](http://www.phidgets.com/docs/Analog_Input_Primer#Ratiometric_Configuration)|
 |outputs|array|yes|Outputs of the InterfaceKit|
 |inputs|array|no|Digital inputs of the InterfaceKit|
 |sensors|array|no|sensor values `0 - 1024`|
