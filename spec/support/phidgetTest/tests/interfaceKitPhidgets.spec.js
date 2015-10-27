@@ -44,7 +44,7 @@ describe(
              }
         );
        
-/*
+
         it(
             'Verify Raw sensor detects value more than 4050',
             function(done){
@@ -86,8 +86,7 @@ describe(
             }
             
         );
-        
-    */
+
         it(
             'Verify sensor detects value more than 900',
             function(done){
@@ -128,7 +127,7 @@ describe(
             
         );
       
-  /*      
+        
         it(
             'Verify change in digital input is detected',
             function(done){
@@ -145,7 +144,8 @@ describe(
 
             }
         );
-         */
+         
+        
        it(
             'Verify "triggers" data key can be modified',
             function(done){
