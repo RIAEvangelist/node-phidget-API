@@ -23,6 +23,7 @@ exports.RFID    = RFID;
 exports.Spatial = Spatial;
 exports.Servo = Servo;
 exports.TemperatureSensor = TemperatureSensor;
+exports.Analog = Analog;
 
 //backwards compatibilirty only below
 exports.phidget = Phidget;
