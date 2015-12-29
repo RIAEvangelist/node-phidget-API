@@ -25,43 +25,32 @@ The PhidgetAnalog library makes for intuitive and lightning fast development wit
 
 Initializing [PhidgetAnalog](http://www.phidgets.com/products.php?category=0) devices can be very easy. here is a basic exmple to help get you started
 
-    var Phidget = require('../phidgetapi').source;
+    var Phidget = require('../phidgetapi.js').Analog;
 
-    var source=new Phidget();
+    var analog=new Phidget();
+    analog.connect();
 
-    source.observe(board)
-
-    source.whenReady(init);
+    analog.whenReady(init)
+    analog.observeVoltage(voltage);
 
     function init(){
-        source.enabled[0]=1; //turn source on
-        source.voltage[0]=0; //zero voltage
-
-        setTimeout(
-            sineWave,
-            500
-        );
-
-        setTimeout(
-            powerdown,
+        setInterval(
+            function(){
+                if(analog.voltage[0] === 0){
+                    analog.voltage[0] = 5;
+                }else{
+                    analog.voltage[0] = 0;
+                }
+                if(analog.enabled === 0){
+                    analog.enabled = 1;
+                }else{
+                    analog.enabled = 0;
+                }
+            },
             5000
         );
     }
 
-    function board(changes){
-        console.log('current board state', JSON.stringify(source));
+    function voltage(changes){
+        console.log(analog.voltage);
     }
-
-    function moveTo180(){
-        for(var i = 0, i < 361, i++){
-            source.voltage[0] = Math.sin(i)
-            console.log(source.voltage[0])
-        }
-    }
-
-    function powerdown(){
-        source.enabled[0]=1; //fake a hard power up just to be sure source listens to power off command
-        source.enabled[0]=0; //power off
-    }
-
-    source.connect();
