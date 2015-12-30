@@ -15,6 +15,7 @@ var Servo = require('./lib/Servo.js').Phidget;
 var Analog = require('./lib/Analog.js').Phidget;
 var TemperatureSensor = require('./lib/TemperatureSensor.js').Phidget;
 var WeightSensor = require('./lib/WeightSensor.js').Phidget;
+var MotorCount = require('./lib/MotorControl.js').Phidget;
 
 exports.Phidget = Phidget;
 exports.Manager = Manager;
@@ -26,6 +27,7 @@ exports.Servo = Servo;
 exports.TemperatureSensor = TemperatureSensor;
 exports.Analog = Analog;
 exports.WeightSensor = WeightSensor;
+exports.MotorControl = MotorControl;
 
 //backwards compatibilirty only below
 exports.phidget = Phidget;
