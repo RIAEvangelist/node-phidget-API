@@ -2,6 +2,10 @@
 
 The PhidgetWeightSensor library makes for intuitive and lightning fast development without any compromise. For a quick start into your Temperature Sensor project see the [Basic weightSensor example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/weightSensor.js).
 
+# TO DO
+
+This addition has yet to be tested, so if issues are found please file an issue or submit a PR.
+
 ##Methods
 
 |Method call|Parameters|Description|
