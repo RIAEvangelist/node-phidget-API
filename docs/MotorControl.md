@@ -2,6 +2,9 @@
 
 The PhidgetMotorControl library makes for intuitive and lightning fast development without any interfaces to any project. [PhidgetMotorControl](http://www.phidgets.com/products.php?category=10) and their [Extensive Primer Guides](http://www.phidgets.com/docs/1065_User_Guide) are very easy to follow and advanced examples are coming soon!
 
+## To Do
+
+Test this portion of the Lib
 
 ## Methods
 |Method call|Parameters|Description|
