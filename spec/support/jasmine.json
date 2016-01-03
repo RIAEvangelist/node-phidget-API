@@ -3,6 +3,7 @@
   "spec_files": [
        "/support/phidgetTest/tests/phidgets.spec.js"
        "/support/phidgetTest/tests/interfaceKitPhidgets.spec.js"
+       "/support/phidgetTest/tests/temperatureSensorPhidgets.spec.js"
 
   ]
 }
