@@ -7,6 +7,14 @@ motor.connect();
 motor.whenReady(init);
 
 function init(){
-    console.log(motor.phidget.data.board);
+    //console.log(motor.phidget.data.board);
+
+    motor.observeEncoderPosition(observerCallback);
+
     //console.log(motor.supplyVoltage);
+}
+
+
+function observerCallback(changes) {
+    console.log(motor.accelerationMin);
 }
