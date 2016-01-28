@@ -12,7 +12,7 @@ Package Quality :
 
 # Known supported platforms
 
-1. [node.js](https://nodejs.org)
+1. [node.js](https://nodejs.org/en/)
 2. [io.js](https://iojs.org/en/index.html)
 3. [nw.js formerly node-webkit](http://nwjs.io/) __->__ [nw.js github](https://github.com/nwjs/nw.js)
 4. [atom electron formerly atom shell](http://electron.atom.io/) __->__ [electron github](https://github.com/atom/electron)
