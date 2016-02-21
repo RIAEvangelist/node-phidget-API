@@ -35,7 +35,7 @@ If you are staring from the command line it will look something like this, __you
 [Linux phidget webservice info](http://www.phidgets.com/docs/OS_-_Linux#Using_the_WebService)  
 [Mac phidget webservice info](http://www.phidgets.com/docs/OS_-_OS_X#Using_the_WebService)
 
-    sudo phidgetswbservice21
+    sudo phidgetwebservice21
 
 [Windows  phidget webservice info](http://www.phidgets.com/docs/OS_-_Windows#Using_the_WebService)
 
