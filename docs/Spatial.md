@@ -1,7 +1,7 @@
-#Phidget Spatial
+# Phidget Spatial
 The PhidgetSpatial library makes for intuitive and lightning fast development without any compromise. All sensors on the Phidget Spatial board should be primed for accurate use, here are the [acceleration](http://www.phidgets.com/docs/Accelerometer_Primer), [gyroscopic](http://www.phidgets.com/docs/Gyroscope_Primer), and [magnetic field](http://www.phidgets.com/docs/Compass_Primer) primer guides. For a quick start into your Spatial project see this [basic PhidgetSpatial example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/spatial.js).
 
-##Methods
+## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
@@ -18,7 +18,7 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |setCompassCorrectionParameters|`magfield, offset0, offset1, offset2, gain0, gain1, gain2, T0, T1, T2, T3, T4, T5`|This function adjusts the parameters of the compass.|
 |resetCompassCorrectionParameters|N/A|Resets the Compass Correction Parameters to default values:`(1,0,0,0,1,1,1,0,0,0,0,0,0)`|
 
-##Data
+## Data
 
 |Key|Data Type|Writable|Description|
 |---|---------|--------|-----------|
@@ -40,10 +40,11 @@ The PhidgetSpatial library makes for intuitive and lightning fast development wi
 |magneticField|array|no|three axes of magnetic field in Gauss|
 
 
-##Getting Started
+## Getting Started
 
 Initializing [Phidgets Spatial Devices](http://www.phidgets.com/products.php?category=1) can be very easy, here is a basic example to help you get started.
 
+```javascript
     var Phidget = require('phidgetapi').Spatial;
 
     var spatial=new Phidget;
@@ -94,3 +95,4 @@ Initializing [Phidgets Spatial Devices](http://www.phidgets.com/products.php?cat
     }
 
     spatial.connect();
+```

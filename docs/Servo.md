@@ -1,7 +1,7 @@
-#Phidget Servo
+# Phidget Servo
 The PhidgetServo library makes for intuitive and lightning fast development without any compromise. For a quick start into your Spatial project see this [basic PhidgetServo example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/servoMotor.js).
 
-##Methods
+## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
@@ -12,7 +12,7 @@ The PhidgetServo library makes for intuitive and lightning fast development with
 |unobserve|change handler function|Stops observing from the specified observe's change handler function.|
 |[servoParameters](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/ServoParameters.md)|see individual methods|array of [ServoParams Methods](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/ServoParameters.md) for each attached motor|
 
-##Data
+## Data
 
 |Key|Data Type|Writable|Description|
 |---|---------|--------|-----------|
@@ -26,11 +26,11 @@ The PhidgetServo library makes for intuitive and lightning fast development with
 |positionMin|array|no|Min position of each servo in degrees|
 
 
-##Getting Started
+## Getting Started
 
 Initializing [Phidget Servos](http://www.phidgets.com/products.php?category=10) can be very easy, here is a basic example to help you get started.
 
-
+```javascript
     var Phidget = require('phidgetapi').Servo;
 
     var servo=new Phidget();
@@ -70,3 +70,4 @@ Initializing [Phidget Servos](http://www.phidgets.com/products.php?category=10) 
     }
 
     servo.connect();
+```

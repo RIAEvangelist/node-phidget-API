@@ -1,8 +1,8 @@
-#Phidget InterfaceKit Boards
+# Phidget InterfaceKit Boards
 
 The PhidgetInterfaceKit library makes for intuitive and lightning fast development without any compromise to any [Phidget InterfaceBoard](http://www.phidgets.com/products.php?category=0). For accurate use, see the [sensors](http://www.phidgets.com/docs/Analog_Input_Primer), [digital inputs](http://www.phidgets.com/docs/Digital_Input_Primer), and [digital outputs](http://www.phidgets.com/docs/Digital_Output_Primer) primers. For a quick start into your InterfaceKit project, see this [basic InterfaceKit example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/InterfaceKit.js).
 
-##Methods
+## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
@@ -18,7 +18,7 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |observeRawSensors|change handler function|Used for asynchronously observing the sensor changes to the Phidget InterfaceKit board with a range of `0 - 4096`.|
 |unobserveRawSensors|change handler function|Stops observing from the specified observeRawSensors' change handler function.|
 
-##Data
+## Data
 
 |Key|Data Type|Writable|Description|
 |---|---------|--------|-----------|
@@ -33,10 +33,10 @@ The PhidgetInterfaceKit library makes for intuitive and lightning fast developme
 |rawSensors|array|no|sensor values `0 - 4096`|
 |triggers|array|yes|Minumum activation for input sensors|
 
-##Getting Started
+## Getting Started
 
 Initializing a [Phidget InterfaceKit](http://www.phidgets.com/products.php?category=0) can be very easy, here is a basic example to help you get started.
-
+```javascript
     var Phidget = require('../phidgetapi').InterfaceKit;
 
     var IK=new Phidget;
@@ -133,3 +133,4 @@ Initializing a [Phidget InterfaceKit](http://www.phidgets.com/products.php?categ
         //see updated IK data after all changes
         console.log('Inputs',IK.inputs);
     }
+```

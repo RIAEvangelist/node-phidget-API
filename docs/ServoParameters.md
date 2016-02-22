@@ -1,8 +1,8 @@
-#ServoParameters
+# ServoParameters
 
 Each PhidgetServo will have its own set of parameters. Documentation for [PhidgetServos can be seen here](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Servo.md),a full list of PhidgetServo products [here](http://www.phidgets.com/products.php?category=10), and a full servo primer guide [here](http://www.phidgets.com/docs/Servo_Motor_and_Controller_Primer).
 
-##Methods
+## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|

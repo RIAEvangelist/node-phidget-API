@@ -1,4 +1,4 @@
-#Phidget Weight Sensor Boards
+# Phidget Weight Sensor Boards
 
 The PhidgetWeightSensor library makes for intuitive and lightning fast development without any compromise. For a quick start into your Temperature Sensor project see the [Basic weightSensor example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/weightSensor.js).
 
@@ -6,7 +6,7 @@ The PhidgetWeightSensor library makes for intuitive and lightning fast developme
 
 This addition has yet to be tested, so if issues are found please file an issue or submit a PR.
 
-##Methods
+## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
@@ -16,17 +16,18 @@ This addition has yet to be tested, so if issues are found please file an issue 
 |observeWeight|change handler function|Used for asynchronously observing the changes to Weight.|
 |unobserveWeight|change handler function|Stops observing from the specified observeWeight's change handler function.|
 
-##Data
+## Data
 
 |Key|Data Type|Writable|Description|
 |---|---------|--------|-----------|
 |type|string|no|'PhidgetWeightSensor'|
 |WeightChangeTrigger|number|yes|gets and sets the change trigger|
 
-##Getting Started
+## Getting Started
 
 Initializing [PhidgetTemperature](http://www.phidgets.com/products.php?category=35) Devices can be very easy, here is a basic example to help you get started.
 
+```javascript
     var Phidget = require('phidgetapi').TemperatureSensor;
     var temp =new Phidget;
 
@@ -49,3 +50,4 @@ Initializing [PhidgetTemperature](http://www.phidgets.com/products.php?category=
     function temperatureUpdates(changes){
         console.log('Sensor Temperatures' , temp.temperature);
     }
+```

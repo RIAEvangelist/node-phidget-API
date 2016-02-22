@@ -1,6 +1,7 @@
-#Phidget RFID
+# Phidget RFID
 The PhidgetRFID library makes for intuitive and lightning fast development without any compromise. For a quick start into your RFID project see this [Basic RFID Example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/RFID.js)
-##Methods
+
+## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
@@ -12,7 +13,7 @@ The PhidgetRFID library makes for intuitive and lightning fast development witho
 |observeOutputs|change handler function|Used for asynchronously observing the changes to the Phidget RFID Outputs.|
 |unobserveOutputs|change handler function|Stops observing from the specified observeOutputs' change handler function.|
 
-##Data
+## Data
 
 |Key|Data Type|Writable|Description|
 |---|---------|--------|-----------|
@@ -30,10 +31,11 @@ The PhidgetRFID library makes for intuitive and lightning fast development witho
 
 
 
-##Getting Started
+## Getting Started
 
 Initializing [Phidget RFID Devices](http://www.phidgets.com/products.php?category=14) can be very easy, here is a basic example to help you get started.
 
+```javascript
     var Phidget = require('phidgetapi').RFID;
 
     var RFID=new Phidget;
@@ -75,3 +77,4 @@ Initializing [Phidget RFID Devices](http://www.phidgets.com/products.php?categor
         }
 
     }
+```
