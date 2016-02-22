@@ -70,7 +70,7 @@ OR
 
 ## Quick Example
 Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phidget-API/tree/master/docs) above for more info on specific phidget types.
-
+```javascript
     var Manager = require('phidgetapi').Manager;
 
     var manager=new Manager;
@@ -89,7 +89,7 @@ Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phid
     }
 
     manager.phidget.connect();
-
+```
 ## ToDo:
 * Support for Phidget authentication
 * Create modules for handling all phidget types
