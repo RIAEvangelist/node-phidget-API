@@ -16,6 +16,7 @@ var Analog = require('./lib/Analog.js').Phidget;
 var TemperatureSensor = require('./lib/TemperatureSensor.js').Phidget;
 var WeightSensor = require('./lib/WeightSensor.js').Phidget;
 var MotorControl = require('./lib/MotorControl.js').Phidget;
+var IR = require('./lib/IR.js').Phidget;
 
 exports.Phidget             = Phidget;
 exports.Manager             = Manager;
@@ -28,6 +29,7 @@ exports.TemperatureSensor   = TemperatureSensor;
 exports.Analog              = Analog;
 exports.WeightSensor        = WeightSensor;
 exports.MotorControl        = MotorControl;
+exports.IR                  = IR;
 
-//backwards compatibilirty only below
+//backwards compatibility only below
 exports.phidget = Phidget;
