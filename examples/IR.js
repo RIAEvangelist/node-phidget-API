@@ -4,9 +4,12 @@ var IR = new Phidget();
 IR.connect();
 IR.whenReady(init);
 
+
 function init(){
     console.log('Phidget IR Receiver/Transmitter ready');
     console.log('Provide an IR signal input and the transmitter will echo that signal');
+
+    IR.observe(updates);
 }
 
 function infra(changes){
