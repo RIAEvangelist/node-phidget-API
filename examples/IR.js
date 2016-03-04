@@ -2,6 +2,7 @@ var Phidget = require('../phidgetapi').IR;
 var IR = new Phidget();
 
 IR.connect();
+console.log('Sucessfully connected');
 IR.whenReady(init);
 
 
