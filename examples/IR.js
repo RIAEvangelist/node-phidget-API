@@ -9,11 +9,11 @@ function init(){
     console.log('Phidget IR Receiver/Transmitter ready');
     console.log('Provide an IR signal input and the transmitter will echo that signal');
 
-    IR.observe(updates);
+    IR.observe(update);
 }
 
-function infra(changes){
-    console.log(IR.readRaw);
+function update(changed){
+    console.log('Read IR signal ', IR.readRaw);
 }
 
 /*
