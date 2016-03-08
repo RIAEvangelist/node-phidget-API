@@ -2,19 +2,21 @@ var Phidget = require('../phidgetapi').IR;
 var IR = new Phidget();
 
 IR.connect();
-console.log('Sucessfully connected');
+console.log('Successfully connected');
 IR.whenReady(init);
-
+console.log(IR);
 
 function init(){
     console.log('Phidget IR Receiver/Transmitter ready');
     console.log('Provide an IR signal input and the transmitter will echo that signal');
 
-    IR.observe(update);
+    IR.observe(receive);
 }
 
-function update(changed){
-    console.log('Read IR signal ', IR.readRaw);
+
+function receive(changes){
+    console.log('in function');
+
 }
 
 /*
