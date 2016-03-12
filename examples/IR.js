@@ -4,7 +4,6 @@ var IR = new Phidget();
 IR.connect();
 console.log('Successfully connected');
 IR.whenReady(init);
-console.log(IR);
 
 function init(){
     console.log('Phidget IR Receiver/Transmitter ready');
@@ -15,8 +14,9 @@ function init(){
 
 
 function receive(changes){
-    console.log('in function');
-
+    console.log(IR.readRaw);
+    //IR.transmitRaw(IR.readRaw);
+    //console.log(IR.readRaw, 'IR code transmitted');
 }
 
 /*
