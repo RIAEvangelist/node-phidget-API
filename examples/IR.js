@@ -14,23 +14,10 @@ function init(){
 
 
 function receive(changes){
-    console.log(IR.readRaw);
-    //IR.transmitRaw(IR.readRaw);
-    //console.log(IR.readRaw, 'IR code transmitted');
+    console.log('IR code received: ', `0x${IR.readRaw.split(',')[0]}`);
+    IR.transmit(receive);
 }
 
-/*
-var phidget = require('../phidgetapi').phidget;
-var IR = new phidget();
-
-IR.on(
-    'changed',
-    function(){
-        if (!IR.data.RawData){
-          return;
-        }
-        console.log(Number(`0x${IR.data.board.Code.split(',')[0]}`));
-
-    }
-);
-*/
+function send(){
+    console.log('IR code transmitted: ', `0x${IR.readRaw.split(',')[0]}`);
+}
