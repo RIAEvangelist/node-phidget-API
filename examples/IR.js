@@ -13,7 +13,7 @@ function init(){
 }
 
 function main(changes){
-    var code=`0x${IR.readRaw.split(',')[0]}`;
+    var code=IR.readRaw;
     console.log('IR code received: ', code);
 
     IR.transmit(code);
