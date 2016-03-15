@@ -9,15 +9,13 @@ function init(){
     console.log('Phidget IR Receiver/Transmitter ready');
     console.log('Provide an IR signal input and the transmitter will echo that signal');
 
-    IR.observe(receive);
+    IR.observe(main);
 }
 
+function main(changes){
+    var code=`0x${IR.readRaw.split(',')[0]}`;
+    console.log('IR code received: ', code);
 
-function receive(changes){
-    console.log('IR code received: ', `0x${IR.readRaw.split(',')[0]}`);
-    IR.transmit(receive);
-}
-
-function send(){
-    console.log('IR code transmitted: ', `0x${IR.readRaw.split(',')[0]}`);
+    IR.transmit(code);
+    console.log('IR code transmitted: ', IR.transmit);
 }
