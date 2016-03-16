@@ -12,13 +12,9 @@ function init(){
     IR.observe(main);
 }
 
-//IR.transmit='20df10ef,32,1';
-//console.log('on');
-
 function main(changes){
-    var code=IR.readRaw;
-    console.log('IR code received: ', code);
+    console.log('IR code received: ', IR.readRaw);
 
-    IR.transmit=IR.readRaw;
-    console.log('IR code transmitted: ', IR.transmit);
+    IR.transmit;
+    console.log('IR code transmitted');
 }
