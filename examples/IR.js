@@ -16,5 +16,5 @@ function main(changes){
     console.log('IR code received: ', IR.readRaw);
 
     IR.transmit;
-    console.log('IR code transmitted');
+    //console.log('IR code transmitted: ');
 }
