@@ -15,6 +15,7 @@ function init(){
 function main(changes){
     console.log('IR code received: ', IR.readRaw);
 
-    IR.transmit;
+    code='20df10ef,32,1';
+    IR.Transmit=code;
     //console.log('IR code transmitted: ');
 }
