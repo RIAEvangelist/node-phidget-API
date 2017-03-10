@@ -5,6 +5,12 @@
  * June 2012
  *
  */
+
+// Quickfix 10.March.2017 | fw@demodern.com
+// Observe is obsolete, fix for new Node Version.
+// Ideally PR should be made which rewrite's all observe's with the new Proxy's
+require('object.observe');
+
 var Phidget = require('./lib/Phidget.js').Phidget;
 var Manager = require('./lib/Manager.js').Manager;
 var GPS     = require('./lib/GPS.js').Phidget;
