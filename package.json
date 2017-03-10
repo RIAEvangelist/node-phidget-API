@@ -13,12 +13,12 @@
     "node": ">=0.11.13"
   },
   "dependencies": {
-    "event-pubsub": "^1.0.3"
+    "event-pubsub": "^1.0.3",
+    "object.observe": "^0.2.6"
   },
   "scripts": {},
   "devDependencies": {
-    "jasmine": "^2.3.2",    
-    "object.observe": "^0.2.6"
+    "jasmine": "^2.3.2"
   },
   "optionalDependencies": {},
   "_engineSupported": true,
