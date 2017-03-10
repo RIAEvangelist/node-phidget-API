@@ -1,8 +1,8 @@
-#Phidget Temperature Sensor Boards
+# Phidget Temperature Sensor Boards
 
 The PhidgetTemperature library makes for intuitive and lightning fast development without any compromise. For a quick start into your Temperature Sensor project see the [Basic Temperature example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/temperature.js).
 
-##Methods
+## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
@@ -14,7 +14,7 @@ The PhidgetTemperature library makes for intuitive and lightning fast developmen
 |observeAmbientTemperature|change handler function|Used for asynchronously observing the changes to Ambient Temperature.|
 |unobserveAmbientTemperature|change handler function|Stops observing from the specified observeAmbientTemperature's change handler function.|
 
-##Data
+## Data
 
 |Key|Data Type|Writable|Description|
 |---|---------|--------|-----------|
@@ -30,10 +30,11 @@ The PhidgetTemperature library makes for intuitive and lightning fast developmen
 |potentialMax|number|no|Max Thermocouple potential|
 |thermocoupleType|number|no|Thermocouple [Key](http://www.phidgets.com/docs/Thermocouple_Primer)|
 
-##Getting Started
+## Getting Started
 
 Initializing [PhidgetTemperature](http://www.phidgets.com/products.php?category=35) Devices can be very easy, here is a basic example to help you get started.
 
+```javascript
     var Phidget = require('phidgetapi').TemperatureSensor;
     var temp =new Phidget;
 
@@ -56,3 +57,4 @@ Initializing [PhidgetTemperature](http://www.phidgets.com/products.php?category=
     function temperatureUpdates(changes){
         console.log('Sensor Temperatures' , temp.temperature);
     }
+```

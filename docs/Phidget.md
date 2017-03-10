@@ -7,7 +7,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
 |connect|[__phidget__.params object](#connecting--phidgetparams)|This is the main initialize function.  Params is a JSON array of connection variables.  The phidgetReady event will be dispatched upon connection and initialization success. You may wish to bind other listeners to your __phidget__ inside a listener for this event.|
-|set|[__phidget__.set object](#setting-information-phidgetset)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. Remember this is case sensative so match that case exactly as it is in the __phidget__.data object for your device.
+|set|[__phidget__.set object](#setting-information-phidgetset)|This method is used to set any output or setable device ( onboard led etc ) on your Phidget. See your __phidget__.data object for possible outputs. Remember this is case sensitive so match that case exactly as it is in the __phidget__.data object for your device.
 |quit|N/A |This method requests a disconnect from the phidget board.  The disconnected event will be dispatched when the connection has been successfully disconnected. |
 |phidget.on|"event name", eventHandler| Bind an event listener.|
 |phidget.addListener|"event name", eventHandler| Bind an event listener.|
@@ -19,7 +19,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |phidget.rate| number | Get or set rate in milliseconds.|
 |phidget.label| number or string | Get or set label.|
 
-##Events
+## Events
 
 |Event name| Paramaters| Description|
 |----------|-----------|------------|
@@ -33,7 +33,7 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 |connected|N/A| the phidget socket was found or connected|
 |data|N/A|phidget data|
 
-## __phidget__.event object
+## **phidget**.event object
 |Key|Value Description|
 |---|-----------------|
 |type| 'board' or 'output' etc. various root children of the devices __phidget__.data object.|
@@ -42,19 +42,19 @@ The PhidgetsAPI package exposes a few different ways of interacting with your Ph
 | value of key from above | the updated value, same as the value of the above `value` key |
 
 example :
-
-    {
-        type: 'Sensor',
-        key: '0',
-        value: '109',
-        '0': '109'
-    }
-
+```javascript
+{
+    type: 'Sensor',
+    key: '0',
+    value: '109',
+    '0': '109'
+}
+```
 
 ## Connecting & phidget.params
 `connect` can be passed an a JSON object of options.  Here are the options and their defaults:
 
-__Note on `version`__: version in this case is the version of the phidget server and associated API.  You should check your phidget server to learn the version in use.  The good news is that the APIs we are using here have not changed for the past 3 years, and appear to be unlikely to do so in the future.  If you run into errors with newer versions, please let us know, or submit a pull request with a fix.
+**Note on `version`**: version in this case is the version of the phidget server and associated API.  You should check your phidget server to learn the version in use.  The good news is that the APIs we are using here have not changed for the past 3 years, and appear to be unlikely to do so in the future.  If you run into errors with newer versions, please let us know, or submit a pull request with a fix.
 
 |Key|Default|Description|
 |---|-------|-----------|
@@ -66,17 +66,17 @@ __Note on `version`__: version in this case is the version of the phidget server
 |serial | false| used to specify a specific board by serial number, handy when connecting to multiple boards of the same type |
 |rawLog  | false| triggers the __phidget__ "log" event on any raw data from the webservice. Handy for debugging. You still need to listen for this even if you want to show the raw data though.|
 
-
-	{
-		host    : 'localhost',
-		port    : 5001,
-		version : '1.0.10',
-		password: null,
-		type    : 'PhidgetManager',
-		boardID : 123456,
-		rawLog  : false
-	}
-
+```javascript
+{
+	host    : 'localhost',
+	port    : 5001,
+	version : '1.0.10',
+	password: null,
+	type    : 'PhidgetManager',
+	boardID : 123456,
+	rawLog  : false
+}
+```
 
 ## Setting information phidget.set
 |Key|Description|
@@ -86,16 +86,17 @@ __Note on `version`__: version in this case is the version of the phidget server
 |value|the value you wish to set|
 
 example:
-
-    {
-        type    : 'Output',
-        key     : '0',
-        value   : '1'
-    }
-
+```javascript
+{
+    type    : 'Output',
+    key     : '0',
+    value   : '1'
+}
+```
 ## Example Connecting to a Raw Phidget Interface Kit 8/8/8
 We designed the [InterfaceKit](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/InterfaceKit.md) module so you don't need to do this, but it serves as a good example if you ever want to build a new or custom Phidget module. If you build a module for a Phidget that we don't have, or something you think is useful, __PLEASE__ feel free to submit a pull request! We love open source contributions and want to make the best API together!
 
+```javascript
 	var Phidget = require('phidgetapi').Phidget;
 
     var IK888=new phidget();
@@ -163,5 +164,6 @@ We designed the [InterfaceKit](https://github.com/RIAEvangelist/node-phidget-API
             type    : 'PhidgetInterfaceKit'
         }
     );
+```
 
 The above example will show you the available Sensors, Inputs and Outputs as well as the Triggers ( amount of change required in sensor value for a change event to be fired ) and DataRate ( sample rate in ms ) for the Phidgets Interface Kit 8/8/8. It will also cause an LED connected Output 0 and Ground to flash for 200 milliseconds upon a change in any sensor data.

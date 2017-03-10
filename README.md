@@ -35,7 +35,7 @@ If you are staring from the command line it will look something like this, __you
 [Linux phidget webservice info](http://www.phidgets.com/docs/OS_-_Linux#Using_the_WebService)  
 [Mac phidget webservice info](http://www.phidgets.com/docs/OS_-_OS_X#Using_the_WebService)
 
-    sudo phidgetswbservice21
+    sudo phidgetwebservice21
 
 [Windows  phidget webservice info](http://www.phidgets.com/docs/OS_-_Windows#Using_the_WebService)
 
@@ -70,7 +70,7 @@ OR
 
 ## Quick Example
 Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phidget-API/tree/master/docs) above for more info on specific phidget types.
-
+```javascript
     var Manager = require('phidgetapi').Manager;
 
     var manager=new Manager;
@@ -89,7 +89,7 @@ Please see the [Module Documentation](https://github.com/RIAEvangelist/node-phid
     }
 
     manager.phidget.connect();
-
+```
 ## ToDo:
 * Support for Phidget authentication
 * Create modules for handling all phidget types

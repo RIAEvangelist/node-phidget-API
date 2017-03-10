@@ -60,6 +60,7 @@ Test this portion of the Lib
 
 Initializing a [Phidget MotorControl](http://www.phidgets.com/products.php?category=10) can be very easy, here is a basic example to help you get started.
 
+```javascript
     var Phidget = new require('../phidgetapi.js').MotorControl;
 
     var motor = new Phidget;
@@ -76,3 +77,4 @@ Initializing a [Phidget MotorControl](http://www.phidgets.com/products.php?categ
         console.log('and the voltage supplied is :',motor.supplyVoltage,' Volts');
         console.log('with a current draw of :', motor.current[0], ' Amps');
     }
+```

@@ -1,8 +1,8 @@
-#Phidget GPS
+# Phidget GPS
 
 The PhidgetGPS library makes for intuitive and lightning fast development without any compromise. For a quick start into your GPS project see the [Basic GPS example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/GPS.js).
 
-##Methods
+## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
@@ -12,7 +12,7 @@ The PhidgetGPS library makes for intuitive and lightning fast development withou
 |observe|change handler function|Used for asynchronously observing the changes to the PhidgetGPS position.|
 |unobserve|change handler function|Stops observing from the specified observe's change handler function.|
 
-##Data
+## Data
 
 |Key|Data Type|Writable|Description|
 |---|---------|--------|-----------|
@@ -34,10 +34,11 @@ The PhidgetGPS library makes for intuitive and lightning fast development withou
 |lon|number|no|longitude|
 |fixed|bool|no|true if the Phidget GPS has gotten a fix on its location|
 
-##Getting Started
+## Getting Started
 
 Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?category=5) can be very easy, here is a basic example to help you get started.
 
+```javascript
     var Phidget = require('phidgetapi').GPS;
 
     var GPS=new Phidget;
@@ -73,3 +74,4 @@ Initializing [Phidgets GPS Devices](http://www.phidgets.com/products.php?categor
      * Connect to phidget
      */
     GPS.connect();
+```

@@ -1,7 +1,7 @@
-#Phidget Analog
+# Phidget Analog
 The PhidgetAnalog library makes for intuitive and lightning fast development without any compromise. For a quick start into your Analog Output project see this [Basic PhidgetAnalog Example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/AnalogSource.js), and see this [Analog Primer Guide](http://www.phidgets.com/docs/Analog_Output_Primer) to get the most out of your Phidget!
 
-##Methods
+## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
@@ -10,7 +10,7 @@ The PhidgetAnalog library makes for intuitive and lightning fast development wit
 |whenReady|function|This executes a function when the Phidget Analog is ready to be used. __If you set intervals on this event, you MUST clear them on the detach event! Otherwise, you could set multiple instances of the same interval if a Phidget is detached and re attached__|
 |observe|change handler function|Used for asynchronously observing changes to the Phidget Analog.|
 
-##Data
+## Data
 
 |Key|Data Type|Writable|Description|
 |---|---------|--------|-----------|
@@ -21,13 +21,14 @@ The PhidgetAnalog library makes for intuitive and lightning fast development wit
 |enabled|array|yes|Power state of Voltage Sources: `1` = on, `0` = off|
 |voltage|array|yes|Output of each Voltage Source in Volts|
 
-##Getting Started
+## Getting Started
 
 Initializing [PhidgetAnalog](http://www.phidgets.com/products.php?category=0) devices can be very easy. here is a basic exmple to help get you started
 
-    var Phidget = require('../phidgetapi.js').Analog;
+```javascript
+var Phidget = require('../phidgetapi.js').Analog;
 
-    var analog=new Phidget();
+var analog=new Phidget();
     analog.connect();
 
     analog.whenReady(init)
@@ -54,3 +55,4 @@ Initializing [PhidgetAnalog](http://www.phidgets.com/products.php?category=0) de
     function voltage(changes){
         console.log(analog.voltage);
     }
+```

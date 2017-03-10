@@ -1,8 +1,8 @@
-#Phidget Manager
+# Phidget Manager
 
 The Phidget Manager library makes for an intuitive and easy way to manage your Phiget devices. For a quick start into your Manager project see the [Getting Started](https://github.com/RIAEvangelist/node-phidget-API/blob/master/docs/Manager.md#GettingStarted) section or jump to this [Basic Manager Example](https://github.com/RIAEvangelist/node-phidget-API/blob/master/examples/manager.js).
 
-##Methods
+## Methods
 
 |Method call|Parameters|Description|
 |-----------|----------|-----------|
@@ -11,16 +11,17 @@ The Phidget Manager library makes for an intuitive and easy way to manage your P
 |observe|change handler function|used for asynchronously observing the changes to any Phidget USB device.|
 |unobserve|change handler function|Stops observing from the specified observe's change handler function.|
 
-##Data
+## Data
 
 |Key|Data Type|Writable|Description|
 |---|---------|--------|-----------|
 |type|string|no|'PhidgetManager'|
 
-##Getting Started
+## Getting Started
 
 Initializing and identifying any [Phidget Device](http://www.phidgets.com/) can be very easy, here is a basic example to help you get started.
 
+```javascript
     var Manager = require('phidgetapi').Manager;
 
     var manager=new Manager;
@@ -39,3 +40,4 @@ Initializing and identifying any [Phidget Device](http://www.phidgets.com/) can 
     }
 
     manager.connect();
+```
