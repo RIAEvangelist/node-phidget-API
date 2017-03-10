@@ -17,7 +17,8 @@
   },
   "scripts": {},
   "devDependencies": {
-    "jasmine": "^2.3.2"
+    "jasmine": "^2.3.2",    
+    "object.observe": "^0.2.6"
   },
   "optionalDependencies": {},
   "_engineSupported": true,
